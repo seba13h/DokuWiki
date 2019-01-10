@@ -1,0 +1,288 @@
+
+<h1 class="sectionedit1" id="extraccion_de_facebook">Extracción de facebook</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Extracci\u00f3n de facebook&quot;,&quot;hid&quot;:&quot;extraccion_de_facebook&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-40&quot;} -->
+<h2 class="sectionedit2" id="nombre_modulo">Nombre módulo:</h2>
+<div class="level2">
+
+<p>
+<strong><em class="u">Propósito</em></strong>: Descripción de su función principal
+</p>
+
+<p>
+<strong><em class="u">Ubicación</em></strong>: Carpeta/directorio donde está el código
+</p>
+
+<p>
+<strong><em class="u">Control</em></strong>: Cómo iniciar y detener el servicio
+</p>
+
+<p>
+!<strong><em class="u">Endpoints</em></strong>: listar end-points y lo que hacen
+</p>
+
+<p>
+!<strong><em class="u">Claves de redis</em></strong>: Qué sets o clave-valor lee, genera o modifica el módulo, principales o auxiliares. 
+</p>
+
+<p>
+<strong>!:</strong> Solo si corresponde
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Nombre m\u00f3dulo:&quot;,&quot;hid&quot;:&quot;nombre_modulo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;41-463&quot;} -->
+<h2 class="sectionedit3" id="actualizador_de_ips_de_apro">Actualizador de ips de apro</h2>
+<div class="level2">
+
+<p>
+<strong> <em class="u">Propósito:</em> </strong>
+Mantener actualizadas las ip locales de las bases de datos de apro en redis para que otros módulos puedan leerlas.
+</p>
+
+<p>
+<strong><em class="u">Ubicación</em></strong>: /home/linux/facebook/nexoApro/actualizaIps
+</p>
+
+<p>
+<strong><em class="u">Control</em></strong>: En el host (no en el contenedor) administrar con 
+</p>
+<pre class="code">sudo service aproips start/status/stop</pre>
+
+<p>
+<strong><em class="u">Claves de redis</em></strong>: 
+</p>
+
+<p>
+Claves <strong>Generadas</strong> en base de datos número 0, en redis del nexoApro “aproredis”:
+</p>
+<div class="hiddenGlobal  hiddenActive"><div class="hiddenElements"></div><div class="hiddenHead  hiddenSinceBeginning"><div class="hiddenOnHidden">
+<p>
+serverNames
+</p>
+</div><div class="hiddenOnVisible">
+<p>
+serverNames
+</p>
+</div></div> <!-- .hiddenHead --><div class="hiddenBody">
+<p>
+<strong>“serverNames”</strong> es un set con el nombre de las base de datos de apro. 
+</p>
+
+<p>
+Ejemplo:
+</p>
+<pre class="code">linux@facebook2:~/facebook/nexoApro/actualizaIps/systemd$ docker exec -it aproredis redis-cli
+127.0.0.1:6379&gt; select 0
+OK
+127.0.0.1:6379&gt; smembers serverNames
+1) &quot;jarjar&quot;
+2) &quot;morty&quot;
+3) &quot;sheldon&quot;
+...</pre>
+</div></div><div class="hiddenGlobal  hiddenActive"><div class="hiddenElements"></div><div class="hiddenHead  hiddenSinceBeginning"><div class="hiddenOnHidden">
+<p>
+servidores
+</p>
+</div><div class="hiddenOnVisible">
+<p>
+servidores
+</p>
+</div></div> <!-- .hiddenHead --><div class="hiddenBody">
+<p>
+<strong>“servidores”</strong> es un hash con la ip de cada servidor y su estado (online u offline) tipo: 
+</p>
+
+<p>
+<code>{&#039;nombre servidor&#039;: &#039;ip&#039;:&#039;ip_servidor&#039;, &#039;status&#039;:&#039;online/offline&#039;}</code>
+</p>
+
+<p>
+Ejemplo: 
+</p>
+<pre class="code">127.0.0.1:6379&gt; hgetall servidores
+ 1) &quot;bart&quot;
+ 2) &quot;{\&quot;ip\&quot;: \&quot;192.168.0.158\&quot;, \&quot;status\&quot;: \&quot;online\&quot;}&quot;
+ 3) &quot;jarjar&quot;
+ 4) &quot;{\&quot;ip\&quot;: \&quot;192.168.0.223\&quot;, \&quot;status\&quot;: \&quot;online\&quot;}&quot;
+ 5) &quot;lagertha&quot;
+ 6) &quot;{\&quot;ip\&quot;: \&quot;192.168.0.146\&quot;, \&quot;status\&quot;: \&quot;online\&quot;}&quot;
+...</pre>
+</div></div><hr />
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Actualizador de ips de apro&quot;,&quot;hid&quot;:&quot;actualizador_de_ips_de_apro&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;464-1811&quot;} -->
+<h2 class="sectionedit4" id="api_rest">API REST</h2>
+<div class="level2">
+
+<p>
+<strong><em class="u">Propósito</em></strong>:
+</p>
+<ul>
+<li class="level1"><div class="li">Poder agregar, listar y eliminar las fans pages almacenadas</div>
+</li>
+<li class="level1"><div class="li">Poder agregar y listar los tokens almacenados</div>
+</li>
+</ul>
+
+<p>
+<strong><em class="u">Ubicación</em></strong>: linux/facebook/extractor/fbapireset/code
+</p>
+
+<p>
+<strong><em class="u">Control</em></strong>: 
+</p>
+
+<p>
+*Instalar dependencia de package.json
+ - docker-compose run fbapirest npm install
+</p>
+
+<p>
+*Iniciar Servidor
+</p>
+
+<p>
+ - “docker exec -it fbapirest bash”
+</p>
+
+<p>
+ - “pm2 start app.js –name apirest”
+</p>
+
+<p>
+*Listar log
+</p>
+
+<p>
+ -pm2 log0
+</p>
+
+<p>
+* detener servicio
+</p>
+<ol>
+<li class="level1"><div class="li">pm2 stop &lt;nombre o id&gt;</div>
+</li>
+</ol>
+
+<p>
+*Testing modulo
+ - npm test /testing/testing.js
+</p>
+
+<p>
+ <strong><em class="u">Endpoints</em></strong>: 
+</p>
+<pre class="code">1)Fan Pages:
+  *AGREGAR:
+    -TIPO: POST
+    -RUTA: /v1.0/fanpage/add
+    -PARAMETROS: Url fanPage.
+    -EJEMPLO: 
+      curl -d &#039;{&quot;url&quot;:&quot; paris&quot;}&#039; -H &quot;Content-Type: application/json&quot; 
+            http://localhost:7005/v1.0/fanpage/add
+      Respuesta:
+           {
+              &quot;mesagge&quot;:&quot; se agrego :  paris&quot;
+           }                   
+  *POST:
+    -TIPO: POST
+    -RUTA: /v1.0/fanpage/delete
+    -PARAMETROS:Url fanpage
+    -EJEMPLO:
+     curl -d &#039;{&quot;url&quot;:&quot; paris&quot;}&#039; -H &quot;Content-Type: application/json&quot; 
+            http://localhost:7005/v1.0/fanpage/delete
+      Respuesta:
+            {
+                &quot;mensaje&quot;:&quot; paris se borro del set fanpage no validada &quot;
+            }
+  
+  *listar todas las fan pages: 
+    -TIPO: GET
+    -RUTA:/v1.0/fanpage/listAll
+    -PARAMETROS:--
+    -EJEMPLO: http://localhost:8081/v1.0/fanpage/listAll
+    -RESPUESTA: {&quot;fanpage&quot;:[&quot; paris&quot;,&quot;ripley&quot;]}               
+  *listar fan pages con error: 
+    -TIPO:GET
+    -RUTA:/v1.0/fanpage/listError
+    -PARAMETROS:--
+    -EJEMPLO: http://localhost:8081/v1.0/fanpage/listAll
+    -RESPUESTA: {[id: &quot;paris&quot;,descripcion_error: &quot;token invalido&quot;], [id: &quot;ripley&quot;,descripcion_error: 
+      &quot;token invalido&quot;] }       
+  *listar fan pages sin error: 
+     -TIPO:GET
+     -RUTA:/v1.0/fanpage/listNoError
+     -PARAMETROS:--
+     -EJEMPLO: http://localhost:8081/v1.0/fanpage/listNoError
+     -RESPUESTA: {&quot;fanpage&quot;:[&quot; paris&quot;,&quot;ripley&quot;]}
+                      
+  *listar fan pages no validas: 
+     -TIPO:GET
+     -RUTA: /v1.0/fanpage/listUnvalidated
+     -PARAMETROS:--
+     -EJEMPLO: http://localhost:8081/v1.0/fanpage/listUnvalidated
+     -RESPUESTA: {&quot;fanpage: &quot;[&quot;paris&quot;,&quot;ripley&quot;]}</pre>
+<pre class="code">2)Tokens:
+   *add : 
+    -TIPO: POST
+    -RUTA:/v1.0/token/add
+    -PARAMETROS: token
+    -EJEMPLO:
+            curl -d &quot;token=321yu3i21j321j&quot; http://localhost:8081/v1.0/token/add
+    -RESPUESTA: {&quot;mesagge&quot;:&quot; se agrego : 321yu3i21j321j&quot;}
+   *listar todos los tokens:
+     -TIPO:GET
+     -RUTA: /v1.0/token/listAll
+     -PARAMETROS:--
+     -EJEMPLO: http://localhost:8081/v1.0/token/listAll
+     -RESPUESTA: {TOKENS: [&quot;675DSFFSADS&quot;]}
+   *listar tokens con error: 
+     -TIPO:GET
+     -RUTA:/v1.0/token/listError
+     -PARAMETROS:--
+     -EJEMPLO:http://localhost:8081/v1.0/token/listError
+     -RESPUESTA: {TOKENS: [&quot;675DSFFSADS&quot;]}</pre>
+
+<p>
+<strong><em class="u">Claves de redis</em></strong>: 
+</p>
+
+<p>
+SETS FANPAGES:
+</p>
+<ol>
+<li class="level1"><div class="li">key → fanpages_validadas = set que almacena las fanpages validadas</div>
+</li>
+<li class="level1"><div class="li">key → fanpages_no_validadas = set que almacena las fanpages no validadas</div>
+</li>
+<li class="level1"><div class="li">key → fanpages_error = set que almacena las fanpages con error</div>
+</li>
+</ol>
+
+<p>
+HASH FANPAGES
+</p>
+<ol>
+<li class="level1"><div class="li">KEY → descripcion_error = hash que almacenara la descripcion de los errores en las fanpages</div>
+</li>
+</ol>
+
+<p>
+SETS TOKENS:
+</p>
+<ol>
+<li class="level1"><div class="li">key → tokens_validados = set que almacena los tokens validados</div>
+</li>
+<li class="level1"><div class="li">key → tokens_reservados = set que almacena los tokens reservados</div>
+</li>
+<li class="level1"><div class="li">key → tokens_error = set que almacena los tokens con error</div>
+</li>
+<li class="level1"><div class="li">key → tokens_no_validados = set que almacena los tokens no validados.</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;API REST&quot;,&quot;hid&quot;:&quot;api_rest&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:4,&quot;range&quot;:&quot;1812-&quot;} -->

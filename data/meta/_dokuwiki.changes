@@ -1,0 +1,71 @@
+1542908755	201.236.191.114	E	extraccion_de_facebook	sebastian			50
+1542912209	201.236.191.114	E	extraccion_de_facebook	sebastian			8
+1542914609	201.236.191.114	E	extraccion_de_facebook	sebastian			-1
+1542988166	200.29.32.235	E	extraccion_de_facebook	sebastian			640
+1542988206	200.29.32.235	E	extraccion_de_facebook	sebastian			-1
+1542988224	200.29.32.235	E	extraccion_de_facebook	sebastian			-1
+1543244926	200.29.32.235	E	extraccion_de_facebook	sebastian			0
+1543245216	200.29.32.235	E	extraccion_de_facebook	sebastian			-34
+1543245236	200.29.32.235	E	extraccion_de_facebook	sebastian			2
+1543245259	200.29.32.235	E	extraccion_de_facebook	sebastian			-1
+1543248732	200.29.32.235	E	extraccion_de_facebook	daniel			61
+1543503789	200.29.32.235	E	extraccion_de_facebook	sebastian			100
+1543503819	200.29.32.235	E	extraccion_de_facebook	sebastian			2
+1543503892	200.29.32.235	E	extraccion_de_facebook	sebastian			4
+1544450489	200.29.32.235	E	start	jverdugo			35
+1544450505	200.29.32.235	E	start	jverdugo			0
+1544450551	200.29.32.235	C	fakeconsul	jverdugo	created		3296
+1544450810	200.29.32.235	E	start	daniel			1
+1544451899	200.29.32.235	E	extraccion_de_facebook	sebastian			70
+1544542132	200.29.32.235	E	extraccion_de_facebook	sebastian			4
+1546766943	127.0.0.1	E	playground:playground		external edit		25
+1547128535	201.236.191.114	E	playground:playground	sebastian			2
+1547128549	201.236.191.114	E	playground:playground	sebastian			4
+1547127157	127.0.0.1	E	start		external edit		0
+1547128786	201.236.191.114	E	start	sebastian			24
+1547128809	201.236.191.114	E	start	sebastian			3
+1547128861	201.236.191.114	E	start	sebastian			15
+1547128942	201.236.191.114	E	start	sebastian			38
+1546766327	127.0.0.1	E	wiki:dokuwiki		external edit		2908
+1547131668	200.29.32.235	E	wiki:dokuwiki	sebastian			-2157
+1547131834	200.29.32.235	E	playground:playground	sebastian			136
+1547132714	200.29.32.235	C	wiki:servidores	sebastian	created		8
+1547133193	200.29.32.235	E	playground:playground	sebastian			-15
+1547133841	200.29.32.235	E	wiki:servidores	sebastian			4200
+1547133878	200.29.32.235	C	wiki:instalar_docker	sebastian	created		611
+1547133909	200.29.32.235	C	wiki:administrar_dominios	sebastian	created		4709
+1547133992	200.29.32.235	C	wiki:instalar_consul	sebastian	created		419
+1547134035	200.29.32.235	C	wiki:migrar_amazon_telefonica	sebastian	created		1005
+1547134064	200.29.32.235	C	wiki:expandir_disco	sebastian	created		1707
+1547134148	200.29.32.235	C	wiki:mysql_proxys	sebastian	created		870
+1547134183	200.29.32.235	C	wiki:agregar_usuario_en_linux	sebastian	created		2938
+1547134220	200.29.32.235	C	wiki:extraccion_de_facebook	sebastian	created		5464
+1547134250	200.29.32.235	C	wiki:fakeconsul	sebastian	created		3281
+1547142767	200.29.32.235	C	playground:apro	sebastian	created		2650
+1547142813	200.29.32.235	E	playground:apro	sebastian			-1
+1547142855	200.29.32.235	E	playground:apro	sebastian			24
+1547142915	200.29.32.235	E	playground:apro	sebastian			224
+1547143519	200.29.32.235	E	playground:apro	sebastian			451
+1547143568	200.29.32.235	E	playground:apro	sebastian			24
+1547143630	200.29.32.235	E	playground:apro	sebastian			2
+1547143672	200.29.32.235	E	playground:apro	sebastian			5
+1547143723	200.29.32.235	E	playground:apro	sebastian			-12
+1547144185	200.29.32.235	C	playground:octosync	sebastian	created		3697
+1547144270	200.29.32.235	E	playground:octosync	sebastian			10
+1547144456	200.29.32.235	E	playground:octosync	sebastian			39
+1547145735	200.29.32.235	E	playground:octosync	sebastian			136
+1547145790	200.29.32.235	E	playground:octosync	sebastian			109
+1547145818	200.29.32.235	E	playground:octosync	sebastian			-17
+1547146821	200.29.32.235	E	playground:octosync	sebastian			32
+1547146894	200.29.32.235	E	playground:octosync	sebastian			-2
+1547146912	200.29.32.235	E	playground:octosync	sebastian			8
+1547147109	200.29.32.235	E	playground:octosync	sebastian			27
+1547149168	200.29.32.235	C	playground:inscreen	sebastian	created		5173
+1547149245	200.29.32.235	E	playground:inscreen	sebastian			360
+1547149296	200.29.32.235	E	playground:inscreen	sebastian			24
+1547149337	200.29.32.235	E	playground:inscreen	sebastian			6
+1547149450	200.29.32.235	E	playground:inscreen	sebastian			40
+1547149546	200.29.32.235	E	playground:inscreen	sebastian			30
+1547149863	200.29.32.235	E	playground:playground	sebastian			12
+1547149877	200.29.32.235	E	playground:playground	sebastian			-7
+1547149894	200.29.32.235	E	playground:playground	sebastian			2

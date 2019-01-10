@@ -1,0 +1,23 @@
+==== Documentacion ==== 
+ 
+  * [[servidores|Listado y descripción de servidores]]
+
+  * [[instalar_docker|Instalar docker]]
+
+  * [[administrar_dominios|administrar_dominios]]: agregar dominios nuevos y aplicaciones en cloud.analitic.cl/aplicacion_nueva
+
+  * [[revisar_consul|Revisar Consul]] (estado de servicios y servidores)
+
+  * [[instalar_consul|Instalar consul]] nodos cliente y servidor
+
+  * [[migrar_amazon_telefonica|Migrar máquina de amazon a telefonica]]
+
+  * [[expandir_disco|Expandir disco máquina de telefónica]]
+
+  * [[mysql_proxys|mysql proxys amazon-telefónica]]
+
+  * [[agregar_usuario_en_linux|Agregar usuario y llave en servidor linux]] 
+
+  * [[extraccion_de_facebook|Extracción de facebook]]
+
+  * [[FAKECONSUL | fakeconsul.py]]

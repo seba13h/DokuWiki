@@ -1,0 +1,140 @@
+
+<h3 class="sectionedit1" id="agregar_usuario_y_llave">Agregar usuario y llave</h3>
+<div class="level3">
+
+<p>
+Sea el usuario nuevo “danilo”
+</p>
+<pre class="code">root@ip-10-253-2-164:~# adduser danilo
+Adding user `danilo&#039; ...
+Adding new group `danilo&#039; (1001) ...
+Adding new user `danilo&#039; (1001) with group `danilo&#039; ...
+Creating home directory `/home/danilo&#039; ...
+Copying files from `/etc/skel&#039; ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for danilo
+Enter the new value, or press ENTER for the default
+        Full Name []: Danilo
+        Room Number []: 
+        Work Phone []: 
+        Home Phone []: 
+        Other []: 
+Is the information correct? [Y/n] </pre>
+
+<p>
+En una máquina cliente subimos la llave del usuario nuevo:
+</p>
+<pre class="code">daniel@daniel-desktop:~/.ssh/keys$ scp danilo.pub ubuntu@54.232.178.126:/home/ubuntu/.</pre>
+
+<p>
+Habiendo movido la llave al directorio del usuario en el servidor ahora le damos permisos a la llave y pasamos al usuario nuevo:
+</p>
+<pre class="code">root@ip-10-253-2-164:/home/danilo# chown danilo danilo.pub 
+root@ip-10-253-2-164:/home/danilo# su danilo</pre>
+
+<p>
+En la raíz creamos directorio .ssh y copiamos la key a authorized_keys:
+</p>
+<pre class="code">danilo@ip-10-253-2-164:~$ mkdir .ssh
+danilo@ip-10-253-2-164:~$ cp danilo.pub .ssh/
+danilo@ip-10-253-2-164:~$ cd .ssh
+danilo@ip-10-253-2-164:~/.ssh$ mv danilo.pub authorized_keys
+danilo@ip-10-253-2-164:~/.ssh$ chmod 700 authorized_keys
+danilo@ip-10-253-2-164:~$ cd
+danilo@ip-10-253-2-164:~$ chmod 700 .ssh</pre>
+
+</div>
+<!-- EDIT1 SECTION "Agregar usuario y llave" [1-1467] -->
+<h3 class="sectionedit2" id="configurar_permisos_web_y_logging">Configurar permisos web y logging</h3>
+<div class="level3">
+
+<p>
+Asignamos grupo de apache con permisos para que pueda editar archivos web
+</p>
+<pre class="code">root@ip-10-253-2-164:~# usermod -a -G adm,www-data,systemd-journal,danilo danilo</pre>
+
+<p>
+el grupo adm es para poder leer los logs.
+</p>
+
+<p>
+Opcionalmente, podemos hacer que se compartan todos los archivos nuevos con 775 añadiendo
+</p>
+<pre class="code">umask 002</pre>
+
+<p>
+Al final de /home/danilo/.bashrc
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Configurar permisos web y logging" [1468-1879] -->
+<h3 class="sectionedit3" id="permisos_de_superusuario_sudo">Permisos de superusuario (sudo)</h3>
+<div class="level3">
+
+<p>
+Como root, añadir el usuario nuevo a sudoers
+</p>
+<pre class="code">root@eventos2:/home/jorge# nano /etc/sudoers</pre>
+
+<p>
+sudoers:
+</p>
+<pre class="code"># User privilege specification
+root    ALL=(ALL:ALL) ALL
+danilo  ALL=(ALL:ALL) ALL</pre>
+
+</div>
+<!-- EDIT3 SECTION "Permisos de superusuario (sudo)" [1880-2139] -->
+<h3 class="sectionedit4" id="ajustes_varios">Ajustes varios</h3>
+<div class="level3">
+
+<p>
+en /home/&lt;usuario&gt;/.bashrc
+</p>
+
+<p>
+Agregar
+</p>
+<pre class="code">function crontab {
+    if [ $@ == &quot;-r&quot; ]
+    then
+        echo &quot;opción deshabilitada.&quot;
+    else
+        /usr/bin/crontab $@
+    fi
+}
+
+umask 002
+
+SSH_ENV=&quot;$HOME/.ssh/environment&quot;
+
+function start_agent {
+     echo &quot;Initialising new SSH agent...&quot;
+     /usr/bin/ssh-agent | sed &#039;s/^echo/#echo/&#039; &gt; &quot;${SSH_ENV}&quot;
+     echo succeeded
+     chmod 600 &quot;${SSH_ENV}&quot;
+     . &quot;${SSH_ENV}&quot; &gt; /dev/null
+}
+
+# Source SSH settings, if applicable
+
+
+if [ -f &quot;${SSH_ENV}&quot; ]; then
+     . &quot;${SSH_ENV}&quot; &gt; /dev/null
+     #ps ${SSH_AGENT_PID} doesn&#039;t work under cywgin
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ &gt; /dev/null || {
+         start_agent;
+     }
+else
+     start_agent;
+fi
+</pre>
+
+<p>
+No olvidar reemplazar &lt;usuario&gt; por el nombre correcto.
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Ajustes varios" [2140-] -->

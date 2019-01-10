@@ -1,0 +1,225 @@
+
+<h1 class="sectionedit1" id="rescursos_api_inscreen">Rescursos API Inscreen</h1>
+<div class="level1">
+
+<p>
+<strong>EndPoint:</strong>
+<a href="http://api.inscreen.cl/usuarios" class="urlextern" title="http://api.inscreen.cl/usuarios" rel="nofollow">http://api.inscreen.cl/usuarios</a>
+</p>
+
+<p>
+Obtenemos la lista de usuario en orden de nro de menciones
+</p>
+
+<p>
+Esta api no posee credencial hasta su paso a producción, por los constantes cambios que pueda presentar. Los datos encontrados son siempre del día actual, modificables desde la hora de consulta
+</p>
+
+<p>
+Por POST, se debe pasar los siguientes parámetros:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>bd</strong> = Base de datos a conectar (obligatorio). Las bd son desarrollo, el112, el122, el164, el177, el189, el45, eventos2 y secom.</div>
+</li>
+<li class="level1"><div class="li"> <strong>arr_perfiles</strong> = Array con el perfil, o los perfiles (comparables) (obligatorio).</div>
+</li>
+<li class="level1"><div class="li"> <strong>horaIni</strong> = Hora desde HH:mm:ss (opcional, default 00:00:00 GMT-0).</div>
+</li>
+<li class="level1"><div class="li"> <strong>gmt</strong> = Horas a descontar (“-n”) o sumar (“n”) (opcional, default 0).</div>
+</li>
+<li class="level1"><div class="li"> <strong>limit_usuarios</strong> = Cantidad registros de retorno (opcional).</div>
+</li>
+<li class="level1"><div class="li"> <strong>arr_not_usuarios</strong> : Array con los ID&#039;s de las fuentes a omitir (opcional).</div>
+</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+<pre class="code">{
+   &quot;bd&quot;:&quot;secom&quot;,
+   &quot;arr_perfiles&quot;:[524],
+   &quot;horaIni&quot;:&quot;22:00:00&quot;,
+   &quot;gmt&quot;:&quot;-5&quot;,
+   &quot;limit_usuarios&quot;:5,
+   &quot;arr_not_usuarios&quot;:[3051761,2268576]
+}
+</pre>
+
+<p>
+Resultado :
+</p>
+<pre class="code">[
+    {
+        &quot;id_fuente&quot;: 3794244,
+        &quot;nombre&quot;: &quot;EstéreoPlay&quot;,
+        &quot;nick&quot;: &quot;estereoplay&quot;,
+        &quot;avatar&quot;: &quot;https://pbs.twimg.com/profile_images/823821093727272960/LliKZ5nB_normal.jpg&quot;,
+        &quot;total_menciones&quot;: 5
+    },
+    {
+        &quot;id_fuente&quot;: 1027522,
+        &quot;nombre&quot;: &quot;Miguel&quot;,
+        &quot;nick&quot;: &quot;no_fumare&quot;,
+        &quot;avatar&quot;: &quot;https://pbs.twimg.com/profile_images/903305959241482240/cTtiqgye_normal.jpg&quot;,
+        &quot;total_menciones&quot;: 4
+    },
+    {
+        &quot;id_fuente&quot;: 3794221,
+        &quot;nombre&quot;: &quot;LUIS WILLIAM LLANOS&quot;,
+        &quot;nick&quot;: &quot;luiswllanosr&quot;,
+        &quot;avatar&quot;: &quot;https://pbs.twimg.com/profile_images/745426542319271940/c4CSOkCh_normal.jpg&quot;,
+        &quot;total_menciones&quot;: 4
+    },
+    {
+        &quot;id_fuente&quot;: 3744840,
+        &quot;nombre&quot;: &quot;Otro Desadaptado&quot;,
+        &quot;nick&quot;: &quot;ODesadaptado&quot;,
+        &quot;avatar&quot;: &quot;https://pbs.twimg.com/profile_images/732613774511837186/FvnWrsLG_normal.jpg&quot;,
+        &quot;total_menciones&quot;: 4
+    },
+    {
+        &quot;id_fuente&quot;: 278881,
+        &quot;nombre&quot;: &quot;Guillermo Arango&quot;,
+        &quot;nick&quot;: &quot;guilloarango&quot;,
+        &quot;avatar&quot;: &quot;https://pbs.twimg.com/profile_images/786596029890228225/2S9o5hSb_normal.jpg&quot;,
+        &quot;total_menciones&quot;: 3
+    }
+]</pre>
+
+<p>
+<strong>EndPoint:</strong>
+<a href="http://api.inscreen.cl/cloud" class="urlextern" title="http://api.inscreen.cl/cloud" rel="nofollow">http://api.inscreen.cl/cloud</a>
+</p>
+
+<p>
+Obtenemos la lista de palabras. Los datos encontrados son siempre del día actual, modificables desde la hora de consulta
+</p>
+
+<p>
+Esta api no posee credencial hasta su paso a producción, por los constantes cambios que pueda presentar.
+</p>
+
+<p>
+Por POST, se debe pasar los siguientes parámetros:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>bd</strong> = Base de datos a conectar (obligatorio). Las bd son desarrollo, el112, el122, el164, el177, el189, el45, eventos2 y secom.</div>
+</li>
+<li class="level1"><div class="li"> <strong>arr_perfiles</strong> = Array con el perfil, o los perfiles (comparables) (obligatorio).</div>
+</li>
+<li class="level1"><div class="li"> <strong>horaIni</strong> = Hora desde HH:mm:ss (opcional, default 00:00:00 GMT-0).</div>
+</li>
+<li class="level1"><div class="li"> <strong>gmt</strong> = Horas a descontar (“-n”) o sumar (“n”) (opcional, default 0).</div>
+</li>
+<li class="level1"><div class="li"> <strong>size</strong> = Cantidad de palabras a retornar (default 100) (obligatorio).</div>
+</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+<pre class="code">{
+   &quot;bd&quot;:&quot;secom&quot;,
+   &quot;arr_perfiles&quot;:[524],
+   &quot;horaIni&quot;:&quot;22:00:00&quot;,
+   &quot;size&quot;:10,
+   &quot;gmt&quot;:&quot;3&quot;
+}</pre>
+
+<p>
+Resultado :
+</p>
+<pre class="code">{
+    &quot;count&quot;: 129,
+    &quot;result&quot;: [
+        {
+            &quot;key&quot;: &quot;@enlajugadarcn&quot;,
+            &quot;doc_count&quot;: 513
+        },
+        {
+            &quot;key&quot;: &quot;@casaleantonio&quot;,
+            &quot;doc_count&quot;: 119
+        },
+        {
+            &quot;key&quot;: &quot;@guilloarango&quot;,
+            &quot;doc_count&quot;: 90
+        },
+        {
+            &quot;key&quot;: &quot;@udsnoexisten&quot;,
+            &quot;doc_count&quot;: 72
+        },
+        {
+            &quot;key&quot;: &quot;12&quot;,
+            &quot;doc_count&quot;: 68
+        },
+        {
+            &quot;key&quot;: &quot;@mdefrancisco&quot;,
+            &quot;doc_count&quot;: 67
+        },
+        {
+            &quot;key&quot;: &quot;@fcfseleccioncol&quot;,
+            &quot;doc_count&quot;: 55
+        },
+        {
+            &quot;key&quot;: &quot;94&quot;,
+            &quot;doc_count&quot;: 49
+        },
+        {
+            &quot;key&quot;: &quot;venezuela&quot;,
+            &quot;doc_count&quot;: 45
+        },
+        {
+            &quot;key&quot;: &quot;vs&quot;,
+            &quot;doc_count&quot;: 42
+        }
+    ]
+}</pre>
+
+<p>
+<strong>EndPoint:</strong>
+<a href="http://api.inscreen.cl/word" class="urlextern" title="http://api.inscreen.cl/word" rel="nofollow">http://api.inscreen.cl/word</a>
+</p>
+
+<p>
+Obtenemos un array con el id_articulo de las menciones cuya palabra de búsqueda se encuentra en el texto. Los datos encontrados son siempre del día actual, modificables desde la hora de consulta
+</p>
+
+<p>
+Esta api no posee credencial hasta su paso a producción, por los constantes cambios que pueda presentar.
+</p>
+
+<p>
+Por POST, se debe pasar los siguientes parámetros:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>bd</strong> = Base de datos a conectar (obligatorio). Las bd son desarrollo, el112, el122, el164, el177, el189, el45, eventos2 y secom.</div>
+</li>
+<li class="level1"><div class="li"> <strong>arr_perfiles</strong> = Array con el perfil, o los perfiles (comparables) (obligatorio).</div>
+</li>
+<li class="level1"><div class="li"> <strong>horaIni</strong> = Hora desde HH:mm:ss (opcional, default 00:00:00 GMT-0).</div>
+</li>
+<li class="level1"><div class="li"> <strong>word</strong> = palabra de búsqueda.</div>
+</li>
+<li class="level1"><div class="li"> <strong>gmt</strong> = Horas a descontar (“-n”) o sumar (“n”) (opcional, default 0).</div>
+</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+<pre class="code">{
+   &quot;bd&quot;:&quot;secom&quot;,
+   &quot;arr_perfiles&quot;:[524],
+   &quot;dateFrom&quot;:&quot;2017-08-30&quot;,
+   &quot;horaIni&quot;:&quot;22:00:00&quot;,
+   &quot;word&quot;:&quot;conferencia&quot;,
+   &quot;gmt&quot;:&quot;3&quot;
+}</pre>
+
+<p>
+Resultado :
+</p>
+<pre class="code">&quot;[2224,233432,3323,22223]&quot;</pre>
+
+</div>

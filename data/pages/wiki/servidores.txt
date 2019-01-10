@@ -1,0 +1,72 @@
+Consola de administración de opencloud telefónica [[https://auth.openmovistarcloud.cl/authui/login.action?service=https://console.openmovistarcloud.cl/ecm/#/login]]
+
+Las ips pueden cambiar en el tiempo, esto es solo referencial.
+
+===== Sistemas =====
+
+**apro:** Servidor que ejecuta el sistema web (no clásico) de apro. ip: 192.168.0.60
+
+**satelites1:** Servidor de donde se almacenan proyectos dependientes del obsoleto (pero aún en uso) analitic pro. ip: 192.168.0.153
+
+**alertas1:** Servidor que ejecuta el sistema de alertas de apro. ip: 192.168.0.50
+
+**apicloud1:** Servidor de apis usado para inscreen y nube apro. ip: 192.168.0.34
+
+**elastic1:** Servidor elasticsearch usado para inscreen. ip: 192.168.0.51, http://192.168.0.51:9100/
+
+**inscreen1:** Servidor para inscreen. ip: 192.168.0.148
+
+**scriptclientes1:** Servidor encargado de ejecutar scripts a la medida que modifican datos de apro, a la fecha solo para cliente bci. https://cloud.analitic.cl:3000/Analitic/aproScripts
+
+**replay1:** Servidor encargado de ejecutar replays, descargar tweets de los últimos 30 días. http://replay.analitic.cl/ o en lan http://192.168.0.11/ (urls accesibles solo desde la oficina o vpn). Colas: http://192.168.0.11:15672/#/queues
+
+**redusuarios1:** Servidor con api rest, que genera el json de la red de usuarios
+
+**clasificador1:** Servidor encargado de clasificación automática de tweets de apro http://192.168.0.183:15672/#/queues
+
+**nginx1:** Máquina con ip pública, ejecuta nginx y carga por proxy aplicaciones web que se ejecutan en otros servidores.
+
+**router_nat:** Máquina encargada de repartir internet entre servidores que no tienen ip pública, necesaria dado que telefónica se negó a activar NAT para que hubiera internet en la red local.
+
+**consul1_wiki:** Uno de los tres nodos maestros de consul y también hosting de ésta wiki. https://cloud.analitic.cl/dokuwiki/doku.php?id=start
+
+**consul3_git:** Uno de los tres nodos maestros de consul y también hosting del servicio gitea, hosting de git donde se almacenan los repositorios de analitic. Consul: http://192.168.0.32:8500/ui/ Gitea: https://cloud.analitic.cl:3000/Analitic/
+
+**consul2_vpn:** Uno de los tres nodos maestros de consul y también el servicio de vpn.
+
+
+===== Extracción =====
+
+**facebook1:** Servidor que ejecuta el sistema de extracción de menciones de facebook de apro. ip: 192.168.0.104. url de elasticsearch: http://192.168.0.104:9200/_plugin/head/
+
+**gnip1:** Servidor encargado de recibir tweets desde gnip y repartirlos a las bases de datos de apro. http://192.168.0.139:15672/#/queues
+
+**youtubeyblogs:** Servidor que ejecuta el sistema de extracción de menciones de medios y blogs (descargando vía feed RSS) y el de videos de youtube via api. Ip: 192.168.0.105. url de elasticsearch: http://192.168.0.105:9100
+
+**flickr1:** Servidor que ejecuta el sistema de extracción de menciones de flickr via api. Ip: 192.168.0.67. url de elasticsearch: http://192.168.0.67:9200/_plugin/head/, Url de rabbitmq (colas): http://192.168.0.67:15672/#/queues
+
+
+===== Bases de datos =====
+
+
+**mongodb0:** Servidor con mongodb, usado para almacenar tweets y generar red de usuarios. http://192.168.0.134:8191/
+
+**bart:** Base de datos mysql de apro, equivalente a antiguo servidor secom, el152. Ip: 192.168.0.158
+
+**jarjar:** Base de datos mysql de apro, equivalente a antiguo servidor desarrollo, el27. Ip: 192.168.0.223
+
+**lagertha:** Base de datos mysql de apro, equivalente a antiguo servidor el122. Ip: 192.168.0.146
+
+**mcfly:** Base de datos mysql de apro, equivalente a antiguo servidor prensa el126. Ip: 192.168.0.132
+
+**sheldon:** Base de datos mysql de apro, equivalente a antiguo servidor el112. Ip: 192.168.0.203
+
+**xena:** Base de datos mysql de apro, equivalente a antiguo servidor el164. Ip: 192.168.0.206
+
+**mcgiver:** Base de datos mysql de apro, equivalente a antiguo servidor el177. Ip: 192.168.0.176
+
+**morty:** Base de datos mysql de apro, equivalente a antiguo servidor el45. Ip: 192.168.0.91
+
+**scully:** Base de datos mysql de apro, equivalente a antiguo servidor el189. Ip: 192.168.0.127
+
+**clon_el66:** Base de datos de clientes de apro, equivalente a antiguo servidor el66. Ip: 192.168.0.5

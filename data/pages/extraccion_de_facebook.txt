@@ -1,0 +1,193 @@
+====== Extracción de facebook ======
+
+
+===== Nombre módulo: =====
+
+
+**__Propósito__**: Descripción de su función principal
+
+**__Ubicación__**: Carpeta/directorio donde está el código
+
+**__Control__**: Cómo iniciar y detener el servicio
+ 
+!**__Endpoints__**: listar end-points y lo que hacen
+                   
+!**__Claves de redis__**: Qué sets o clave-valor lee, genera o modifica el módulo, principales o auxiliares. 
+
+
+**!:** Solo si corresponde
+
+
+===== Actualizador de ips de apro =====
+
+** __Propósito:__ ** 
+Mantener actualizadas las ip locales de las bases de datos de apro en redis para que otros módulos puedan leerlas.
+
+**__Ubicación__**: /home/linux/facebook/nexoApro/actualizaIps
+
+**__Control__**: En el host (no en el contenedor) administrar con <code>sudo service aproips start/status/stop</code>
+
+**__Claves de redis__**: 
+
+Claves **Generadas** en base de datos número 0, en redis del nexoApro "aproredis":
+
+<hidden serverNames>
+**"serverNames"** es un set con el nombre de las base de datos de apro. 
+
+
+Ejemplo:
+<code>
+linux@facebook2:~/facebook/nexoApro/actualizaIps/systemd$ docker exec -it aproredis redis-cli
+127.0.0.1:6379> select 0
+OK
+127.0.0.1:6379> smembers serverNames
+1) "jarjar"
+2) "morty"
+3) "sheldon"
+...
+</code>
+</hidden>
+
+<hidden servidores>
+**"servidores"** es un hash con la ip de cada servidor y su estado (online u offline) tipo: 
+
+
+''%%{'nombre servidor': 'ip':'ip_servidor', 'status':'online/offline'}%%'' 
+
+Ejemplo: 
+<code>
+127.0.0.1:6379> hgetall servidores
+ 1) "bart"
+ 2) "{\"ip\": \"192.168.0.158\", \"status\": \"online\"}"
+ 3) "jarjar"
+ 4) "{\"ip\": \"192.168.0.223\", \"status\": \"online\"}"
+ 5) "lagertha"
+ 6) "{\"ip\": \"192.168.0.146\", \"status\": \"online\"}"
+...
+</code>
+</hidden>
+
+
+----------------------------------------------------------
+
+
+===== API REST =====
+
+
+**__Propósito__**: 
+  *Poder agregar, listar y eliminar las fans pages almacenadas
+  *Poder agregar y listar los tokens almacenados
+
+**__Ubicación__**: linux/facebook/extractor/fbapireset/code
+
+**__Control__**: 
+
+*Instalar dependencia de package.json
+ - docker-compose run fbapirest npm install
+
+*Iniciar Servidor
+
+ - "docker exec -it fbapirest bash"
+
+ - "pm2 start app.js --name apirest"
+
+*Listar log
+
+ -pm2 log0
+
+* detener servicio
+   -pm2 stop <nombre o id>
+
+*Testing modulo
+ - npm test /testing/testing.js
+ 
+ **__Endpoints__**: 
+  1)Fan Pages:
+    *AGREGAR:
+      -TIPO: POST
+      -RUTA: /v1.0/fanpage/add
+      -PARAMETROS: Url fanPage.
+      -EJEMPLO: 
+        curl -d '{"url":" paris"}' -H "Content-Type: application/json" 
+              http://localhost:7005/v1.0/fanpage/add
+        Respuesta:
+             {
+                "mesagge":" se agrego :  paris"
+             }                   
+    *POST:
+      -TIPO: POST
+      -RUTA: /v1.0/fanpage/delete
+      -PARAMETROS:Url fanpage
+      -EJEMPLO:
+       curl -d '{"url":" paris"}' -H "Content-Type: application/json" 
+              http://localhost:7005/v1.0/fanpage/delete
+        Respuesta:
+              {
+                  "mensaje":" paris se borro del set fanpage no validada "
+              }
+    
+    *listar todas las fan pages: 
+      -TIPO: GET
+      -RUTA:/v1.0/fanpage/listAll
+      -PARAMETROS:--
+      -EJEMPLO: http://localhost:8081/v1.0/fanpage/listAll
+      -RESPUESTA: {"fanpage":[" paris","ripley"]}               
+    *listar fan pages con error: 
+      -TIPO:GET
+      -RUTA:/v1.0/fanpage/listError
+      -PARAMETROS:--
+      -EJEMPLO: http://localhost:8081/v1.0/fanpage/listAll
+      -RESPUESTA: {[id: "paris",descripcion_error: "token invalido"], [id: "ripley",descripcion_error: 
+        "token invalido"] }       
+    *listar fan pages sin error: 
+       -TIPO:GET
+       -RUTA:/v1.0/fanpage/listNoError
+       -PARAMETROS:--
+       -EJEMPLO: http://localhost:8081/v1.0/fanpage/listNoError
+       -RESPUESTA: {"fanpage":[" paris","ripley"]}
+                        
+    *listar fan pages no validas: 
+       -TIPO:GET
+       -RUTA: /v1.0/fanpage/listUnvalidated
+       -PARAMETROS:--
+       -EJEMPLO: http://localhost:8081/v1.0/fanpage/listUnvalidated
+       -RESPUESTA: {"fanpage: "["paris","ripley"]}
+
+  2)Tokens:
+     *add : 
+      -TIPO: POST
+      -RUTA:/v1.0/token/add
+      -PARAMETROS: token
+      -EJEMPLO:
+              curl -d "token=321yu3i21j321j" http://localhost:8081/v1.0/token/add
+      -RESPUESTA: {"mesagge":" se agrego : 321yu3i21j321j"}
+     *listar todos los tokens:
+       -TIPO:GET
+       -RUTA: /v1.0/token/listAll
+       -PARAMETROS:--
+       -EJEMPLO: http://localhost:8081/v1.0/token/listAll
+       -RESPUESTA: {TOKENS: ["675DSFFSADS"]}
+     *listar tokens con error: 
+       -TIPO:GET
+       -RUTA:/v1.0/token/listError
+       -PARAMETROS:--
+       -EJEMPLO:http://localhost:8081/v1.0/token/listError
+       -RESPUESTA: {TOKENS: ["675DSFFSADS"]}
+**__Claves de redis__**: 
+
+SETS FANPAGES:
+
+   -key -> fanpages_validadas = set que almacena las fanpages validadas
+   -key -> fanpages_no_validadas = set que almacena las fanpages no validadas
+   -key -> fanpages_error = set que almacena las fanpages con error
+
+HASH FANPAGES
+   -KEY -> descripcion_error = hash que almacenara la descripcion de los errores en las fanpages
+
+SETS TOKENS:
+   -key -> tokens_validados = set que almacena los tokens validados
+   -key -> tokens_reservados = set que almacena los tokens reservados
+   -key -> tokens_error = set que almacena los tokens con error
+   -key -> tokens_no_validados = set que almacena los tokens no validados.
+
+

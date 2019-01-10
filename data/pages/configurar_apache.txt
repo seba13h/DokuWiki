@@ -1,0 +1,110 @@
+====== Apache ======
+
+<code>
+root@analiticpro:~# apt-get install apache2
+</code>
+
+===== Módulos extra de apache =====
+
+<code>
+a2enmod rewrite
+a2enmod proxy
+a2enmod proxy_http
+a2enmod headers
+service apache2 restart
+</code>
+
+
+===== Php =====
+
+
+<code>
+root@analiticpro:~# apt-get install php-mysql php libapache2-mod-php
+</code>
+
+===== Módulo wsgi =====
+
+
+<code>
+root@analiticpro:~# apt-get install libapache2-mod-wsgi
+</code>
+
+===== Recomendaciones para los virtual hosts: =====
+
+
+En el virtual host de apache (por defecto en 
+
+<code>
+/etc/apache2/sites-enabled/000-default
+</code>
+
+Bloquear acceso a directorio .git (en caso de proyecto ubicado en la raíz):
+
+<code>
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ...
+        RewriteEngine On
+        RewriteRule \.git - [F,L]
+        ...
+</code>
+
+Deshabilitar listar directorios añadiendo "Options -Indexes" en los lugares donde corresponda
+
+<code>
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ...
+        <Directory />
+                Options -Indexes
+                ...
+        </Directory>
+</code>
+
+Habilitar uso de ficheros .htaccess borrando o comentando "AllowOverride None"
+
+<code>
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ...
+        <Directory />
+                ...
+                #AllowOverride None
+        </Directory>
+</code>
+
+
+===== Recomendaciones archivo principal apache.conf =====
+
+Al final del fichero:
+
+Forzar utf-8
+<code>
+AddDefaultCharset utf-8
+</code>
+
+Deshabilitar FileETag:
+<code>
+FileETag None
+</code>
+
+Quitar versión del apache pública
+<code>
+ServerTokens Prod
+ServerSignature Off
+</code>
+
+
+====== Servidor de cache ======
+
+
+<code>
+root@analiticpro:~# apt-get install memcached
+</code>
+
+===== Conector php-memcache =====
+
+
+<code>
+root@analiticpro:~# apt-get install php-memcache
+</code>

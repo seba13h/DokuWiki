@@ -1,0 +1,22 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1547133878;s:8:"modified";i:1547133878;}s:7:"creator";s:19:"Sebastian Rodriguez";s:4:"user";s:9:"sebastian";s:11:"last_change";a:8:{s:4:"date";i:1547133878;s:2:"ip";s:13:"200.29.32.235";s:4:"type";s:1:"C";s:2:"id";s:20:"wiki:instalar_docker";s:4:"user";s:9:"sebastian";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";s:10:"sizechange";i:611;}s:5:"title";s:15:"Instalar docker";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:15:"instalar_docker";s:5:"title";s:15:"Instalar docker";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:255:"Instalar docker
+
+0.- Si la máquina es nueva, recién creada:
+
+
+sudo apt-get update
+sudo apt-get upgrade
+
+
+Reiniciar.
+
+
+sudo reboot
+
+
+1.- Instalar docker
+
+
+curl -sSL https://get.docker.com/ | sh
+
+
+2.- Añadir usuario linux (si corresponde) al grupo docker";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1547133878;}s:7:"creator";s:19:"Sebastian Rodriguez";s:4:"user";s:9:"sebastian";s:11:"last_change";a:8:{s:4:"date";i:1547133878;s:2:"ip";s:13:"200.29.32.235";s:4:"type";s:1:"C";s:2:"id";s:20:"wiki:instalar_docker";s:4:"user";s:9:"sebastian";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";s:10:"sizechange";i:611;}}}

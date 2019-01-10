@@ -1,0 +1,25 @@
+a:63:{i:0;a:3:{i:0;s:14:"document_start";i:1;a:0:{}i:2;i:0;}i:1;a:3:{i:0;s:6:"header";i:1;a:3:{i:0;s:38:"Expandir disco máquina de telefónica";i:1;i:1;i:2;i:1;}i:2;i:1;}i:2;a:3:{i:0;s:12:"section_open";i:1;a:1:{i:0;i:1;}i:2;i:1;}i:3;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1;}i:4;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:325:"El disco inicial de un servidor recién creado en telefónica con ubuntu trae una una partición primaria y una partición swap, tal como en los años 80. Estas particiones están hechas para un disco de 40gb y no se ajustan automáticamente, por lo que si el disco es más grande todo el espacio extra no se podrá utilizar.";}i:2;i:55;}i:5;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:380;}i:6;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:380;}i:7;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:214:"Dado lo anterior y para poder aprovechar el disco completo, hay borrar la partición swap, modificar el tamaño de la partición primaria inicial y recrear la swap en formato archivo tal como se usa en el siglo 21.";}i:2;i:384;}i:8;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:598;}i:9;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:598;}i:10;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:21:"- Desactivar la swap:";}i:2;i:600;}i:11;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:627;}i:12;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:14:"
+# swapoff -a
+";i:1;N;i:2;N;}i:2;i:627;}i:13;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:627;}i:14;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:44:"- Editar las particiones del disco /dev/xvda";}i:2;i:651;}i:15;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:701;}i:16;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:20:"
+# cfdisk /dev/xvda
+";i:1;N;i:2;N;}i:2;i:701;}i:17;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:701;}i:18;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:37:"- Editar las particiones del arranque";}i:2;i:731;}i:19;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:768;}i:20;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:19:"
+# nano /etc/fstab
+";i:1;N;i:2;N;}i:2;i:775;}i:21;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:775;}i:22;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:43:"- Comentar la línea donde se carga la swap";}i:2;i:804;}i:23;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:853;}i:24;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:140:"
+# swap was on /dev/xvda5 during installation
+# UUID=bf79f9f4-8b14-4456-ad28-8c89db5b2a31 none            swap    sw              0       0
+";i:1;N;i:2;N;}i:2;i:853;}i:25;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:853;}i:26;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:51:"- Borrar todo y crear una partición nueva de tipo ";}i:2;i:1003;}i:27;a:3:{i:0;s:18:"doublequoteopening";i:1;a:0:{}i:2;i:1054;}i:28;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:7:"primary";}i:2;i:1055;}i:29;a:3:{i:0;s:18:"doublequoteclosing";i:1;a:0:{}i:2;i:1062;}i:30;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:87:" -automáticamente ocupará todo el disco y será tipo ext4-, escribir los cambios con ";}i:2;i:1063;}i:31;a:3:{i:0;s:18:"doublequoteopening";i:1;a:0:{}i:2;i:1150;}i:32;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:5:"write";}i:2;i:1151;}i:33;a:3:{i:0;s:18:"doublequoteclosing";i:1;a:0:{}i:2;i:1156;}i:34;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:30:", salir de cfdisk y reiniciar.";}i:2;i:1157;}i:35;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1193;}i:36;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:10:"
+# reboot
+";i:1;N;i:2;N;}i:2;i:1193;}i:37;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1193;}i:38;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:35:"- Crear la swapfile, ejemplo de 4gb";}i:2;i:1213;}i:39;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1254;}i:40;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:48:"
+# fallocate -l 4G /swapfile
+# mkswap /swapfile
+";i:1;N;i:2;N;}i:2;i:1254;}i:41;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1254;}i:42;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:37:"- Editar las particiones del arranque";}i:2;i:1312;}i:43;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1355;}i:44;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:19:"
+# nano /etc/fstab
+";i:1;N;i:2;N;}i:2;i:1355;}i:45;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1355;}i:46;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:39:"- Agregar línea para cargar nueva swap";}i:2;i:1385;}i:47;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1430;}i:48;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:28:"
+/swapfile none swap sw 0 0
+";i:1;N;i:2;N;}i:2;i:1430;}i:49;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1430;}i:50;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:25:"- Editar /etc/sysctl.conf";}i:2;i:1468;}i:51;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1499;}i:52;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:23:"
+nano /etc/sysctl.conf
+";i:1;N;i:2;N;}i:2;i:1499;}i:53;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1499;}i:54;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:93:"- Agregar línea al final para disminuir prioridad del sistema a ocupar swap en lugar de ram ";}i:2;i:1532;}i:55;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1631;}i:56;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:18:"
+vm.swappiness=10
+";i:1;N;i:2;N;}i:2;i:1631;}i:57;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:1631;}i:58;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:21:"- Guardar y Reiniciar";}i:2;i:1660;}i:59;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:1687;}i:60;a:3:{i:0;s:4:"code";i:1;a:3:{i:0;s:10:"
+# reboot
+";i:1;N;i:2;N;}i:2;i:1687;}i:61;a:3:{i:0;s:13:"section_close";i:1;a:0:{}i:2;i:1708;}i:62;a:3:{i:0;s:12:"document_end";i:1;a:0:{}i:2;i:1708;}}

@@ -1,0 +1,52 @@
+<pre class="code">from flask import Flask
+app = Flask(__name__)
+
+
+@app.route(&quot;/v1/catalog/service/redusuarios-apro&quot;)
+def fakeredusuarios():
+    return &quot;&quot;&quot;[{&quot;Node&quot;:&quot;redususarios1&quot;,&quot;Address&quot;:&quot;192.168.0.45&quot;,&quot;ServiceID&quot;:&quot;redusuarios-apro&quot;,
+      &quot;ServiceName&quot;:&quot;redusuarios-apro&quot;,&quot;ServiceTags&quot;:[&quot;timbre&quot;],
+      &quot;ServiceAddress&quot;:&quot;&quot;,&quot;ServicePort&quot;:8181,
+      &quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:35,
+      &quot;ModifyIndex&quot;:35}]&quot;&quot;&quot;
+
+
+@app.route(&quot;/v1/catalog/service/mongodb-analiticpro&quot;)
+def fakemongo():
+    return &quot;&quot;&quot;[{&quot;Node&quot;:&quot;mongodb0&quot;,&quot;Address&quot;:&quot;192.168.0.134&quot;,&quot;ServiceID&quot;:&quot;mongodb-analiticpro&quot;,
+    &quot;ServiceName&quot;:&quot;mongodb-analiticpro&quot;,&quot;ServiceTags&quot;:[&quot;secadora&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:1038,&quot;ModifyIndex&quot;:1040}]&quot;&quot;&quot;
+
+
+@app.route(&quot;/v1/catalog/service/mysql-analiticpro-db&quot;)
+def fakemysql():
+    return &quot;&quot;&quot;[{&quot;Node&quot;:&quot;jarjar&quot;,&quot;Address&quot;:&quot;192.168.0.223&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;jarjar&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:27,&quot;ModifyIndex&quot;:27},
+    {&quot;Node&quot;:&quot;sheldon&quot;,&quot;Address&quot;:&quot;192.168.0.203&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;sheldon&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:36,&quot;ModifyIndex&quot;:36},
+    {&quot;Node&quot;:&quot;lagertha&quot;,&quot;Address&quot;:&quot;192.168.0.146&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;lagertha&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:34,&quot;ModifyIndex&quot;:34},
+    {&quot;Node&quot;:&quot;xena&quot;,&quot;Address&quot;:&quot;192.168.0.206&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;xena&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:39,&quot;ModifyIndex&quot;:39},
+    {&quot;Node&quot;:&quot;mcgiver&quot;,&quot;Address&quot;:&quot;192.168.0.206&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;mcgiver&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:38,&quot;ModifyIndex&quot;:38},
+    {&quot;Node&quot;:&quot;scully&quot;,&quot;Address&quot;:&quot;192.168.0.127&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;scully&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:33,&quot;ModifyIndex&quot;:33},
+    {&quot;Node&quot;:&quot;morty&quot;,&quot;Address&quot;:&quot;192.168.0.91&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;morty&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:28,&quot;ModifyIndex&quot;:28},
+    {&quot;Node&quot;:&quot;mcfly&quot;,&quot;Address&quot;:&quot;192.168.0.132&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;mcfly&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:29,&quot;ModifyIndex&quot;:29},
+    {&quot;Node&quot;:&quot;bart&quot;,&quot;Address&quot;:&quot;192.168.0.15&quot;,&quot;ServiceID&quot;:&quot;mysql-analiticpro-db&quot;,
+    &quot;ServiceName&quot;:&quot;mysql-analiticpro-db&quot;,&quot;ServiceTags&quot;:[&quot;bart&quot;],&quot;ServiceAddress&quot;:&quot;&quot;,
+    &quot;ServicePort&quot;:3306,&quot;ServiceEnableTagOverride&quot;:false,&quot;CreateIndex&quot;:60963,&quot;ModifyIndex&quot;:60965}]&quot;&quot;&quot;
+
+if __name__ == &#039;__main__&#039;:
+    app.run(host=&#039;0.0.0.0&#039;, port=8500)</pre>

@@ -1,0 +1,46 @@
+
+<h1 class="sectionedit1" id="instalar_docker">Instalar docker</h1>
+<div class="level1">
+
+<p>
+0.- Si la máquina es nueva, recién creada:
+</p>
+<pre class="code">sudo apt-get update
+sudo apt-get upgrade</pre>
+
+<p>
+Reiniciar.
+</p>
+<pre class="code">sudo reboot</pre>
+
+<p>
+1.- Instalar docker
+</p>
+<pre class="code">curl -sSL https://get.docker.com/ | sh</pre>
+
+<p>
+2.- Añadir usuario linux (si corresponde) al grupo docker
+</p>
+<pre class="code">sudo usermod -aG docker linux</pre>
+
+<p>
+3.- Instalar utilidades
+</p>
+<pre class="code">sudo apt-get install git tree python-setuptools</pre>
+
+<p>
+Instalar pip
+</p>
+<pre class="code">sudo easy_install pip</pre>
+
+<p>
+Instalar docker-compose
+</p>
+<pre class="code">sudo pip install docker-compose</pre>
+
+<p>
+Reiniciar.
+</p>
+<pre class="code">sudo reboot</pre>
+
+</div>

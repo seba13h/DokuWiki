@@ -1,0 +1,15 @@
+Listado end-point Api Rest.
+ 
+ 1)Fan Pages:
+    -Add : /v1.0/fanpage/add
+    -delete: /v1.0/fanpage/delete/:idFp
+    -listar todas las fan pages: /v1.0/fanpage/listAll
+    -listar fan pages con error: /v1.0/fanpage/listError
+    -listar fan pages sin error: /v1.0/fanpage/listNoError
+    -listar fan pages invalidas: /v1.0/fanpage/listUnvalidated
+ 
+ 2)Tokens:
+    -add : /v1.0/token/add
+    -listar todos los tokens: /v1.0/token/listAll
+    -listar tokens con error: /v1.0/token/listError
+ 

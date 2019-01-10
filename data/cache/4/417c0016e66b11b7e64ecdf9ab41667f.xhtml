@@ -1,0 +1,108 @@
+
+<h1 class="sectionedit1" id="apache">Apache</h1>
+<div class="level1">
+<pre class="code">root@analiticpro:~# apt-get install apache2</pre>
+
+</div>
+<!-- EDIT1 SECTION "Apache" [1-82] -->
+<h2 class="sectionedit2" id="modulos_extra_de_apache">Módulos extra de apache</h2>
+<div class="level2">
+<pre class="code">a2enmod rewrite
+a2enmod proxy
+a2enmod proxy_http
+a2enmod headers
+service apache2 restart</pre>
+
+</div>
+<!-- EDIT2 SECTION "Módulos extra de apache" [83-226] -->
+<h2 class="sectionedit3" id="php">Php</h2>
+<div class="level2">
+<pre class="code">root@analiticpro:~# apt-get install php-mysql php libapache2-mod-php</pre>
+
+</div>
+<!-- EDIT3 SECTION "Php" [227-329] -->
+<h2 class="sectionedit4" id="modulo_wsgi">Módulo wsgi</h2>
+<div class="level2">
+<pre class="code">root@analiticpro:~# apt-get install libapache2-mod-wsgi</pre>
+
+</div>
+<!-- EDIT4 SECTION "Módulo wsgi" [330-428] -->
+<h2 class="sectionedit5" id="recomendaciones_para_los_virtual_hosts">Recomendaciones para los virtual hosts:</h2>
+<div class="level2">
+
+<p>
+En el virtual host de apache (por defecto en 
+</p>
+<pre class="code">/etc/apache2/sites-enabled/000-default</pre>
+
+<p>
+Bloquear acceso a directorio .git (en caso de proyecto ubicado en la raíz):
+</p>
+<pre class="code">&lt;VirtualHost *:80&gt;
+        ServerAdmin webmaster@localhost
+        ...
+        RewriteEngine On
+        RewriteRule \.git - [F,L]
+        ...</pre>
+
+<p>
+Deshabilitar listar directorios añadiendo “Options -Indexes” en los lugares donde corresponda
+</p>
+<pre class="code">&lt;VirtualHost *:80&gt;
+        ServerAdmin webmaster@localhost
+        ...
+        &lt;Directory /&gt;
+                Options -Indexes
+                ...
+        &lt;/Directory&gt;</pre>
+
+<p>
+Habilitar uso de ficheros .htaccess borrando o comentando “AllowOverride None”
+</p>
+<pre class="code">&lt;VirtualHost *:80&gt;
+        ServerAdmin webmaster@localhost
+        ...
+        &lt;Directory /&gt;
+                ...
+                #AllowOverride None
+        &lt;/Directory&gt;</pre>
+
+</div>
+<!-- EDIT5 SECTION "Recomendaciones para los virtual hosts:" [429-1366] -->
+<h2 class="sectionedit6" id="recomendaciones_archivo_principal_apacheconf">Recomendaciones archivo principal apache.conf</h2>
+<div class="level2">
+
+<p>
+Al final del fichero:
+</p>
+
+<p>
+Forzar utf-8
+</p>
+<pre class="code">AddDefaultCharset utf-8</pre>
+
+<p>
+Deshabilitar FileETag:
+</p>
+<pre class="code">FileETag None</pre>
+
+<p>
+Quitar versión del apache pública
+</p>
+<pre class="code">ServerTokens Prod
+ServerSignature Off</pre>
+
+</div>
+<!-- EDIT6 SECTION "Recomendaciones archivo principal apache.conf" [1367-1645] -->
+<h1 class="sectionedit7" id="servidor_de_cache">Servidor de cache</h1>
+<div class="level1">
+<pre class="code">root@analiticpro:~# apt-get install memcached</pre>
+
+</div>
+<!-- EDIT7 SECTION "Servidor de cache" [1646-1741] -->
+<h2 class="sectionedit8" id="conector_php-memcache">Conector php-memcache</h2>
+<div class="level2">
+<pre class="code">root@analiticpro:~# apt-get install php-memcache</pre>
+
+</div>
+<!-- EDIT8 SECTION "Conector php-memcache" [1742-] -->

@@ -1,0 +1,46 @@
+
+<h1 class="sectionedit1" id="cambiar_nombre_servidor">Cambiar nombre servidor</h1>
+<div class="level1">
+
+<p>
+Para cambiar el hostname a un servidor permanentemente
+</p>
+
+<p>
+Editar
+</p>
+<pre class="code">root@ip-10-253-2-164:~# nano /etc/hosts</pre>
+
+<p>
+Agregar línea para el nuevoNombre
+</p>
+<pre class="code">127.0.0.1 localhost
+127.0.0.1 nuevoNombre</pre>
+
+<p>
+editar
+</p>
+<pre class="code">root@ip-10-253-2-164:~# nano /etc/hostname</pre>
+
+<p>
+dejarlo como:
+</p>
+<pre class="code">nuevoNombre</pre>
+
+<p>
+y editar también /etc/cloud/templates/hosts.debian.tmpl
+</p>
+<pre class="code">127.0.1.1 {{fqdn}} {{hostname}}
+127.0.0.1 localhost
+127.0.0.1 nuevoNombre</pre>
+
+<p>
+ejecutar:
+</p>
+<pre class="code">root@ip-10-253-2-164:~# hostname nuevoNombre</pre>
+
+<p>
+Cerrar la sesión y entrar de nuevo o reiniciar.
+</p>
+
+</div>

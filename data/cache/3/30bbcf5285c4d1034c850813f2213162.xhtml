@@ -1,0 +1,65 @@
+
+<p>
+Los proxys para conectarse desde amazon a las bases de datos de apro de telefónica están configurados en nginx1 192.168.0.212, concretamente en la carpeta /etc/nginx/mysql-proxys. 
+</p>
+
+<p>
+Ocupan puertos del rango 5000-5999, agregados al grupo de seguridad sg-apro en telefónica.
+</p>
+
+<p>
+Son de la forma:
+</p>
+<pre class="code">upstream mysql_el177 {
+    server 192.168.0.176:3306;
+}
+
+server {
+    listen 5177;
+    proxy_pass mysql_el177;
+}
+</pre>
+
+<p>
+Listado de proxys, accesibles solo desde el66 o el27 en amazon:
+</p>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5152 - el152, secom</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5027 - el27, desarrollo</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5112 - el112</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5126 - el126, prensa</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5122 - el122</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5164 - el164</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5177 - el177</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5045 - el45</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5189 - el189</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 170.84.210.133:5066 - el66, base de datos de clientes</div>
+</li>
+</ul>

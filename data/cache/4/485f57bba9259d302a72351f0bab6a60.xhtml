@@ -1,0 +1,144 @@
+
+<p>
+Consola de administración de opencloud telefónica <a href="https://auth.openmovistarcloud.cl/authui/login.action?service=https://console.openmovistarcloud.cl/ecm/#/login" class="urlextern" title="https://auth.openmovistarcloud.cl/authui/login.action?service=https://console.openmovistarcloud.cl/ecm/#/login" rel="nofollow">https://auth.openmovistarcloud.cl/authui/login.action?service=https://console.openmovistarcloud.cl/ecm/#/login</a>
+</p>
+
+<p>
+Las ips pueden cambiar en el tiempo, esto es solo referencial.
+</p>
+
+<h2 class="sectionedit1" id="sistemas">Sistemas</h2>
+<div class="level2">
+
+<p>
+<strong>apro:</strong> Servidor que ejecuta el sistema web (no clásico) de apro. ip: 192.168.0.60
+</p>
+
+<p>
+<strong>satelites1:</strong> Servidor de donde se almacenan proyectos dependientes del obsoleto (pero aún en uso) analitic pro. ip: 192.168.0.153
+</p>
+
+<p>
+<strong>alertas1:</strong> Servidor que ejecuta el sistema de alertas de apro. ip: 192.168.0.50
+</p>
+
+<p>
+<strong>apicloud1:</strong> Servidor de apis usado para inscreen y nube apro. ip: 192.168.0.34
+</p>
+
+<p>
+<strong>elastic1:</strong> Servidor elasticsearch usado para inscreen. ip: 192.168.0.51, <a href="http://192.168.0.51:9100/" class="urlextern" title="http://192.168.0.51:9100/" rel="nofollow">http://192.168.0.51:9100/</a>
+</p>
+
+<p>
+<strong>inscreen1:</strong> Servidor para inscreen. ip: 192.168.0.148
+</p>
+
+<p>
+<strong>scriptclientes1:</strong> Servidor encargado de ejecutar scripts a la medida que modifican datos de apro, a la fecha solo para cliente bci. <a href="https://cloud.analitic.cl:3000/Analitic/aproScripts" class="urlextern" title="https://cloud.analitic.cl:3000/Analitic/aproScripts" rel="nofollow">https://cloud.analitic.cl:3000/Analitic/aproScripts</a>
+</p>
+
+<p>
+<strong>replay1:</strong> Servidor encargado de ejecutar replays, descargar tweets de los últimos 30 días. <a href="http://replay.analitic.cl/" class="urlextern" title="http://replay.analitic.cl/" rel="nofollow">http://replay.analitic.cl/</a> o en lan <a href="http://192.168.0.11/" class="urlextern" title="http://192.168.0.11/" rel="nofollow">http://192.168.0.11/</a> (urls accesibles solo desde la oficina o vpn). Colas: <a href="http://192.168.0.11:15672/#/queues" class="urlextern" title="http://192.168.0.11:15672/#/queues" rel="nofollow">http://192.168.0.11:15672/#/queues</a>
+</p>
+
+<p>
+<strong>redusuarios1:</strong> Servidor con api rest, que genera el json de la red de usuarios
+</p>
+
+<p>
+<strong>clasificador1:</strong> Servidor encargado de clasificación automática de tweets de apro <a href="http://192.168.0.183:15672/#/queues" class="urlextern" title="http://192.168.0.183:15672/#/queues" rel="nofollow">http://192.168.0.183:15672/#/queues</a>
+</p>
+
+<p>
+<strong>nginx1:</strong> Máquina con ip pública, ejecuta nginx y carga por proxy aplicaciones web que se ejecutan en otros servidores.
+</p>
+
+<p>
+<strong>router_nat:</strong> Máquina encargada de repartir internet entre servidores que no tienen ip pública, necesaria dado que telefónica se negó a activar NAT para que hubiera internet en la red local.
+</p>
+
+<p>
+<strong>consul1_wiki:</strong> Uno de los tres nodos maestros de consul y también hosting de ésta wiki. <a href="https://cloud.analitic.cl/dokuwiki/doku.php?id=start" class="urlextern" title="https://cloud.analitic.cl/dokuwiki/doku.php?id=start" rel="nofollow">https://cloud.analitic.cl/dokuwiki/doku.php?id=start</a>
+</p>
+
+<p>
+<strong>consul3_git:</strong> Uno de los tres nodos maestros de consul y también hosting del servicio gitea, hosting de git donde se almacenan los repositorios de analitic. Consul: <a href="http://192.168.0.32:8500/ui/" class="urlextern" title="http://192.168.0.32:8500/ui/" rel="nofollow">http://192.168.0.32:8500/ui/</a> Gitea: <a href="https://cloud.analitic.cl:3000/Analitic/" class="urlextern" title="https://cloud.analitic.cl:3000/Analitic/" rel="nofollow">https://cloud.analitic.cl:3000/Analitic/</a>
+</p>
+
+<p>
+<strong>consul2_vpn:</strong> Uno de los tres nodos maestros de consul y también el servicio de vpn.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sistemas&quot;,&quot;hid&quot;:&quot;sistemas&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;233-2249&quot;} -->
+<h2 class="sectionedit2" id="extraccion">Extracción</h2>
+<div class="level2">
+
+<p>
+<strong>facebook1:</strong> Servidor que ejecuta el sistema de extracción de menciones de facebook de apro. ip: 192.168.0.104. url de elasticsearch: <a href="http://192.168.0.104:9200/_plugin/head/" class="urlextern" title="http://192.168.0.104:9200/_plugin/head/" rel="nofollow">http://192.168.0.104:9200/_plugin/head/</a>
+</p>
+
+<p>
+<strong>gnip1:</strong> Servidor encargado de recibir tweets desde gnip y repartirlos a las bases de datos de apro. <a href="http://192.168.0.139:15672/#/queues" class="urlextern" title="http://192.168.0.139:15672/#/queues" rel="nofollow">http://192.168.0.139:15672/#/queues</a>
+</p>
+
+<p>
+<strong>youtubeyblogs:</strong> Servidor que ejecuta el sistema de extracción de menciones de medios y blogs (descargando vía feed RSS) y el de videos de youtube via api. Ip: 192.168.0.105. url de elasticsearch: <a href="http://192.168.0.105:9100" class="urlextern" title="http://192.168.0.105:9100" rel="nofollow">http://192.168.0.105:9100</a>
+</p>
+
+<p>
+<strong>flickr1:</strong> Servidor que ejecuta el sistema de extracción de menciones de flickr via api. Ip: 192.168.0.67. url de elasticsearch: <a href="http://192.168.0.67:9200/_plugin/head/" class="urlextern" title="http://192.168.0.67:9200/_plugin/head/" rel="nofollow">http://192.168.0.67:9200/_plugin/head/</a>, Url de rabbitmq (colas): <a href="http://192.168.0.67:15672/#/queues" class="urlextern" title="http://192.168.0.67:15672/#/queues" rel="nofollow">http://192.168.0.67:15672/#/queues</a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Extracci\u00f3n&quot;,&quot;hid&quot;:&quot;extraccion&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;2250-3054&quot;} -->
+<h2 class="sectionedit3" id="bases_de_datos">Bases de datos</h2>
+<div class="level2">
+
+<p>
+<strong>mongodb0:</strong> Servidor con mongodb, usado para almacenar tweets y generar red de usuarios. <a href="http://192.168.0.134:8191/" class="urlextern" title="http://192.168.0.134:8191/" rel="nofollow">http://192.168.0.134:8191/</a>
+</p>
+
+<p>
+<strong>bart:</strong> Base de datos mysql de apro, equivalente a antiguo servidor secom, el152. Ip: 192.168.0.158
+</p>
+
+<p>
+<strong>jarjar:</strong> Base de datos mysql de apro, equivalente a antiguo servidor desarrollo, el27. Ip: 192.168.0.223
+</p>
+
+<p>
+<strong>lagertha:</strong> Base de datos mysql de apro, equivalente a antiguo servidor el122. Ip: 192.168.0.146
+</p>
+
+<p>
+<strong>mcfly:</strong> Base de datos mysql de apro, equivalente a antiguo servidor prensa el126. Ip: 192.168.0.132
+</p>
+
+<p>
+<strong>sheldon:</strong> Base de datos mysql de apro, equivalente a antiguo servidor el112. Ip: 192.168.0.203
+</p>
+
+<p>
+<strong>xena:</strong> Base de datos mysql de apro, equivalente a antiguo servidor el164. Ip: 192.168.0.206
+</p>
+
+<p>
+<strong>mcgiver:</strong> Base de datos mysql de apro, equivalente a antiguo servidor el177. Ip: 192.168.0.176
+</p>
+
+<p>
+<strong>morty:</strong> Base de datos mysql de apro, equivalente a antiguo servidor el45. Ip: 192.168.0.91
+</p>
+
+<p>
+<strong>scully:</strong> Base de datos mysql de apro, equivalente a antiguo servidor el189. Ip: 192.168.0.127
+</p>
+
+<p>
+<strong>clon_el66:</strong> Base de datos de clientes de apro, equivalente a antiguo servidor el66. Ip: 192.168.0.5
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bases de datos&quot;,&quot;hid&quot;:&quot;bases_de_datos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;3055-&quot;} -->

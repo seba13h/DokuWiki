@@ -1,0 +1,67 @@
+====== Expandir disco máquina de telefónica ======
+
+El disco inicial de un servidor recién creado en telefónica con ubuntu trae una una partición primaria y una partición swap, tal como en los años 80. Estas particiones están hechas para un disco de 40gb y no se ajustan automáticamente, por lo que si el disco es más grande todo el espacio extra no se podrá utilizar.
+  
+Dado lo anterior y para poder aprovechar el disco completo, hay borrar la partición swap, modificar el tamaño de la partición primaria inicial y recrear la swap en formato archivo tal como se usa en el siglo 21.
+
+- Desactivar la swap:
+<code>
+# swapoff -a
+</code>
+
+- Editar las particiones del disco /dev/xvda
+<code>
+# cfdisk /dev/xvda
+</code>
+
+- Editar las particiones del arranque
+
+<code>
+# nano /etc/fstab
+</code>
+
+- Comentar la línea donde se carga la swap
+<code>
+# swap was on /dev/xvda5 during installation
+# UUID=bf79f9f4-8b14-4456-ad28-8c89db5b2a31 none            swap    sw              0       0
+</code>
+
+- Borrar todo y crear una partición nueva de tipo "primary" -automáticamente ocupará todo el disco y será tipo ext4-, escribir los cambios con "write", salir de cfdisk y reiniciar.
+<code>
+# reboot
+</code>
+
+- Crear la swapfile, ejemplo de 4gb
+<code>
+# fallocate -l 4G /swapfile
+# mkswap /swapfile
+</code>
+
+- Editar las particiones del arranque
+<code>
+# nano /etc/fstab
+</code>
+
+
+- Agregar línea para cargar nueva swap
+<code>
+/swapfile none swap sw 0 0
+</code>
+
+- Editar /etc/sysctl.conf
+<code>
+nano /etc/sysctl.conf
+</code>
+
+- Agregar línea al final para disminuir prioridad del sistema a ocupar swap en lugar de ram 
+<code>
+vm.swappiness=10
+</code>
+
+
+- Guardar y Reiniciar
+<code>
+# reboot
+</code>
+
+

@@ -1,0 +1,13 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1542632390;s:8:"modified";i:1544542132;}s:7:"creator";s:6:"Daniel";s:4:"user";s:6:"daniel";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:6:"daniel";s:6:"Daniel";s:9:"sebastian";s:19:"Sebastian Rodriguez";}s:5:"title";s:23:"Extracción de facebook";s:11:"description";a:2:{s:15:"tableofcontents";a:4:{i:0;a:4:{s:3:"hid";s:22:"extraccion_de_facebook";s:5:"title";s:23:"Extracción de facebook";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:13:"nombre_modulo";s:5:"title";s:15:"Nombre módulo:";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:27:"actualizador_de_ips_de_apro";s:5:"title";s:27:"Actualizador de ips de apro";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:8:"api_rest";s:5:"title";s:8:"API REST";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:256:"Extracción de facebook
+
+Nombre módulo:
+
+Propósito: Descripción de su función principal
+
+Ubicación: Carpeta/directorio donde está el código
+
+Control: Cómo iniciar y detener el servicio
+
+!Endpoints: listar end-points y lo que hacen
+
+!Claves de redis";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1542632390;s:8:"modified";i:1544542132;}s:7:"creator";s:6:"Daniel";s:4:"user";s:6:"daniel";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:6:"daniel";s:6:"Daniel";s:9:"sebastian";s:19:"Sebastian Rodriguez";}}}

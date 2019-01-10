@@ -1,0 +1,70 @@
+
+<h1 class="sectionedit1" id="expandir_disco_maquina_de_telefonica">Expandir disco máquina de telefónica</h1>
+<div class="level1">
+
+<p>
+El disco inicial de un servidor recién creado en telefónica con ubuntu trae una una partición primaria y una partición swap, tal como en los años 80. Estas particiones están hechas para un disco de 40gb y no se ajustan automáticamente, por lo que si el disco es más grande todo el espacio extra no se podrá utilizar.
+</p>
+
+<p>
+Dado lo anterior y para poder aprovechar el disco completo, hay borrar la partición swap, modificar el tamaño de la partición primaria inicial y recrear la swap en formato archivo tal como se usa en el siglo 21.
+</p>
+
+<p>
+- Desactivar la swap:
+</p>
+<pre class="code"># swapoff -a</pre>
+
+<p>
+- Editar las particiones del disco /dev/xvda
+</p>
+<pre class="code"># cfdisk /dev/xvda</pre>
+
+<p>
+- Editar las particiones del arranque
+</p>
+<pre class="code"># nano /etc/fstab</pre>
+
+<p>
+- Comentar la línea donde se carga la swap
+</p>
+<pre class="code"># swap was on /dev/xvda5 during installation
+# UUID=bf79f9f4-8b14-4456-ad28-8c89db5b2a31 none            swap    sw              0       0</pre>
+
+<p>
+- Borrar todo y crear una partición nueva de tipo “primary” -automáticamente ocupará todo el disco y será tipo ext4-, escribir los cambios con “write”, salir de cfdisk y reiniciar.
+</p>
+<pre class="code"># reboot</pre>
+
+<p>
+- Crear la swapfile, ejemplo de 4gb
+</p>
+<pre class="code"># fallocate -l 4G /swapfile
+# mkswap /swapfile</pre>
+
+<p>
+- Editar las particiones del arranque
+</p>
+<pre class="code"># nano /etc/fstab</pre>
+
+<p>
+- Agregar línea para cargar nueva swap
+</p>
+<pre class="code">/swapfile none swap sw 0 0</pre>
+
+<p>
+- Editar /etc/sysctl.conf
+</p>
+<pre class="code">nano /etc/sysctl.conf</pre>
+
+<p>
+- Agregar línea al final para disminuir prioridad del sistema a ocupar swap en lugar de ram 
+</p>
+<pre class="code">vm.swappiness=10</pre>
+
+<p>
+- Guardar y Reiniciar
+</p>
+<pre class="code"># reboot</pre>
+
+</div>

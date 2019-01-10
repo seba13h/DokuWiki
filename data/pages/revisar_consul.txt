@@ -1,0 +1,22 @@
+===== Revisar Consul =====
+
+
+La interfaz de consul debería ser accesible desde sus 3 nodos maestros en la red Local.
+
+Ver Nodos:
+
+http://192.168.0.82:8500/ui/#/movistarecs/nodes
+
+http://192.168.0.32:8500/ui/#/movistarecs/nodes
+
+http://192.168.0.159:8500/ui/#/movistarecs/nodes
+
+Ver Servicios:
+
+http://192.168.0.82:8500/ui/#/movistarecs/services
+
+http://192.168.0.32:8500/ui/#/movistarecs/services
+
+http://192.168.0.159:8500/ui/#/movistarecs/services
+
+

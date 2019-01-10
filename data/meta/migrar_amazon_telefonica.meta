@@ -1,0 +1,10 @@
+a:2:{s:7:"current";a:7:{s:4:"date";a:2:{s:7:"created";i:1530287808;s:8:"modified";i:1547127157;}s:7:"creator";s:6:"Daniel";s:4:"user";s:6:"daniel";s:11:"last_change";b:0;s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:509:"Parar extractores locales (no gnip) del servidor desarrollo
+  Parar extracción flickr
+  Activar redireccionamiento de tweets a telefónica (screen telefonica)
+  mongodb en telefónica iniciará guardado automático
+  Revisar colas http://192.168.0.139:15672/#/queues
+  Revisar mongo http://192.168.0.134:8191/
+  Activar guardado temporal de tweets en telefónica (screen cache)
+  Detener servicio consul en desarrollo (amazon)
+  Revisar http://consul.analiticpro.cl:8089/ui/#/amazonec2/nodes
+  Deregistrar…";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1530287808;}s:7:"creator";s:6:"Daniel";s:4:"user";s:6:"daniel";s:11:"last_change";b:0;}}

@@ -1,0 +1,186 @@
+====== Rescursos API Inscreen ======
+
+**EndPoint:**
+http://api.inscreen.cl/usuarios
+
+Obtenemos la lista de usuario en orden de nro de menciones
+
+Esta api no posee credencial hasta su paso a producción, por los constantes cambios que pueda presentar. Los datos encontrados son siempre del día actual, modificables desde la hora de consulta
+
+Por POST, se debe pasar los siguientes parámetros:
+
+  * **bd** = Base de datos a conectar (obligatorio). Las bd son desarrollo, el112, el122, el164, el177, el189, el45, eventos2 y secom.
+  * **arr_perfiles** = Array con el perfil, o los perfiles (comparables) (obligatorio).
+  * **horaIni** = Hora desde HH:mm:ss (opcional, default 00:00:00 GMT-0).
+  * **gmt** = Horas a descontar ("-n") o sumar ("n") (opcional, default 0).
+  * **limit_usuarios** = Cantidad registros de retorno (opcional).
+  * **arr_not_usuarios** : Array con los ID's de las fuentes a omitir (opcional).
+
+Ejemplo:
+
+<code>
+{
+   "bd":"secom",
+   "arr_perfiles":[524],
+   "horaIni":"22:00:00",
+   "gmt":"-5",
+   "limit_usuarios":5,
+   "arr_not_usuarios":[3051761,2268576]
+}
+
+</code>
+
+Resultado :
+
+<code>
+[
+    {
+        "id_fuente": 3794244,
+        "nombre": "EstéreoPlay",
+        "nick": "estereoplay",
+        "avatar": "https://pbs.twimg.com/profile_images/823821093727272960/LliKZ5nB_normal.jpg",
+        "total_menciones": 5
+    },
+    {
+        "id_fuente": 1027522,
+        "nombre": "Miguel",
+        "nick": "no_fumare",
+        "avatar": "https://pbs.twimg.com/profile_images/903305959241482240/cTtiqgye_normal.jpg",
+        "total_menciones": 4
+    },
+    {
+        "id_fuente": 3794221,
+        "nombre": "LUIS WILLIAM LLANOS",
+        "nick": "luiswllanosr",
+        "avatar": "https://pbs.twimg.com/profile_images/745426542319271940/c4CSOkCh_normal.jpg",
+        "total_menciones": 4
+    },
+    {
+        "id_fuente": 3744840,
+        "nombre": "Otro Desadaptado",
+        "nick": "ODesadaptado",
+        "avatar": "https://pbs.twimg.com/profile_images/732613774511837186/FvnWrsLG_normal.jpg",
+        "total_menciones": 4
+    },
+    {
+        "id_fuente": 278881,
+        "nombre": "Guillermo Arango",
+        "nick": "guilloarango",
+        "avatar": "https://pbs.twimg.com/profile_images/786596029890228225/2S9o5hSb_normal.jpg",
+        "total_menciones": 3
+    }
+]
+</code>
+
+**EndPoint:**
+http://api.inscreen.cl/cloud
+
+Obtenemos la lista de palabras. Los datos encontrados son siempre del día actual, modificables desde la hora de consulta
+
+Esta api no posee credencial hasta su paso a producción, por los constantes cambios que pueda presentar.
+
+Por POST, se debe pasar los siguientes parámetros:
+
+  * **bd** = Base de datos a conectar (obligatorio). Las bd son desarrollo, el112, el122, el164, el177, el189, el45, eventos2 y secom.
+  * **arr_perfiles** = Array con el perfil, o los perfiles (comparables) (obligatorio).
+  * **horaIni** = Hora desde HH:mm:ss (opcional, default 00:00:00 GMT-0).
+  * **gmt** = Horas a descontar ("-n") o sumar ("n") (opcional, default 0).
+  * **size** = Cantidad de palabras a retornar (default 100) (obligatorio).
+
+
+Ejemplo:
+
+<code>
+{
+   "bd":"secom",
+   "arr_perfiles":[524],
+   "horaIni":"22:00:00",
+   "size":10,
+   "gmt":"3"
+}
+</code>
+
+Resultado :
+
+<code>
+{
+    "count": 129,
+    "result": [
+        {
+            "key": "@enlajugadarcn",
+            "doc_count": 513
+        },
+        {
+            "key": "@casaleantonio",
+            "doc_count": 119
+        },
+        {
+            "key": "@guilloarango",
+            "doc_count": 90
+        },
+        {
+            "key": "@udsnoexisten",
+            "doc_count": 72
+        },
+        {
+            "key": "12",
+            "doc_count": 68
+        },
+        {
+            "key": "@mdefrancisco",
+            "doc_count": 67
+        },
+        {
+            "key": "@fcfseleccioncol",
+            "doc_count": 55
+        },
+        {
+            "key": "94",
+            "doc_count": 49
+        },
+        {
+            "key": "venezuela",
+            "doc_count": 45
+        },
+        {
+            "key": "vs",
+            "doc_count": 42
+        }
+    ]
+}
+</code>
+
+**EndPoint:**
+http://api.inscreen.cl/word
+
+Obtenemos un array con el id_articulo de las menciones cuya palabra de búsqueda se encuentra en el texto. Los datos encontrados son siempre del día actual, modificables desde la hora de consulta
+
+Esta api no posee credencial hasta su paso a producción, por los constantes cambios que pueda presentar.
+
+Por POST, se debe pasar los siguientes parámetros:
+
+  * **bd** = Base de datos a conectar (obligatorio). Las bd son desarrollo, el112, el122, el164, el177, el189, el45, eventos2 y secom.
+  * **arr_perfiles** = Array con el perfil, o los perfiles (comparables) (obligatorio).
+  * **horaIni** = Hora desde HH:mm:ss (opcional, default 00:00:00 GMT-0).
+  * **word** = palabra de búsqueda.
+  * **gmt** = Horas a descontar ("-n") o sumar ("n") (opcional, default 0).
+
+
+Ejemplo:
+
+<code>
+{
+   "bd":"secom",
+   "arr_perfiles":[524],
+   "dateFrom":"2017-08-30",
+   "horaIni":"22:00:00",
+   "word":"conferencia",
+   "gmt":"3"
+}
+</code>
+
+Resultado :
+
+<code>
+"[2224,233432,3323,22223]"
+</code>

@@ -1,0 +1,126 @@
+==== Agregar usuario y llave ====
+
+Sea el usuario nuevo "danilo"
+
+<code>
+root@ip-10-253-2-164:~# adduser danilo
+Adding user `danilo' ...
+Adding new group `danilo' (1001) ...
+Adding new user `danilo' (1001) with group `danilo' ...
+Creating home directory `/home/danilo' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for danilo
+Enter the new value, or press ENTER for the default
+        Full Name []: Danilo
+        Room Number []: 
+        Work Phone []: 
+        Home Phone []: 
+        Other []: 
+Is the information correct? [Y/n] 
+</code>
+
+En una máquina cliente subimos la llave del usuario nuevo:
+
+<code>
+daniel@daniel-desktop:~/.ssh/keys$ scp danilo.pub ubuntu@54.232.178.126:/home/ubuntu/.
+</code>
+
+Habiendo movido la llave al directorio del usuario en el servidor ahora le damos permisos a la llave y pasamos al usuario nuevo:
+
+<code>
+root@ip-10-253-2-164:/home/danilo# chown danilo danilo.pub 
+root@ip-10-253-2-164:/home/danilo# su danilo
+</code>
+
+En la raíz creamos directorio .ssh y copiamos la key a authorized_keys:
+
+<code>
+danilo@ip-10-253-2-164:~$ mkdir .ssh
+danilo@ip-10-253-2-164:~$ cp danilo.pub .ssh/
+danilo@ip-10-253-2-164:~$ cd .ssh
+danilo@ip-10-253-2-164:~/.ssh$ mv danilo.pub authorized_keys
+danilo@ip-10-253-2-164:~/.ssh$ chmod 700 authorized_keys
+danilo@ip-10-253-2-164:~$ cd
+danilo@ip-10-253-2-164:~$ chmod 700 .ssh
+</code>
+
+==== Configurar permisos web y logging ====
+
+Asignamos grupo de apache con permisos para que pueda editar archivos web
+
+<code>
+root@ip-10-253-2-164:~# usermod -a -G adm,www-data,systemd-journal,danilo danilo
+</code>
+
+el grupo adm es para poder leer los logs.
+
+Opcionalmente, podemos hacer que se compartan todos los archivos nuevos con 775 añadiendo
+
+<code>
+umask 002
+</code>
+
+Al final de /home/danilo/.bashrc
+
+==== Permisos de superusuario (sudo) ====
+
+Como root, añadir el usuario nuevo a sudoers
+
+<code>
+root@eventos2:/home/jorge# nano /etc/sudoers
+</code>
+
+sudoers:
+
+<code>
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+danilo  ALL=(ALL:ALL) ALL
+</code>
+
+==== Ajustes varios ====
+
+en /home/<usuario>/.bashrc
+
+Agregar
+<code>
+function crontab {
+    if [ $@ == "-r" ]
+    then
+        echo "opción deshabilitada."
+    else
+        /usr/bin/crontab $@
+    fi
+}
+
+umask 002
+
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+     echo "Initialising new SSH agent..."
+     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     echo succeeded
+     chmod 600 "${SSH_ENV}"
+     . "${SSH_ENV}" > /dev/null
+}
+
+# Source SSH settings, if applicable
+
+
+if [ -f "${SSH_ENV}" ]; then
+     . "${SSH_ENV}" > /dev/null
+     #ps ${SSH_AGENT_PID} doesn't work under cywgin
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+         start_agent;
+     }
+else
+     start_agent;
+fi
+
+</code>
+
+No olvidar reemplazar <usuario> por el nombre correcto.

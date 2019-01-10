@@ -1,0 +1,52 @@
+====== Instalar docker ======
+
+
+0.- Si la máquina es nueva, recién creada:
+
+<code>
+sudo apt-get update
+sudo apt-get upgrade
+</code>
+
+Reiniciar.
+
+<code>
+sudo reboot
+</code>
+
+1.- Instalar docker
+
+<code>
+curl -sSL https://get.docker.com/ | sh
+</code>
+
+2.- Añadir usuario linux (si corresponde) al grupo docker
+
+<code>
+sudo usermod -aG docker linux
+</code>
+
+3.- Instalar utilidades
+
+<code>
+sudo apt-get install git tree python-setuptools
+</code>
+
+Instalar pip
+
+<code>
+sudo easy_install pip
+</code>
+
+Instalar docker-compose
+
+<code>
+sudo pip install docker-compose
+</code>
+
+
+Reiniciar.
+
+<code>
+sudo reboot
+</code>
