@@ -1,0 +1,85 @@
+==== octosync ====
+Octosync es un sistema Web que permite hacer analisis de cuentas de Redes Sociales, para comprender la audencia, con el fin de mejorar decisiones y conocer el desempeño del contenido y la comparación con la competencia. Trabajamos para hacer de OctoSync una herramienta práctica, que proporcione información estratégica de manera simple y funcional.
+
+OctoSync es un sistema de fácil uso, con la capacidad de comparar diversas Fan Pages de Facebook, cuentas de Instagram y de Twitter, sin importar si eres administrador ni la cantidad de seguidores que tengan. Las Redes Sociales que actualmente se pueden analizar son Fan Pages Facebook, Cuentas Instagram y Cuentas Twitter.
+
+Funcionalidades
+1 Arquitectura de Software
+  * Arquitectura de Software
+   - {{:playground:arq.png?400|}}
+  
+2 Modelo de Datos
+  * Unordered List ItemModelo de Datos
+  - {{:playground:modelodatos.png?400|}}
+
+3 Funcionalidades
+  * 3.1 Estadisticas Generales por Plataformas (Perfil unico y Comparativo por fecha)
+  * 3.1.1 Resumen Cuenta (Fans, Posts, Reacciones)
+  * 3.1.2 Tabla Menciones
+  * 3.1.2.1 Conteo Reacciones
+  * 3.1.2.2 Nube de Palabras de Comentarios
+  * 3.1.2.3 Busqueda
+  * 3.2 Interacciones Perfil (Grafico)
+  * 3.3 Actividad de Usuarios (Grafico)
+  * 3.3.1 Comparativo : Seleccionar
+  * 3.4 Fans Acumulados
+  * 3.4.1 Fans Locales y Globales Acumulados
+  * 3.5 PTA Totales (Grafico solo Facebook)
+  * 3.6 Tipo Publicaciones (Grafico)
+  * 3.7 Gestion de Perfiles por Plataforma (Agregar, Eliminar, Ver Cantidad Disponibles, Gestion de Tokens)
+  * 3.8 Planes y Perfil de Usuario
+  * 3.8.1 Nombre de Usuario y Contraseña (Solo Pagos)
+  * 3.8.2 Planes
+  * 3.8.2.1 Listado de Planes
+  * 3.8.2.2 Compra de Planes (crear suscripcion Stripe)
+  * 3.8.3 Cambio de Tarjeta de Credito (Solo Pagos)
+  * 3.8.4 Listado de Pagos Realizados (Descarga Invoice)
+  * 3.8.5 Datos de Facturacion (Editar)
+  * 3.9 Compra Plan desde Pagina Web
+  * 3.9.1 Inicio y Aprobacion
+  * 3.9.2 Encuesta Inicial
+  * 3.9.3 Seleccion FanPages (Al modificar Plan)
+  * 3.10 Login Usuario
+  * 3.10.1 Facebook
+  * 3.10.2 Nombre Usuario y Contraseña
+  * 3.11 Stripe Endpoint (Webhook)
+  * 3.12 Extractores
+  * 3.12.1 FanCount Twitter
+  * 3.12.2 FanCount Instagram
+  * 3.12.3 FanCount y PTA Facebook 
+Estructura del Proyecto
+  - Descripcion y explicacion de las carpetas y archivos importantes
+
+  * /_docs (documentacion del proyecto)
+  * /ajax (manejo de llamadas)
+  * /caracol (Login especial)
+  * /class (libreria)
+  * /Facebook (SDK)
+  * /insta (Gestion de plataforma Instagram)
+  * /login (Vistas del login y recuperar contraseña)
+  * /paypal (deprecado?)
+  * /stripe (SDK y cupon, suscripcion y cambio tarjeta)
+  * /twit (Gestion plataforma Twitter)
+Tecnologias usadas y requisitos de instalacion:
+  * PHP 5.5.9
+  * jquery-1.11.0.min.js
+  * Twitter SDK “abraham/twitteroauth”: “^0.6.2”
+  * Instagram SDK (https://github.com/florianbeer/Instagram-PHP-API)
+  * Facebook SDK VERSION 4.0.9
+  * Facebook API ‘v2.6’
+  * Base de Datos Amazon-Aurora Mysql v 5.6.10
+Despliegue Servidores
+Instancia	Tipo	Region	Objetivo	IP Local	IP Publica	Contenido
+Octosync desarrollo	servidor m3.medium	Virginia	Se generan pruebas del sistema en modo desarrollo y se interactúa con BD octosync	172.31.42.212	34.236..34.167	Extractor de fans para Twitter, Facebook e Instagram Extractor de post/tweets para Twitter, Facebook a Instagram Sistema web de desarrollo (desatest.octosync.com))
+Octosync producción	servidor m3.medium	Virginia	Produccion	54.227.170.95	52.44.188.244	Extractores y sistema.octosync.com
+Bases de Datos
+Instancia	Tipo	Region	Objetivo	IP	user
+Octosync desarrollo	Aurora	Virginia	BD desarrollo test	octosync.c8s0ibdbydld.us-east-1.rds.amazonaws.com	root
+Octosync producción	Aurora	Virginia	BD Produccion	octosyncprod.c8s0ibdbydld.us-east-1.rds.amazonaws.com	root
+Instalacion
+  * mkdir carpeta
+  * cd carpeta
+  * git clone 
+  * #Editar archivos de configuracion : class/bd.class.php class/functiones.php
+Equipo
+  * Mauricio Aburto Jonathan Calderon

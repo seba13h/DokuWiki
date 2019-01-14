@@ -1,0 +1,3 @@
+==== INDICE ====
+  * [[Manuales de Uso | Manuales de Uso ]]
+  * [[Informes | Informes de Industria ]]

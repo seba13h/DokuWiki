@@ -1,39 +1,39 @@
-====== Formatting Syntax ======
+====== Formato de sintaxis ======
 
-[[doku>DokuWiki]] supports some simple markup language, which tries to make the datafiles to be as readable as possible. This page contains all possible syntax you may use when editing the pages. Simply have a look at the source of this page by pressing "Edit this page". If you want to try something, just use the [[playground:playground|playground]] page. The simpler markup is easily accessible via [[doku>toolbar|quickbuttons]], too.
+[[doku>DokuWiki]] admite algunos lenguajes de marcado simples, que intentan hacer que los archivos de datos sean lo más legibles posible. Esta página contiene toda la sintaxis posible que puede utilizar al editar las páginas. Simplemente eche un vistazo a la fuente de esta página presionando "Editar esta página".
 
-===== Basic Text Formatting =====
+===== formato de texto basico =====
 
-DokuWiki supports **bold**, //italic//, __underlined__ and ''monospaced'' texts. Of course you can **__//''combine''//__** all these.
+DokuWiki admite los textos **bold**, //italic//, __underlined__ y ''monospaced''. Por supuesto que puede  **__//''combine''//__** todo esto.
+- Ej:
+  DokuWiki admite textos **bold**, //italic//, __underlined__ y ''monospaced'' .
+  Por supuesto que puede **__//''combine''//__** todo esto.
 
-  DokuWiki supports **bold**, //italic//, __underlined__ and ''monospaced'' texts.
-  Of course you can **__//''combine''//__** all these.
+Tambien puede utilizar <sub>subscript</sub> and <sup>superscript</sup>.
+ - EJ:
+  Tambien puede utilizar <sub>subscript</sub> and <sup>superscript</sup>.
 
-You can use <sub>subscript</sub> and <sup>superscript</sup>, too.
+Tambien puedes marcar algo como <del>eliminado</del>.
+ - Ej:
+  Tambien puedes marcar algo como <del>eliminado</del>.
 
-  You can use <sub>subscript</sub> and <sup>superscript</sup>, too.
+** Los párrafos ** se crean a partir de líneas en blanco. Si desea ** forzar una nueva línea ** sin un párrafo, puede usar dos barras invertidas seguidas de un espacio en blanco o el final de la línea.
 
-You can mark something as <del>deleted</del> as well.
+Este es un texto con algunos saltos de línea. \\ Tenga en cuenta que
+dos barras invertidas solo se reconocen al final de una línea \\
+o seguido de \\ un espacio en blanco \\ esto sucede sin él \\ Ej:
 
-  You can mark something as <del>deleted</del> as well.
+  Este es un texto con algunos saltos de línea\\ Tenga en cuenta que
+  dos barras invertidas solo se reconocen al final de una línea\\
+  o segido de\\ un espacio en blanco \\esto sucede sin él.
 
-**Paragraphs** are created from blank lines. If you want to **force a newline** without a paragraph, you can use two backslashes followed by a whitespace or the end of line.
-
-This is some text with some linebreaks\\ Note that the
-two backslashes are only recognized at the end of a line\\
-or followed by\\ a whitespace \\this happens without it.
-
-  This is some text with some linebreaks\\ Note that the
-  two backslashes are only recognized at the end of a line\\
-  or followed by\\ a whitespace \\this happens without it.
-
-You should use forced newlines only if really needed.
+Debes usar nuevas líneas forzadas solo si es realmente necesario.
 
 ===== Links =====
 
-DokuWiki supports multiple ways of creating links.
+DokuWiki soporta múltiples formas de crear enlaces.
 
-==== External ====
+==== Externo ====
 
 External links are recognized automagically: http://www.google.com or simply www.google.com - You can set the link text as well: [[http://www.google.com|This Link points to google]]. Email addresses like this one: <andi@splitbrain.org> are recognized, too.
 
@@ -42,7 +42,7 @@ External links are recognized automagically: http://www.google.com or simply www
   link text as well: [[http://www.google.com|This Link points to google]]. Email
   addresses like this one: <andi@splitbrain.org> are recognized, too.
 
-==== Internal ====
+==== Interno ====
 
 Internal links are created by using square brackets. You can either just give a [[pagename]] or use an additional [[pagename|link text]].
 
@@ -74,7 +74,7 @@ DokuWiki supports [[doku>Interwiki]] links. These are quick links to other Wikis
   DokuWiki supports [[doku>Interwiki]] links. These are quick links to other Wikis.
   For example this is a link to Wikipedia's page about Wikis: [[wp>Wiki]].
 
-==== Windows Shares ====
+==== Acciones de WIndows ====
 
 Windows shares like [[\\server\share|this]] are recognized, too. Please note that these only make sense in a homogeneous user group like a corporate [[wp>Intranet]].
 
@@ -92,7 +92,7 @@ Notes:
 $lang['js']['nosmblinks'] = '';
 </code>
 
-==== Image Links ====
+==== LInks de imagen ====
 
 You can also use an image to link to another internal or external page by combining the syntax for links and [[#images_and_other_files|images]] (see below) like this:
 
@@ -104,29 +104,29 @@ Please note: The image formatting is the only formatting syntax accepted in link
 
 The whole [[#images_and_other_files|image]] and [[#links|link]] syntax is supported (including image resizing, internal and external images and URLs and interwiki links).
 
-===== Footnotes =====
+===== Notas de pie =====
 
 You can add footnotes ((This is a footnote)) by using double parentheses.
 
   You can add footnotes ((This is a footnote)) by using double parentheses.
 
-===== Sectioning =====
+===== Secciones =====
 
 You can use up to five different levels of headlines to structure your content. If you have more than three headlines, a table of contents is generated automatically -- this can be disabled by including the string ''<nowiki>~~NOTOC~~</nowiki>'' in the document.
 
-==== Headline Level 3 ====
-=== Headline Level 4 ===
-== Headline Level 5 ==
+==== Titulos nivel 3 ====
+=== Titulos nivel 4 ===
+==Titulos nivel 5 ==
 
-  ==== Headline Level 3 ====
-  === Headline Level 4 ===
-  == Headline Level 5 ==
+  ==== Titulos nivel 3 ====
+  ===Titulos nivel 4 ===
+  == Titulos nivel 5 ==
 
 By using four or more dashes, you can make a horizontal line:
 
 ----
 
-===== Media Files =====
+===== Archivos Multimedia =====
 
 You can include external and internal [[doku>images|images, videos and audio files]] with curly brackets. Optionally you can specify the size of them.
 
@@ -193,7 +193,7 @@ When you upload a ''video.webm'' and ''video.ogv'' next to the referenced ''vide
 
 Additionally DokuWiki supports a "poster" image which will be shown before the video has started. That image needs to have the same filename as the video and be either a jpg or png file. In the example above a ''video.jpg'' file would work.
 
-===== Lists =====
+===== Listas =====
 
 Dokuwiki supports ordered and unordered lists. To create a list item, indent your text by two spaces and use a ''*'' for unordered lists or a ''-'' for ordered ones.
 
@@ -221,13 +221,13 @@ Dokuwiki supports ordered and unordered lists. To create a list item, indent you
 
 Also take a look at the [[doku>faq:lists|FAQ on list items]].
 
-===== Text Conversions =====
+===== Conversion de texto =====
 
 DokuWiki can convert certain pre-defined characters or strings into images or other text or HTML.
 
 The text to image conversion is mainly done for smileys. And the text to HTML conversion is used for typography replacements, but can be configured to use other HTML as well.
 
-==== Text to Image Conversions ====
+==== Conversion de texto a Imagen ====
 
 DokuWiki converts commonly used [[wp>emoticon]]s to their graphical equivalents. Those [[doku>Smileys]] and other images can be configured and extended. Here is an overview of Smileys included in DokuWiki:
 
@@ -252,7 +252,7 @@ DokuWiki converts commonly used [[wp>emoticon]]s to their graphical equivalents.
   * FIXME %%  FIXME %%
   * DELETEME %% DELETEME %%
 
-==== Text to HTML Conversions ====
+==== Conversion de texto a HTML ====
 
 Typography: [[DokuWiki]] can convert simple text characters to their typographically correct entities. Here is an example of recognized characters.
 
@@ -268,7 +268,7 @@ The same can be done to produce any kind of HTML, it just needs to be added to t
 
 There are three exceptions which do not come from that pattern file: multiplication entity (640x480), 'single' and "double quotes". They can be turned off through a [[doku>config:typography|config option]].
 
-===== Quoting =====
+===== Citando =====
 
 Some times you want to mark some text to show it's a reply or comment. You can use the following syntax:
 
@@ -298,7 +298,7 @@ I think we should do it
 
 >>> Then lets do it!
 
-===== Tables =====
+===== Tablas =====
 
 DokuWiki supports a simple syntax to create tables.
 
@@ -360,7 +360,7 @@ This is how it looks in the source:
 
 Note: Vertical alignment is not supported.
 
-===== No Formatting =====
+===== Sin formato =====
 
 If you need to display text exactly like it is typed (without any formatting), enclose the area either with ''%%<nowiki>%%'' tags or even simpler, with double percent signs ''<nowiki>%%</nowiki>''.
 
@@ -374,7 +374,7 @@ The same is true for %%//__this__ text// with a smiley ;-)%%.
   </nowiki>
   The same is true for %%//__this__ text// with a smiley ;-)%%.
 
-===== Code Blocks =====
+===== Bloques de Codigo =====
 
 You can include code blocks into your documents by either indenting them by at least two spaces (like used for the previous examples) or by using the tags ''%%<code>%%'' or ''%%<file>%%''.
 
@@ -400,7 +400,7 @@ Those blocks were created by this source:
   This is pretty much the same, but you could use it to show that you quoted a file.
   </file>
 
-==== Syntax Highlighting ====
+==== Resultados de sintaxis ====
 
 [[wiki:DokuWiki]] can highlight sourcecode, which makes it easier to read. It uses the [[http://qbnz.com/highlighter/|GeSHi]] Generic Syntax Highlighter -- so any language supported by GeSHi is supported. The syntax uses the same code and file blocks described in the previous section, but this time the name of the language syntax to be highlighted is included inside the tag, e.g. ''<nowiki><code java></nowiki>'' or ''<nowiki><file java></nowiki>''.
 
@@ -437,7 +437,7 @@ When you use the ''%%<code>%%'' or ''%%<file>%%'' syntax as above, you might wan
 If you don't want any highlighting but want a downloadable file, specify a dash (''-'') as the language code: ''%%<code - myfile.foo>%%''.
 
 
-===== Embedding HTML and PHP =====
+===== Incrustar HTML y PHP =====
 
 You can embed raw HTML or PHP code into your documents by using the ''%%<html>%%'' or ''%%<php>%%'' tags. (Use uppercase tags if you need to enclose block level elements.)
 
@@ -487,7 +487,7 @@ echo '</tr></table>';
 
 **Please Note**: HTML and PHP embedding is disabled by default in the configuration. If disabled, the code is displayed instead of executed.
 
-===== RSS/ATOM Feed Aggregation =====
+===== Añadir RSS/ATOM =====
 [[DokuWiki]] can integrate data from external XML feeds. For parsing the XML feeds, [[http://simplepie.org/|SimplePie]] is used. All formats understood by SimplePie can be used in DokuWiki as well. You can influence the rendering by multiple additional space separated parameters:
 
 ^ Parameter  ^ Description ^
@@ -510,7 +510,7 @@ By default the feed will be sorted by date, newest items first. You can sort it 
 {{rss>http://slashdot.org/index.rss 5 author date 1h }}
 
 
-===== Control Macros =====
+===== Mascros de control =====
 
 Some syntax influences how DokuWiki renders a page without creating any output it self. The following control macros are availble:
 
@@ -518,7 +518,7 @@ Some syntax influences how DokuWiki renders a page without creating any output i
 | %%~~NOTOC~~%%   | If this macro is found on the page, no table of contents will be created |
 | %%~~NOCACHE~~%% | DokuWiki caches all output by default. Sometimes this might not be wanted (eg. when the %%<php>%% syntax above is used), adding this macro will force DokuWiki to rerender a page on every call |
 
-===== Syntax Plugins =====
+===== Complementos de sintaxis =====
 
 DokuWiki's syntax can be extended by [[doku>plugins|Plugins]]. How the installed plugins are used is described on their appropriate description pages. The following syntax plugins are available in this particular DokuWiki installation:
 

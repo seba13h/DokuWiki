@@ -10,8 +10,12 @@ Octosync es un sistema Web que permite hacer analisis de cuentas de Redes Social
 OctoSync es un sistema de fácil uso, con la capacidad de comparar diversas Fan Pages de Facebook, cuentas de Instagram y de Twitter, sin importar si eres administrador ni la cantidad de seguidores que tengan. Las Redes Sociales que actualmente se pueden analizar son Fan Pages Facebook, Cuentas Instagram y Cuentas Twitter.
 </p>
 
+</div>
+
+<h4 id="funcionalidades">Funcionalidades</h4>
+<div class="level4">
+
 <p>
-Funcionalidades
 1 Arquitectura de Software
 </p>
 <ul>
@@ -109,9 +113,10 @@ Funcionalidades
 </li>
 </ul>
 
-<p>
-Estructura del Proyecto
-</p>
+</div>
+
+<h4 id="estructura_del_proyecto">Estructura del Proyecto</h4>
+<div class="level4">
 <ol>
 <li class="level1"><div class="li"> Descripcion y explicacion de las carpetas y archivos importantes</div>
 </li>
@@ -159,17 +164,46 @@ Tecnologias usadas y requisitos de instalacion:
 </li>
 </ul>
 
-<p>
-Despliegue Servidores
-Instancia	Tipo	Region	Objetivo	IP Local	IP Publica	Contenido
-Octosync desarrollo	servidor m3.medium	Virginia	Se generan pruebas del sistema en modo desarrollo y se interactúa con BD octosync	172.31.42.212	34.236..34.167	Extractor de fans para Twitter, Facebook e Instagram Extractor de post/tweets para Twitter, Facebook a Instagram Sistema web de desarrollo (desatest.octosync.com))
-Octosync producción	servidor m3.medium	Virginia	Produccion	54.227.170.95	52.44.188.244	Extractores y sistema.octosync.com
-Bases de Datos
-Instancia	Tipo	Region	Objetivo	IP	user
-Octosync desarrollo	Aurora	Virginia	BD desarrollo test	octosync.c8s0ibdbydld.us-east-1.rds.amazonaws.com	root
-Octosync producción	Aurora	Virginia	BD Produccion	octosyncprod.c8s0ibdbydld.us-east-1.rds.amazonaws.com	root
-Instalacion
-</p>
+</div>
+
+<h5 id="despliegue_servidores">Despliegue Servidores</h5>
+<div class="level5">
+<div class="table sectionedit2"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Instancia	</th><th class="col1 leftalign"> Tipo	</th><th class="col2"> Region </th><th class="col3"> Objetivo </th><th class="col4 leftalign">IP Local  </th><th class="col5">IP Publica </th><th class="col6">Contenido </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> Octosync desarrollo </td><td class="col1"> servidor m3.medium</td><td class="col2"> Virginia </td><td class="col3 leftalign"> Se generan pruebas del sistema en modo desarrollo y se interactúa con BD octosync	</td><td class="col4"> 172.31.42.212 </td><td class="col5"> 34.236..34.167 </td><td class="col6"> Extractor de fans para Twitter, Facebook e Instagram Extractor de post/tweets para Twitter, Facebook a Instagram Sistema web de desarrollo (desatest.octosync.com))</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Octosync producción	</td><td class="col1 leftalign">servidor m3.medium	</td><td class="col2 leftalign">Virginia	</td><td class="col3 leftalign">Produccion	</td><td class="col4 leftalign">54.227.170.95	</td><td class="col5 leftalign">52.44.188.244	</td><td class="col6">Extractores y sistema.octosync.com</td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:2,&quot;range&quot;:&quot;3096-3640&quot;} -->
+</div>
+
+<h4 id="bases_de_datos">Bases de Datos</h4>
+<div class="level4">
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign">Instancia	</th><th class="col1 leftalign">Tipo	</th><th class="col2 leftalign">Region	</th><th class="col3 leftalign">Objetivo	</th><th class="col4 leftalign">IP	</th><th class="col5">user</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign">Octosync desarrollo	</td><td class="col1 leftalign">Aurora	</td><td class="col2 leftalign">Virginia	</td><td class="col3">BD desarrollo test</td><td class="col4 rightalign">	octosync.c8s0ibdbydld.us-east-1.rds.amazonaws.com</td><td class="col5 rightalign">	root</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">Octosync producción</td><td class="col1 centeralign">	Aurora	</td><td class="col2 leftalign">Virginia	</td><td class="col3">BD Produccion</td><td class="col4 rightalign">	octosyncprod.c8s0ibdbydld.us-east-1.rds.amazonaws.com</td><td class="col5 rightalign">	root</td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:3,&quot;range&quot;:&quot;3664-3943&quot;} -->
+</div>
+
+<h4 id="instalacion">Instalacion</h4>
+<div class="level4">
 <ul>
 <li class="level1"><div class="li"> mkdir carpeta</div>
 </li>

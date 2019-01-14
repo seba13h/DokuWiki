@@ -43,14 +43,42 @@ if($technical) $feedbackLink .= rawurlencode("\n\n====PLEASE DO NOT DELETE=====\
 <?php
 if($sidebarPage) tpl_include_page("sidebar");
 ?>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=wiki:dokuwiki" ?>">
-    <i class="material-icons" role="presentation">file_copy</i>
-    Documentacion</a>
-<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=playground:playground" ?>">
-    <i class="material-icons" role="presentation">build</i>
-    Uso Tecnico</a>
+<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=start" ?>">
+    <i class="material-icons" role="presentation">home</i>
+    Home</a>
+<a id="btnGroupDrop1" class="mdl-navigation__link"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer">
+        <i class="material-icons" role="presentation">build</i>
+      Operaciones
+    </a>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=sistema" ?>">
+    Sistema</a>
+      <a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=desarrollo" ?>">
+    Desarrollo</a>
+    </div>
+
+<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=comercial" ?>">
+    <i class="material-icons" role="presentation">attach_money</i>
+    Comercial</a>
+
+<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=diseño" ?>">
+    <i class="material-icons" role="presentation">create</i>
+    Diseño</a>
+
+<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=soporte" ?>">
+    <i class="material-icons" role="presentation">help</i>
+    Soporte</a>
+
 <div class="mdl-layout-spacer"></div>
-<a class="mdl-navigation__link" href="http://sitio.analitic.cl" target="_blank">
-    <i class="material-icons" role="presentation">public</i>
-    Pagina Web</a>
+<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=f.a.q" ?>">
+    <i class="material-icons" role="presentation">add</i>
+    F.A.Q</a>
+<a class="mdl-navigation__link" href="<?php echo DOKU_BASE . "doku.php?id=wiki:syntax" ?>">
+  <i class="material-icons" role="presentation">info</i>
+    info </a>
+

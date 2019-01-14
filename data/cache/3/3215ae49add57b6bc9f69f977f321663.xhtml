@@ -1,4 +1,123 @@
 
+<h1 class="sectionedit1" id="formatting_syntax">Formatting Syntax</h1>
+<div class="level1">
+
 <p>
-test1
+<a href="https://www.dokuwiki.org/DokuWiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/DokuWiki">DokuWiki</a> supports some simple markup language, which tries to make the datafiles to be as readable as possible. This page contains all possible syntax you may use when editing the pages. Simply have a look at the source of this page by pressing “Edit this page”. If you want to try something, just use the <a href="/dokuwiki/doku.php?id=playground:playground" class="wikilink1" title="playground:playground">playground</a> page. The simpler markup is easily accessible via <a href="https://www.dokuwiki.org/toolbar" class="interwiki iw_doku" title="https://www.dokuwiki.org/toolbar">quickbuttons</a>, too.
 </p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Formatting Syntax&quot;,&quot;hid&quot;:&quot;formatting_syntax&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-472&quot;} -->
+<h2 class="sectionedit2" id="basic_text_formatting">Basic Text Formatting</h2>
+<div class="level2">
+
+<p>
+DokuWiki supports <strong>bold</strong>, <em>italic</em>, <em class="u">underlined</em> and <code>monospaced</code> texts. Of course you can <strong><em class="u"><em><code>combine</code></em></em></strong> all these.
+</p>
+<pre class="code">DokuWiki supports **bold**, //italic//, __underlined__ and &#039;&#039;monospaced&#039;&#039; texts.
+Of course you can **__//&#039;&#039;combine&#039;&#039;//__** all these.</pre>
+
+<p>
+You can use <sub>subscript</sub> and <sup>superscript</sup>, too.
+</p>
+<pre class="code">You can use &lt;sub&gt;subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;, too.</pre>
+
+<p>
+You can mark something as <del>deleted</del> as well.
+</p>
+<pre class="code">You can mark something as &lt;del&gt;deleted&lt;/del&gt; as well.</pre>
+
+<p>
+<strong>Paragraphs</strong> are created from blank lines. If you want to <strong>force a newline</strong> without a paragraph, you can use two backslashes followed by a whitespace or the end of line.
+</p>
+
+<p>
+This is some text with some linebreaks<br/>
+Note that the
+two backslashes are only recognized at the end of a line<br/>
+
+or followed by<br/>
+a whitespace \\this happens without it.
+</p>
+<pre class="code">This is some text with some linebreaks\\ Note that the
+two backslashes are only recognized at the end of a line\\
+or followed by\\ a whitespace \\this happens without it.</pre>
+
+<p>
+You should use forced newlines only if really needed.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Basic Text Formatting&quot;,&quot;hid&quot;:&quot;basic_text_formatting&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;473-1609&quot;} -->
+<h2 class="sectionedit3" id="links">Links</h2>
+<div class="level2">
+
+<p>
+DokuWiki supports multiple ways of creating links.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Links&quot;,&quot;hid&quot;:&quot;links&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1610-1680&quot;} -->
+<h3 class="sectionedit4" id="external">External</h3>
+<div class="level3">
+
+<p>
+External links are recognized automagically: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">http://www.google.com</a> or simply <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">www.google.com</a> - You can set the link text as well: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">This Link points to google</a>. Email addresses like this one: <a href="mailto:&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;</a> are recognized, too.
+</p>
+<pre class="code">DokuWiki supports multiple ways of creating links. External links are recognized
+automagically: http://www.google.com or simply www.google.com - You can set
+link text as well: [[http://www.google.com|This Link points to google]]. Email
+addresses like this one: &lt;andi@splitbrain.org&gt; are recognized, too.</pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;External&quot;,&quot;hid&quot;:&quot;external&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1681-2271&quot;} -->
+<h3 class="sectionedit5" id="internal">Internal</h3>
+<div class="level3">
+
+<p>
+Internal links are created by using square brackets. You can either just give a <a href="/dokuwiki/doku.php?id=pagename" class="wikilink2" title="pagename" rel="nofollow">pagename</a> or use an additional <a href="/dokuwiki/doku.php?id=pagename" class="wikilink2" title="pagename" rel="nofollow">link text</a>.
+</p>
+<pre class="code">Internal links are created by using square brackets. You can either just give
+a [[pagename]] or use an additional [[pagename|link text]].</pre>
+
+<p>
+<a href="https://www.dokuwiki.org/pagename" class="interwiki iw_doku" title="https://www.dokuwiki.org/pagename">Wiki pagenames</a> are converted to lowercase automatically, special characters are not allowed.
+</p>
+
+<p>
+You can use <a href="/dokuwiki/doku.php?id=some:namespaces" class="wikilink2" title="some:namespaces" rel="nofollow">namespaces</a> by using a colon in the pagename.
+</p>
+<pre class="code">You can use [[some:namespaces]] by using a colon in the pagename.</pre>
+
+<p>
+For details about namespaces see <a href="https://www.dokuwiki.org/namespaces" class="interwiki iw_doku" title="https://www.dokuwiki.org/namespaces">namespaces</a>.
+</p>
+
+<p>
+Linking to a specific section is possible, too. Just add the section name behind a hash character as known from <abbr title="HyperText Markup Language">HTML</abbr>. This links to <a href="/dokuwiki/doku.php?id=syntax#internal" class="wikilink2" title="syntax" rel="nofollow">this Section</a>.
+</p>
+<pre class="code">This links to [[syntax#internal|this Section]].</pre>
+
+<p>
+Notes:
+</p>
+<ul>
+<li class="level1"><div class="li"> Links to <a href="/dokuwiki/doku.php?id=syntax" class="wikilink2" title="syntax" rel="nofollow">existing pages</a> are shown in a different style from <a href="/dokuwiki/doku.php?id=nonexisting" class="wikilink2" title="nonexisting" rel="nofollow">nonexisting</a> ones.</div>
+</li>
+<li class="level1"><div class="li"> DokuWiki does not use <a href="https://en.wikipedia.org/wiki/CamelCase" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/CamelCase">CamelCase</a> to automatically create links by default, but this behavior can be enabled in the <a href="https://www.dokuwiki.org/config" class="interwiki iw_doku" title="https://www.dokuwiki.org/config">config</a> file. Hint: If DokuWiki is a link, then it&#039;s enabled.</div>
+</li>
+<li class="level1"><div class="li"> When a section&#039;s heading is changed, its bookmark changes, too. So don&#039;t rely on section linking too much.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Internal&quot;,&quot;hid&quot;:&quot;internal&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2272-3506&quot;} -->
+<h3 class="sectionedit6" id="interwiki">Interwiki</h3>
+<div class="level3">
+
+<p>
+DokuWiki supports <a href="https://www.dokuwiki.org/Interwiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/Interwiki">Interwiki</a> links. These are quick links to other Wikis. For example this is a link to Wikipedia&#039;s page about Wikis: <a href="https://en.wikipedia.org/wiki/Wiki" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Wiki">Wiki</a>.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interwiki&quot;,&quot;hid&quot;:&quot;interwiki&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;3507-&quot;} -->

@@ -1,32 +1,10 @@
-1542908755	201.236.191.114	E	extraccion_de_facebook	sebastian			50
-1542912209	201.236.191.114	E	extraccion_de_facebook	sebastian			8
-1542914609	201.236.191.114	E	extraccion_de_facebook	sebastian			-1
-1542988166	200.29.32.235	E	extraccion_de_facebook	sebastian			640
-1542988206	200.29.32.235	E	extraccion_de_facebook	sebastian			-1
-1542988224	200.29.32.235	E	extraccion_de_facebook	sebastian			-1
-1543244926	200.29.32.235	E	extraccion_de_facebook	sebastian			0
-1543245216	200.29.32.235	E	extraccion_de_facebook	sebastian			-34
-1543245236	200.29.32.235	E	extraccion_de_facebook	sebastian			2
-1543245259	200.29.32.235	E	extraccion_de_facebook	sebastian			-1
-1543248732	200.29.32.235	E	extraccion_de_facebook	daniel			61
-1543503789	200.29.32.235	E	extraccion_de_facebook	sebastian			100
-1543503819	200.29.32.235	E	extraccion_de_facebook	sebastian			2
-1543503892	200.29.32.235	E	extraccion_de_facebook	sebastian			4
-1544450489	200.29.32.235	E	start	jverdugo			35
-1544450505	200.29.32.235	E	start	jverdugo			0
-1544450551	200.29.32.235	C	fakeconsul	jverdugo	created		3296
-1544450810	200.29.32.235	E	start	daniel			1
-1544451899	200.29.32.235	E	extraccion_de_facebook	sebastian			70
-1544542132	200.29.32.235	E	extraccion_de_facebook	sebastian			4
-1546766943	127.0.0.1	E	playground:playground		external edit		25
+1547127157	127.0.0.1	E	start		external edit		0
 1547128535	201.236.191.114	E	playground:playground	sebastian			2
 1547128549	201.236.191.114	E	playground:playground	sebastian			4
-1547127157	127.0.0.1	E	start		external edit		0
 1547128786	201.236.191.114	E	start	sebastian			24
 1547128809	201.236.191.114	E	start	sebastian			3
 1547128861	201.236.191.114	E	start	sebastian			15
 1547128942	201.236.191.114	E	start	sebastian			38
-1546766327	127.0.0.1	E	wiki:dokuwiki		external edit		2908
 1547131668	200.29.32.235	E	wiki:dokuwiki	sebastian			-2157
 1547131834	200.29.32.235	E	playground:playground	sebastian			136
 1547132714	200.29.32.235	C	wiki:servidores	sebastian	created		8
@@ -69,3 +47,60 @@
 1547149863	200.29.32.235	E	playground:playground	sebastian			12
 1547149877	200.29.32.235	E	playground:playground	sebastian			-7
 1547149894	200.29.32.235	E	playground:playground	sebastian			2
+1547219743	200.29.32.235	E	playground:octosync	sebastian			32
+1547219778	200.29.32.235	E	playground:octosync	sebastian			0
+1547219800	200.29.32.235	E	playground:octosync	sebastian			2
+1547219977	200.29.32.235	E	playground:octosync	sebastian			44
+1547220001	200.29.32.235	E	playground:octosync	sebastian			1
+1547220019	200.29.32.235	E	playground:octosync	sebastian			1
+1547223453	200.29.32.235	E	start	sebastian			28
+1547223472	200.29.32.235	E	start	sebastian			12
+1547223480	200.29.32.235	E	start	sebastian			-5
+1547223618	200.29.32.235	E	start	sebastian			-36
+1547470328	201.236.191.114	E	playground:octosync	sebastian			8
+1547470350	201.236.191.114	E	playground:octosync	sebastian			8
+1547470877	200.29.32.235	E	start	sebastian			108
+1547470905	200.29.32.235	E	start	sebastian			1
+1547470921	200.29.32.235	E	start	sebastian			-6
+1547472349	200.29.32.235	E	start	sebastian			20
+1547127157	127.0.0.1	E	test1		external edit		0
+1547472727	200.29.32.235	E	test1	sebastian			3677
+1546766327	127.0.0.1	E	wiki:syntax		external edit		22597
+1547472916	200.29.32.235	E	wiki:syntax	sebastian			2
+1547472971	200.29.32.235	E	wiki:syntax	sebastian			2
+1547473415	200.29.32.235	E	wiki:syntax	sebastian			28
+1547473492	200.29.32.235	E	wiki:syntax	sebastian	[Formato de sintaxis] 		70
+1547473534	200.29.32.235	E	wiki:syntax	sebastian	[Formato de sintaxis] 		-188
+1547473601	200.29.32.235	E	wiki:syntax	sebastian	[formato de texto basico] 		175
+1547473668	200.29.32.235	E	wiki:syntax	sebastian	[formato de texto basico] 		-175
+1547473789	200.29.32.235	E	wiki:syntax	sebastian	[formato de texto basico] 		14
+1547473874	200.29.32.235	E	wiki:syntax	sebastian			16
+1547473989	200.29.32.235	E	wiki:syntax	sebastian			19
+1547474043	200.29.32.235	E	wiki:syntax	sebastian			-10
+1547474130	200.29.32.235	E	wiki:syntax	sebastian			55
+1547474227	200.29.32.235	E	wiki:syntax	sebastian	[formato de texto basico] 		22
+1547474304	200.29.32.235	E	wiki:syntax	sebastian	[formato de texto basico] 		13
+1547474406	200.29.32.235	E	wiki:syntax	sebastian	[formato de texto basico] 		10
+1547474462	200.29.32.235	E	wiki:syntax	sebastian	[Links] 		2
+1547477112	200.29.32.235	C	sistema	sebastian	created		11
+1547477123	200.29.32.235	C	desarrollo	sebastian	created		14
+1547477244	200.29.32.235	C	sistema:playground	sebastian	created		0
+1547477274	200.29.32.235	C	sistema:playground	sebastian	created		0
+1547477299	200.29.32.235	E	sistema	sebastian			712
+1547477319	200.29.32.235	E	sistema	sebastian			15
+1547477393	200.29.32.235	E	desarrollo	sebastian			141
+1547477420	200.29.32.235	C	apro	sebastian	created		3367
+1547477454	200.29.32.235	C	octosync	sebastian	created		4039
+1547477474	200.29.32.235	C	inscreen	sebastian	created		5633
+1547477520	200.29.32.235	E	desarrollo	sebastian			-39
+1547477769	200.29.32.235	C	comercial	sebastian	created		300
+1547477799	200.29.32.235	E	comercial	sebastian			10
+1547477897	200.29.32.235	E	comercial	sebastian			-244
+1547477904	200.29.32.235	C	manuales_de_uso	sebastian	created		310
+1547477924	200.29.32.235	E	comercial	sebastian			-7
+1547477977	200.29.32.235	E	comercial	sebastian			42
+1547478099	200.29.32.235	C	diseno	sebastian			156
+1547478109	200.29.32.235	E	comercial	sebastian			0
+1547478135	200.29.32.235	C	soporte	sebastian	created		16
+1547478164	200.29.32.235	E	soporte	sebastian			32
+1547478185	200.29.32.235	E	sistema	sebastian			2

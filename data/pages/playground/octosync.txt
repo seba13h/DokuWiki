@@ -3,7 +3,7 @@ Octosync es un sistema Web que permite hacer analisis de cuentas de Redes Social
 
 OctoSync es un sistema de fácil uso, con la capacidad de comparar diversas Fan Pages de Facebook, cuentas de Instagram y de Twitter, sin importar si eres administrador ni la cantidad de seguidores que tengan. Las Redes Sociales que actualmente se pueden analizar son Fan Pages Facebook, Cuentas Instagram y Cuentas Twitter.
 
-Funcionalidades
+=== Funcionalidades ===
 1 Arquitectura de Software
   * Arquitectura de Software
    - {{:playground:arq.png?400|}}
@@ -47,7 +47,7 @@ Funcionalidades
   * 3.12.1 FanCount Twitter
   * 3.12.2 FanCount Instagram
   * 3.12.3 FanCount y PTA Facebook 
-Estructura del Proyecto
+=== Estructura del Proyecto ===
   - Descripcion y explicacion de las carpetas y archivos importantes
 
   * /_docs (documentacion del proyecto)
@@ -68,15 +68,15 @@ Tecnologias usadas y requisitos de instalacion:
   * Facebook SDK VERSION 4.0.9
   * Facebook API ‘v2.6’
   * Base de Datos Amazon-Aurora Mysql v 5.6.10
-Despliegue Servidores
-Instancia	Tipo	Region	Objetivo	IP Local	IP Publica	Contenido
-Octosync desarrollo	servidor m3.medium	Virginia	Se generan pruebas del sistema en modo desarrollo y se interactúa con BD octosync	172.31.42.212	34.236..34.167	Extractor de fans para Twitter, Facebook e Instagram Extractor de post/tweets para Twitter, Facebook a Instagram Sistema web de desarrollo (desatest.octosync.com))
-Octosync producción	servidor m3.medium	Virginia	Produccion	54.227.170.95	52.44.188.244	Extractores y sistema.octosync.com
-Bases de Datos
-Instancia	Tipo	Region	Objetivo	IP	user
-Octosync desarrollo	Aurora	Virginia	BD desarrollo test	octosync.c8s0ibdbydld.us-east-1.rds.amazonaws.com	root
-Octosync producción	Aurora	Virginia	BD Produccion	octosyncprod.c8s0ibdbydld.us-east-1.rds.amazonaws.com	root
-Instalacion
+== Despliegue Servidores ==
+^ Instancia	^ Tipo	^ Region ^ Objetivo ^IP Local  ^IP Publica ^Contenido ^
+| Octosync desarrollo | servidor m3.medium| Virginia | Se generan pruebas del sistema en modo desarrollo y se interactúa con BD octosync	| 172.31.42.212 | 34.236..34.167 | Extractor de fans para Twitter, Facebook e Instagram Extractor de post/tweets para Twitter, Facebook a Instagram Sistema web de desarrollo (desatest.octosync.com))|
+| Octosync producción	|servidor m3.medium	|Virginia	|Produccion	|54.227.170.95	|52.44.188.244	|Extractores y sistema.octosync.com|
+=== Bases de Datos ===
+^Instancia	^Tipo	^Region	^Objetivo	^IP	^user^
+|Octosync desarrollo	|Aurora	|Virginia	|BD desarrollo test|	octosync.c8s0ibdbydld.us-east-1.rds.amazonaws.com|	root|
+|Octosync producción|	Aurora	|Virginia	|BD Produccion|	octosyncprod.c8s0ibdbydld.us-east-1.rds.amazonaws.com|	root|
+=== Instalacion ===
   * mkdir carpeta
   * cd carpeta
   * git clone 

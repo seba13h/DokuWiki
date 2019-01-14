@@ -1,0 +1,112 @@
+======APRO==========
+
+Es la nueva version de Analitic Pro Version 2018 con un nuevo aspecto grafico y un poco más ordenado.
+
+Apro es un sistema de Social Media Listening, con el puedes recolectar la información exacta que andas buscando en las redes sociales.
+
+===Funcionalidades===
+== 1 Arquitectura de Software ==
+![Arquitectura de Software]
+
+== 2 Modelo de Datos ==
+![Modelo de Datos]
+
+== 3 Funcionalidades ==
+  * Login
+  * Filtro General por:
+       - Plataformas
+       - Sentimiento
+        - Etiquetas Mención
+        - Etiquetas Autor
+        - Búsqueda por Autor “@”
+        - Búsqueda de texto en cuerpo mencion
+ * Filtro General por Fecha y Hora
+     - DashBoard
+           *   Gráfico Menciones de la última semana
+           * Porcentaje Menciones por Sentido
+           *  Nube de Palabras
+           * Últimas 3 Menciones en formato Box
+           * Contador Menciones por:
+           * Filtro Fecha
+           * Último Mes
+           * Último Semana
+           * Hoy
+  * Menciones
+     - Filtro por Tipo de usuario
+     - Acciones Box Menciones:
+         * Sentimentalizar
+         * Favoritos
+         * Etiquetado por autor
+         * Etiquetado por mención
+         * Detalles del usuario
+         * Perfil usuario con menciones
+         * Clasificación por edad
+         * Clasificación por género
+         * Enviar Lista Negra
+         * Bloquear usuario
+         * Eliminar Usuario
+         * Ver Imagen relacionada
+         * Ver Vídeo Instagram
+         * Ver Imagen Instagram
+         * Video Modal Plataforma Youtube
+         * Fecha publicación
+         * Klout
+         * Followers twitter
+         * Followings twitter
+         * Cantidad de Tweets
+         * Geolocalización
+         * Dispositivo / Aplicación
+         * Link para ver detalle en la plataforma
+         * Paginado
+         * Eliminado múltiple
+         * Favoriteo Multiple
+         * Sentimentalizar Múltiple
+  - Nube de Palabras
+  - Gráficos Twitter
+    * Zona Horaria
+    * Aplicaciones
+    * Audiencia
+    * Interacciones
+    * Influencias 
+=== Estructura del Proyecto ===
+- Descripcion y explicacion de las carpetas y archivos importantes
+
+  * /api (extraccion datos para inscreen, nube)
+  * /app/auth (Login)
+  * /app/filters/ (archivos de filtros)
+  * /app/modules/admin/ (archivos administracion)
+  * /app/modules/frontend/ajax/ (llamadas)
+  * /app/modules/frontend/ (frontend)
+  * /app/templates/ (template frontend/backend)
+  * /assets/ (assets sistema)
+  * /class (libreria)
+  * /config (gestion databases)
+  * /data (json y xls generados por el sistema)
+  * /error (validacion de error)
+  * /vendor (vendor composer)
+=== Tecnologias usadas y requisitos de instalacion ===
+  * PHP 7.0.22
+  * Jquery v3.1.1
+  * Bootstrap v3.3.7
+  * D3 v4.9.1
+  * DataTables v1.10.13
+  * Moments v2.13.0
+  * Highcharts JS v5.0.14
+  * Mysql v 5.6.10
+  * Apache Web Server with mod rewrite enabled
+=== Instalacion ===
+  * mkdir carpeta
+  * cd carpeta
+  * git clone 
+  * composer install
+  * Crear un archivo config/config.ini
+
+=== Estrutura config.ini ===
+  * [database] driver = mysql username = user-database password = password-database dbname = apro-database-name dbname_cli = apro-database-name-clientes host_api = ip-host-api host_cli = ip-host-cliente charset = utf8 
+
+- Equipo
+  * Johnny Verdugo
+  * 
+  * Mauricio Aburto
+  * 
+  * Jonathan Calderon
