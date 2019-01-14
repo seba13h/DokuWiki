@@ -1,64 +1,55 @@
 
-<h1 class="sectionedit1" id="formato_de_sintaxis">Formato de sintaxis</h1>
+<h1 class="sectionedit1" id="sintaxis_de_formato">Sintaxis de Formato</h1>
 <div class="level1">
 
 <p>
-<a href="https://www.dokuwiki.org/DokuWiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/DokuWiki">DokuWiki</a> admite algunos lenguajes de marcado simples, que intentan hacer que los archivos de datos sean lo más legibles posible. Esta página contiene toda la sintaxis posible que puede utilizar al editar las páginas. Simplemente eche un vistazo a la fuente de esta página presionando “Editar esta página”.
+<a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> soporta un lenguaje de marcas simple, que intenta hacer los ficheros de datos tan legibles como sea posible. Esta página contiene todas las posibles opciones que puedes usar a la hora de editar las páginas. Simplemente, observa el código de esta página pulsando sobre <em>Editar esta página</em> en la parte superior y en la parte inferior de la página. Si quieres intentar algo, usa la página de <a href="/dokuwiki/doku.php?id=playground:playground" class="wikilink1" title="playground:playground">pruebas</a>. Las marcas más simples también se encuentran accesibles mediante <a href="https://www.dokuwiki.org/toolbar" class="interwiki iw_doku" title="https://www.dokuwiki.org/toolbar">toolbar</a>.
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Formato de sintaxis&quot;,&quot;hid&quot;:&quot;formato_de_sintaxis&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-356&quot;} -->
-<h2 class="sectionedit2" id="formato_de_texto_basico">formato de texto basico</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sintaxis de Formato&quot;,&quot;hid&quot;:&quot;sintaxis_de_formato&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-568&quot;} -->
+<h2 class="sectionedit2" id="formato_basico_de_texto">Formato básico de texto</h2>
 <div class="level2">
 
 <p>
-DokuWiki admite los textos <strong>bold</strong>, <em>italic</em>, <em class="u">underlined</em> y <code>monospaced</code>. Por supuesto que puede  <strong><em class="u"><em><code>combine</code></em></em></strong> todo esto.
-- Ej:
+DokuWiki soporta <strong>negritas</strong>, <em>cursivas</em>, <em class="u">subrayados</em> y texto <code>monoespaciado</code>. Por supuesto, puedes <strong><em class="u"><em><code>combinarlos</code></em></em></strong> todos.
 </p>
-<pre class="code">DokuWiki admite textos **bold**, //italic//, __underlined__ y &#039;&#039;monospaced&#039;&#039; .
-Por supuesto que puede **__//&#039;&#039;combine&#039;&#039;//__** todo esto.</pre>
+<pre class="code">DokuWiki soporta **negritas**, //cursivas//, __subrayados__ y texto &#039;&#039;monoespaciado&#039;&#039;.
+Por supuesto, puedes **__//&#039;&#039;combinarlos&#039;&#039;//__** todos.</pre>
 
 <p>
-Tambien puede utilizar <sub>subscript</sub> and <sup>superscript</sup>.
- - EJ:
+También puedes usar <sub>subíndices</sub> y <sup>superíndices</sup>.
 </p>
-<pre class="code">Tambien puede utilizar &lt;sub&gt;subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;.</pre>
+<pre class="code">También puedes usar &lt;sub&gt;subíndices&lt;/sub&gt; y &lt;sup&gt;superíndices&lt;/sup&gt;.</pre>
 
 <p>
-Tambien puedes marcar algo como <del>eliminado</del>.
- - Ej:
+Del mismo modo, también puedes marcar algo como <del>borrado</del>.
 </p>
-<pre class="code">Tambien puedes marcar algo como &lt;del&gt;eliminado&lt;/del&gt;.</pre>
+<pre class="code">Del mismo modo, también puedes marcar algo como &lt;del&gt;borrado&lt;/del&gt;.</pre>
 
 <p>
-<strong> Los párrafos </strong> se crean a partir de líneas en blanco. Si desea <strong> forzar una nueva línea </strong> sin un párrafo, puede usar dos barras invertidas seguidas de un espacio en blanco o el final de la línea.
+Los <strong>párrafos</strong> se crean a partir de líneas en blanco. Si quieres <strong>forzar un salto de línea</strong> sin un párrafo, puedes usar dos barras invertidas seguidas por un espacio en blanco o el final de la línea.
 </p>
 
 <p>
-Este es un texto con algunos saltos de línea. <br/>
-Tenga en cuenta que
-dos barras invertidas solo se reconocen al final de una línea <br/>
+Esto es un texto con algunos saltos de línea.<br/>
+Advierte que las
+dos barras invertidas son reconocidas solamente al final de una línea<br/>
 
-o seguido de <br/>
-un espacio en blanco <br/>
-esto sucede sin él <br/>
-Ej:
+o cuando están seguidas de<br/>
+un espacio en blanco \\Esto sucede sin él.
 </p>
-<pre class="code">Este es un texto con algunos saltos de línea\\ Tenga en cuenta que</pre>
+<pre class="code">Esto es un texto con algunos saltos de línea.\\ Advierte que las
+dos barras invertidas son reconocidas solamente al final de una línea\\
+o cuando están seguidas de\\ un espacio en blanco \\Esto sucede sin él.</pre>
 
 <p>
-  dos barras invertidas solo se reconocen al final de una línea<br/>
-
-</p>
-<pre class="code">o segido de\\ un espacio en blanco \\esto sucede sin él.</pre>
-
-<p>
-Debes usar nuevas líneas forzadas solo si es realmente necesario.
+Solamente deberías forzar saltos de línea cuando realmente lo necesites.
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;formato de texto basico&quot;,&quot;hid&quot;:&quot;formato_de_texto_basico&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;357-1634&quot;} -->
-<h2 class="sectionedit3" id="links">Links</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Formato b\u00e1sico de texto&quot;,&quot;hid&quot;:&quot;formato_basico_de_texto&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;569-1911&quot;} -->
+<h2 class="sectionedit3" id="enlaces">Enlaces</h2>
 <div class="level2">
 
 <p>
@@ -66,194 +57,208 @@ DokuWiki soporta múltiples formas de crear enlaces.
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Links&quot;,&quot;hid&quot;:&quot;links&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1635-1707&quot;} -->
-<h3 class="sectionedit4" id="externo">Externo</h3>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Enlaces&quot;,&quot;hid&quot;:&quot;enlaces&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;1912-1985&quot;} -->
+<h3 class="sectionedit4" id="externos">Externos</h3>
 <div class="level3">
 
 <p>
-External links are recognized automagically: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">http://www.google.com</a> or simply <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">www.google.com</a> - You can set the link text as well: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">This Link points to google</a>. Email addresses like this one: <a href="mailto:&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;</a> are recognized, too.
+Los enlaces externos se reconocen automáticamente: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">http://www.google.com</a> o simplemente <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">www.google.com</a> - También puedes establecer enlaces con un nombre: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="nofollow">Este enlace apunta a google</a>. Las direcciones de correo electrónico como ésta: <a href="mailto:&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;</a> también son reconocidas.
 </p>
-<pre class="code">DokuWiki supports multiple ways of creating links. External links are recognized
-automagically: http://www.google.com or simply www.google.com - You can set
-link text as well: [[http://www.google.com|This Link points to google]]. Email
-addresses like this one: &lt;andi@splitbrain.org&gt; are recognized, too.</pre>
+<pre class="code">Dokuwiki soporta múltiples formas de crear enlaces. Los enlaces externos se reconocen
+automáticamente: http://www.google.com o simplemente www.google.com - También puedes
+establecer enlaces con nombre: [[http://www.google.com|Este enlace apunta a google]].
+Las direcciones de correo electrónico como ésta: &lt;andi@splitbrain.org&gt;
+también son reconocidas.</pre>
+
+<p>
+<strong>Nota</strong>: para los enlaces con nombre hay que usar el caracter separador | (barra vertical). A la izquierda del separador va la dirección del enlace y a la derecha el nombre del enlace.<br/>
+
+Algunos teclados lo tienen en la tecla del número 1 y se obtiene presionando dicha tecla simultánemamnte con AltGr.<br/>
+
+Si no tuvieras en tu teclado el caracter separador, <strong>en Windows</strong> se consigue mediante la combinación <em>alt+124</em> (tecleando con el teclado numérico).<br/>
+
+Si no te funcionaran ninguno de los dos métodos anteriores (puede ocurrir en Mac, en Linux y en notebooks sin teclado numérico) puedes copiar el siguiente texto para construir un enlace con nombre:
+</p>
+<pre class="code">[[http://direccion|nombre enlace]]</pre>
+
+<p>
+Pégalo en tu documento y luego reemplaza &#039;dirección&#039; y &#039;nombre enlace&#039; por los correspondientes que desees poner.
+</p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Externo&quot;,&quot;hid&quot;:&quot;externo&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1708-2297&quot;} -->
-<h3 class="sectionedit5" id="interno">Interno</h3>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Externos&quot;,&quot;hid&quot;:&quot;externos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;1986-3515&quot;} -->
+<h3 class="sectionedit5" id="internos">Internos</h3>
 <div class="level3">
 
 <p>
-Internal links are created by using square brackets. You can either just give a <a href="/dokuwiki/doku.php?id=wiki:pagename" class="wikilink2" title="wiki:pagename" rel="nofollow">pagename</a> or use an additional <a href="/dokuwiki/doku.php?id=wiki:pagename" class="wikilink2" title="wiki:pagename" rel="nofollow">link text</a>.
+Los enlaces internos se crean mediante corchetes. Puedes tanto simplemente usar <a href="https://www.dokuwiki.org/es%3Apagename" class="interwiki iw_doku" title="https://www.dokuwiki.org/es%3Apagename">pagename</a> como usar el extendido<a href="https://www.dokuwiki.org/es%3Apagename" class="interwiki iw_doku" title="https://www.dokuwiki.org/es%3Apagename">Texto de título</a>. Los nombres de páginas wiki son convertidos a minúsculas automáticamente y no se permiten caracteres especiales.
 </p>
-<pre class="code">Internal links are created by using square brackets. You can either just give
-a [[pagename]] or use an additional [[pagename|link text]].</pre>
+<pre class="code">Los enlaces internos se crean mediante corchetes. Puedes tanto simplemente usar [[doku&gt;es:pagename|pagename]]
+como usar el extendido[[doku&gt;es:pagename|Texto de título]]. Los nombres de páginas wiki son convertidos
+a minúsculas automáticamente y no se permiten caracteres especiales.</pre>
 
 <p>
-<a href="https://www.dokuwiki.org/pagename" class="interwiki iw_doku" title="https://www.dokuwiki.org/pagename">Wiki pagenames</a> are converted to lowercase automatically, special characters are not allowed.
+Puedes usar <a href="https://www.dokuwiki.org/es%3Apagename" class="interwiki iw_doku" title="https://www.dokuwiki.org/es%3Apagename">pagename</a> mediante dos puntos en el nombre de la página.
 </p>
+<pre class="code">Puedes usar [[doku&gt;es:pagename|pagename]] mediante dos puntos en el nombre de la página.</pre>
 
 <p>
-You can use <a href="/dokuwiki/doku.php?id=some:namespaces" class="wikilink2" title="some:namespaces" rel="nofollow">namespaces</a> by using a colon in the pagename.
-</p>
-<pre class="code">You can use [[some:namespaces]] by using a colon in the pagename.</pre>
-
-<p>
-For details about namespaces see <a href="https://www.dokuwiki.org/namespaces" class="interwiki iw_doku" title="https://www.dokuwiki.org/namespaces">namespaces</a>.
+Para más detalles sobre espacios de nombres mira <a href="https://www.dokuwiki.org/es%3Anamespaces" class="interwiki iw_doku" title="https://www.dokuwiki.org/es%3Anamespaces">namespaces</a>.
 </p>
 
 <p>
-Linking to a specific section is possible, too. Just add the section name behind a hash character as known from <abbr title="HyperText Markup Language">HTML</abbr>. This links to <span class="curid"><a href="/dokuwiki/doku.php?id=wiki:syntax#internal" class="wikilink1" title="wiki:syntax">this Section</a></span>.
+Es también posible enlazar con una sección específica. Basta con añadir el nombre de sección detrás de una almohadilla, como se hace en <abbr title="HyperText Markup Language">HTML</abbr>. Esto enlaza a <a href="/dokuwiki/doku.php?id=es:syntax#internos" class="wikilink2" title="es:syntax" rel="nofollow">Esta sección</a>.
 </p>
-<pre class="code">This links to [[syntax#internal|this Section]].</pre>
+<pre class="code">Esto enlaza a [[es:syntax#Internos|Esta sección]].</pre>
 
 <p>
-Notes:
+Notas:
 </p>
 <ul>
-<li class="level1"><div class="li"> Links to <span class="curid"><a href="/dokuwiki/doku.php?id=wiki:syntax" class="wikilink1" title="wiki:syntax">existing pages</a></span> are shown in a different style from <a href="/dokuwiki/doku.php?id=wiki:nonexisting" class="wikilink2" title="wiki:nonexisting" rel="nofollow">nonexisting</a> ones.</div>
+<li class="level1"><div class="li"> Los enlaces a <a href="/dokuwiki/doku.php?id=es:syntax" class="wikilink2" title="es:syntax" rel="nofollow">páginas existentes</a> se muestran de forma diferente a los <a href="/dokuwiki/doku.php?id=wiki:no_existentes" class="wikilink2" title="wiki:no_existentes" rel="nofollow">no existentes</a>.</div>
 </li>
-<li class="level1"><div class="li"> DokuWiki does not use <a href="https://en.wikipedia.org/wiki/CamelCase" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/CamelCase">CamelCase</a> to automatically create links by default, but this behavior can be enabled in the <a href="https://www.dokuwiki.org/config" class="interwiki iw_doku" title="https://www.dokuwiki.org/config">config</a> file. Hint: If DokuWiki is a link, then it&#039;s enabled.</div>
+<li class="level1"><div class="li"> DokuWiki no utiliza <a href="https://en.wikipedia.org/wiki/es:CamelCase" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/es:CamelCase">es:CamelCase</a> para crear enlaces automáticamente por defecto, pero este comportamiento puede ser habilitado en el fichero <a href="https://www.dokuwiki.org/es%3Aconfig" class="interwiki iw_doku" title="https://www.dokuwiki.org/es%3Aconfig">es:config</a>. Truco: Si DokuWiki es un enlace, entonces está habilitado.</div>
 </li>
-<li class="level1"><div class="li"> When a section&#039;s heading is changed, its bookmark changes, too. So don&#039;t rely on section linking too much.</div>
+<li class="level1"><div class="li"> Cuando se cambia el encabezamiento de una sección, su bookmark también cambia. Así que no dependas demasiado del enlace de secciones.</div>
 </li>
 </ul>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interno&quot;,&quot;hid&quot;:&quot;interno&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:5,&quot;range&quot;:&quot;2298-3531&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Internos&quot;,&quot;hid&quot;:&quot;internos&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:5,&quot;range&quot;:&quot;3516-5134&quot;} -->
 <h3 class="sectionedit6" id="interwiki">Interwiki</h3>
 <div class="level3">
 
 <p>
-DokuWiki supports <a href="https://www.dokuwiki.org/Interwiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/Interwiki">Interwiki</a> links. These are quick links to other Wikis. For example this is a link to Wikipedia&#039;s page about Wikis: <a href="https://en.wikipedia.org/wiki/Wiki" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Wiki">Wiki</a>.
+DokuWiki permite enlaces <a href="https://www.dokuwiki.org/es%3Ainterwiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/es%3Ainterwiki">es:interwiki</a>. Estos son enlaces rápidos a otros Wikis. Por ejemplo, esto es un enlace a la página de la Wikipedia sobre Wikis: <a href="https://en.wikipedia.org/wiki/Wiki" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Wiki">Wiki</a>.
 </p>
-<pre class="code">DokuWiki supports [[doku&gt;Interwiki]] links. These are quick links to other Wikis.
-For example this is a link to Wikipedia&#039;s page about Wikis: [[wp&gt;Wiki]].</pre>
+<pre class="code">DokuWiki permite enlaces [[doku&gt;es:interwiki]]. Estos son enlaces rápidos a otros Wikis.
+Por ejemplo, esto es un enlace a la página web de la Wikipedia sobre Wikis: [[wp&gt;Wiki]].</pre>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interwiki&quot;,&quot;hid&quot;:&quot;interwiki&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;3532-3868&quot;} -->
-<h3 class="sectionedit7" id="acciones_de_windows">Acciones de WIndows</h3>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Interwiki&quot;,&quot;hid&quot;:&quot;interwiki&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:6,&quot;range&quot;:&quot;5135-5517&quot;} -->
+<h3 class="sectionedit7" id="recursos_compartidos_de_windows">Recursos compartidos de Windows</h3>
 <div class="level3">
 
 <p>
-Windows shares like <a href="file://///server/share" class="windows" title="\\server\share">this</a> are recognized, too. Please note that these only make sense in a homogeneous user group like a corporate <a href="https://en.wikipedia.org/wiki/Intranet" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Intranet">Intranet</a>.
+Los recursos compartidos de Windows como <a href="file://///server/share" class="windows" title="\\server\share">este</a> también son reconocidos. Por favor, date cuenta de que éstos solamente tienen sentido en un grupo de usuarios homogéneo, tales como una <a href="https://en.wikipedia.org/wiki/Intranet" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Intranet">Intranet</a> corporativa.
 </p>
-<pre class="code">Windows Shares like [[\\server\share|this]] are recognized, too.</pre>
+<pre class="code">Los recursos compartidos de Windows como [[\\server\share|este]] también son reconocidos.</pre>
 
 <p>
-Notes:
+Nota:
 </p>
 <ul>
-<li class="level1"><div class="li"> For security reasons direct browsing of windows shares only works in Microsoft Internet Explorer per default (and only in the “local zone”).</div>
+<li class="level1"><div class="li"> Por motivos de seguridad, la navegación directa por recursos compartidos solamente funciona en Microsoft Internet Explorer.</div>
 </li>
-<li class="level1"><div class="li"> For Mozilla and Firefox it can be enabled through different workaround mentioned in the <a href="http://kb.mozillazine.org/Links_to_local_pages_do_not_work" class="urlextern" title="http://kb.mozillazine.org/Links_to_local_pages_do_not_work" rel="nofollow">Mozilla Knowledge Base</a>. However, there will still be a JavaScript warning about trying to open a Windows Share. To remove this warning (for all users), put the following line in <code>conf/lang/en/lang.php</code> (more details at <a href="https://www.dokuwiki.org/localization#changing_some_localized_texts_and_strings_in_your_installation" class="interwiki iw_doku" title="https://www.dokuwiki.org/localization#changing_some_localized_texts_and_strings_in_your_installation">localization</a>): <dl class="code">
-<dt><a href="/dokuwiki/doku.php?do=export_code&amp;id=wiki:syntax&amp;codeblock=0" title="Download Snippet" class="mediafile mf_php">conf/lang/en/lang.php</a></dt>
-<dd><pre class="code">&lt;?php
-/**
- * Customization of the english language file
- * Copy only the strings that needs to be modified
- */
-$lang[&#039;js&#039;][&#039;nosmblinks&#039;] = &#039;&#039;;</pre>
-</dd></dl>
-</div>
+<li class="level1"><div class="li"> Para Mozilla y Firefox puede ser habilitada a través de una opción de configuración <a href="http://www.mozilla.org/quality/networking/docs/netprefs.html#file" class="urlextern" title="http://www.mozilla.org/quality/networking/docs/netprefs.html#file" rel="nofollow">security.checkloaduri</a> pero no es recomendado.</div>
+</li>
+<li class="level1"><div class="li"> Ver <a href="https://www.google.com/search?q=151&amp;btnI=lucky" class="interwiki iw_go" title="https://www.google.com/search?q=151&amp;btnI=lucky">151</a> para más información.</div>
 </li>
 </ul>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Acciones de WIndows&quot;,&quot;hid&quot;:&quot;acciones_de_windows&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:7,&quot;range&quot;:&quot;3869-4946&quot;} -->
-<h3 class="sectionedit8" id="links_de_imagen">LInks de imagen</h3>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Recursos compartidos de Windows&quot;,&quot;hid&quot;:&quot;recursos_compartidos_de_windows&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:7,&quot;range&quot;:&quot;5518-6278&quot;} -->
+<h3 class="sectionedit8" id="enlaces_imagen">Enlaces imagen</h3>
 <div class="level3">
 
 <p>
-You can also use an image to link to another internal or external page by combining the syntax for links and <a href="#images_and_other_files" title="wiki:syntax ↵" class="wikilink1">images</a> (see below) like this:
+También puedes usar una imagen como enlace a otra página externa o interna combinando la sintaxis de enlaces e imágenes (ver abajo) así:
 </p>
-<pre class="code">[[http://php.net|{{wiki:dokuwiki-128.png}}]]</pre>
+<pre class="code">[[http://www.php.net|{{wiki:dokuwiki-128.png}}]]</pre>
 
 <p>
-<a href="http://php.net" class="media" title="http://php.net" rel="nofollow"><img src="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="media" alt="" /></a>
-</p>
-
-<p>
-Please note: The image formatting is the only formatting syntax accepted in link names.
+<a href="http://www.php.net" class="media" title="http://www.php.net" rel="nofollow"><img src="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="media" alt="" /></a>
 </p>
 
 <p>
-The whole <a href="#images_and_other_files" title="wiki:syntax ↵" class="wikilink1">image</a> and <a href="#links" title="wiki:syntax ↵" class="wikilink1">link</a> syntax is supported (including image resizing, internal and external images and URLs and interwiki links).
+Por favor, ten en cuenta que el formato de imagen es la única sintaxis de formato aceptada en los nombres de enlace.
+</p>
+
+<p>
+Está soportada la sintaxis completa de <a href="#imagenes_y_otros_ficheros" title="wiki:syntax ↵" class="wikilink1">imagen</a> y <a href="#enlaces" title="wiki:syntax ↵" class="wikilink1">enlace</a> (incluyendo modificar el tamaño de la imagen, e imágenes, URLs y enlaces interwiki internas y externas).
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;LInks de imagen&quot;,&quot;hid&quot;:&quot;links_de_imagen&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:8,&quot;range&quot;:&quot;4947-5496&quot;} -->
-<h2 class="sectionedit9" id="notas_de_pie">Notas de pie</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Enlaces imagen&quot;,&quot;hid&quot;:&quot;enlaces_imagen&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:8,&quot;range&quot;:&quot;6279-6875&quot;} -->
+<h2 class="sectionedit9" id="notas_al_pie">Notas al pie</h2>
 <div class="level2">
 
 <p>
-You can add footnotes <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> by using double parentheses.
+Puedes añadir notas al pie <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> usando paréntesis dobles.
 </p>
-<pre class="code">You can add footnotes ((This is a footnote)) by using double parentheses.</pre>
+<pre class="code">Puedes añadir notas al pie ((Esto es una nota al pie)) usando paréntesis dobles.</pre>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Notas de pie&quot;,&quot;hid&quot;:&quot;notas_de_pie&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:9,&quot;range&quot;:&quot;5497-5674&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Notas al pie&quot;,&quot;hid&quot;:&quot;notas_al_pie&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:9,&quot;range&quot;:&quot;6876-7071&quot;} -->
 <h2 class="sectionedit10" id="secciones">Secciones</h2>
 <div class="level2">
 
 <p>
-You can use up to five different levels of headlines to structure your content. If you have more than three headlines, a table of contents is generated automatically – this can be disabled by including the string <code>~~NOTOC~~</code> in the document.
+Puedes usar hasta cinco niveles de encabezado distintos para estructurar tus contenidos.
+Cada encabezado se hace encerrando el titular entre signos de igual (caracter “=”)<br/>
+
+La cantidad de signos de igual (caracter “=”) determina el nivel del encabezado.
+</p>
+
+<p>
+Si tienes más de tres encabezados, un índice se genera automáticamente – se puede deshabilitar incluyendo la cadena <code>~~NOTOC~~</code> en el documento.
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Secciones&quot;,&quot;hid&quot;:&quot;secciones&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:10,&quot;range&quot;:&quot;5675-5960&quot;} -->
-<h3 class="sectionedit11" id="titulos_nivel_3">Titulos nivel 3</h3>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Secciones&quot;,&quot;hid&quot;:&quot;secciones&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:10,&quot;range&quot;:&quot;7072-7521&quot;} -->
+<h3 class="sectionedit11" id="titular_nivel_3">Titular Nivel 3</h3>
 <div class="level3">
 
 </div>
 
-<h4 id="titulos_nivel_4">Titulos nivel 4</h4>
+<h4 id="titular_nivel_4">Titular Nivel 4</h4>
 <div class="level4">
 
 </div>
 
-<h5 id="titulos_nivel_5">Titulos nivel 5</h5>
+<h5 id="titular_nivel_5">Titular Nivel 5</h5>
 <div class="level5">
-<pre class="code">==== Titulos nivel 3 ====
-===Titulos nivel 4 ===
-== Titulos nivel 5 ==</pre>
+<pre class="code"> ==== Titular Nivel 3 ====
+ === Titular Nivel 4 ===
+ == Titular Nivel 5 ==</pre>
 
 <p>
-By using four or more dashes, you can make a horizontal line:
+Usando cuatro o más guiones, puedes hacer una línea horizontal:
 </p>
 <hr />
+<pre class="code"> ---- </pre>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Titulos nivel 3&quot;,&quot;hid&quot;:&quot;titulos_nivel_3&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:11,&quot;range&quot;:&quot;5961-6179&quot;} -->
-<h2 class="sectionedit12" id="archivos_multimedia">Archivos Multimedia</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Titular Nivel 3&quot;,&quot;hid&quot;:&quot;titular_nivel_3&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:11,&quot;range&quot;:&quot;7522-7771&quot;} -->
+<h2 class="sectionedit12" id="imagenes_y_otros_ficheros">Imágenes y otros ficheros</h2>
 <div class="level2">
 
 <p>
-You can include external and internal <a href="https://www.dokuwiki.org/images" class="interwiki iw_doku" title="https://www.dokuwiki.org/images">images, videos and audio files</a> with curly brackets. Optionally you can specify the size of them.
+Puedes incluir <a href="https://www.dokuwiki.org/images" class="interwiki iw_doku" title="https://www.dokuwiki.org/images">imágenes</a> externas e internas usando llaves. De manera opcional, puede especificar sus tamaños.
 </p>
 
 <p>
-Real size:                        <a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="media" alt="" /></a>
+Tamaño real:                        <a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="media" alt="" /></a>
 </p>
 
 <p>
-Resize to given width:            <a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?w=50&amp;tok=01c3b4&amp;media=wiki:dokuwiki-128.png" class="media" alt="" width="50" /></a>
+Redimensionando el ancho:           <a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?w=50&amp;tok=01c3b4&amp;media=wiki:dokuwiki-128.png" class="media" alt="" width="50" /></a>
 </p>
 
 <p>
-Resize to given width and height<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>: <a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;h=50&amp;tok=2c0afb&amp;media=wiki:dokuwiki-128.png" class="media" alt="" width="200" height="50" /></a>
+Redimensionando altura y ancho:     <a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;h=50&amp;tok=2c0afb&amp;media=wiki:dokuwiki-128.png" class="media" alt="" width="200" height="50" /></a>
 </p>
 
 <p>
-Resized external image:           <a href="/dokuwiki/lib/exe/fetch.php?tok=58230d&amp;media=http%3A%2F%2Fphp.net%2Fimages%2Fphp.gif" class="media" title="http://php.net/images/php.gif"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;h=50&amp;tok=5fa448&amp;media=http%3A%2F%2Fphp.net%2Fimages%2Fphp.gif" class="media" alt="" width="200" height="50" /></a>
+Imagen externa redimensionada:      <a href="/dokuwiki/lib/exe/fetch.php?tok=b2682e&amp;media=http%3A%2F%2Fde3.php.net%2Fimages%2Fphp.gif" class="media" title="http://de3.php.net/images/php.gif"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;h=50&amp;tok=bb27c4&amp;media=http%3A%2F%2Fde3.php.net%2Fimages%2Fphp.gif" class="media" alt="" width="200" height="50" /></a>
 </p>
-<pre class="code">Real size:                        {{wiki:dokuwiki-128.png}}
-Resize to given width:            {{wiki:dokuwiki-128.png?50}}
-Resize to given width and height: {{wiki:dokuwiki-128.png?200x50}}
-Resized external image:           {{http://php.net/images/php.gif?200x50}}</pre>
+<pre class="code">Tamaño real:                      {{wiki:dokuwiki-128.png}}
+Redimensionando la anchura:       {{wiki:dokuwiki-128.png?50}}
+Redimensionando altura y anchura: {{wiki:dokuwiki-128.png?200x50}}
+Imagen externa redimensionada:    {{http://de3.php.net/images/php.gif?200x50}}</pre>
 
 <p>
-By using left or right whitespaces you can choose the alignment.
+Usando espacios en blanco a derecha o izquierda puedes escoger el alineamiento:
 </p>
 
 <p>
@@ -272,142 +277,71 @@ By using left or right whitespaces you can choose the alignment.
 {{ wiki:dokuwiki-128.png }}</pre>
 
 <p>
-Of course, you can add a title (displayed as a tooltip by most browsers), too.
+Naturalmente, también puedes añadir un título (se muestra como tooltip en la mayoría de los navegadores).
 </p>
 
 <p>
-<a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="mediacenter" title="This is the caption" alt="This is the caption" /></a>
+<a href="/dokuwiki/lib/exe/detail.php?id=wiki%3Asyntax&amp;media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="mediacenter" title="Este es el título" alt="Este es el título" /></a>
 </p>
-<pre class="code">{{ wiki:dokuwiki-128.png |This is the caption}}</pre>
+<pre class="code">{{ wiki:dokuwiki-128.png |Este es el título}}</pre>
 
 <p>
-For linking an image to another page see <a href="#image_links" title="wiki:syntax ↵" class="wikilink1">Image Links</a> above.
+Si especificas un nombre de fichero (externo o interno) que no es una imagen (<code>gif,jpeg,png</code>), entonces será mostrado como un enlace.
+</p>
+
+<p>
+Para enlazar una imagen a otra página ver mas arriba en <a href="#enlaces_imagen" title="wiki:syntax ↵" class="wikilink1">Enlaces imagen</a>.
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Archivos Multimedia&quot;,&quot;hid&quot;:&quot;archivos_multimedia&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:12,&quot;range&quot;:&quot;6180-7534&quot;} -->
-<h3 class="sectionedit13" id="supported_media_formats">Supported Media Formats</h3>
-<div class="level3">
-
-<p>
-DokuWiki can embed the following media formats directly.
-</p>
-<div class="table sectionedit14"><table class="inline">
-	<tr class="row0">
-		<td class="col0"> Image </td><td class="col1 leftalign"> <code>gif</code>, <code>jpg</code>, <code>png</code>  </td>
-	</tr>
-	<tr class="row1">
-		<td class="col0"> Video </td><td class="col1"> <code>webm</code>, <code>ogv</code>, <code>mp4</code> </td>
-	</tr>
-	<tr class="row2">
-		<td class="col0"> Audio </td><td class="col1 leftalign"> <code>ogg</code>, <code>mp3</code>, <code>wav</code>  </td>
-	</tr>
-	<tr class="row3">
-		<td class="col0"> Flash </td><td class="col1 leftalign"> <code>swf</code>                    </td>
-	</tr>
-</table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:14,&quot;range&quot;:&quot;7628-7783&quot;} -->
-<p>
-If you specify a filename that is not a supported media format, then it will be displayed as a link instead.
-</p>
-
-<p>
-By adding <code>?linkonly</code> you provide a link to the media without displaying it inline
-</p>
-<pre class="code">{{wiki:dokuwiki-128.png?linkonly}}</pre>
-
-<p>
-<a href="/dokuwiki/lib/exe/fetch.php?media=wiki:dokuwiki-128.png" class="media mediafile mf_png" title="wiki:dokuwiki-128.png (27.2 KB)">dokuwiki-128.png</a> This is just a link to the image.
-</p>
-
-</div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Supported Media Formats&quot;,&quot;hid&quot;:&quot;supported_media_formats&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:13,&quot;range&quot;:&quot;7535-8088&quot;} -->
-<h3 class="sectionedit15" id="fallback_formats">Fallback Formats</h3>
-<div class="level3">
-
-<p>
-Unfortunately not all browsers understand all video and audio formats. To mitigate the problem, you can upload your file in different formats for maximum browser compatibility.
-</p>
-
-<p>
-For example consider this embedded mp4 video:
-</p>
-<pre class="code">{{video.mp4|A funny video}}</pre>
-
-<p>
-When you upload a <code>video.webm</code> and <code>video.ogv</code> next to the referenced <code>video.mp4</code>, DokuWiki will automatically add them as alternatives so that one of the three files is understood by your browser.
-</p>
-
-<p>
-Additionally DokuWiki supports a “poster” image which will be shown before the video has started. That image needs to have the same filename as the video and be either a jpg or png file. In the example above a <code>video.jpg</code> file would work.
-</p>
-
-</div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Fallback Formats&quot;,&quot;hid&quot;:&quot;fallback_formats&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:15,&quot;range&quot;:&quot;8089-8819&quot;} -->
-<h2 class="sectionedit16" id="listas">Listas</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Im\u00e1genes y otros ficheros&quot;,&quot;hid&quot;:&quot;imagenes_y_otros_ficheros&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:12,&quot;range&quot;:&quot;7772-9186&quot;} -->
+<h2 class="sectionedit13" id="listas">Listas</h2>
 <div class="level2">
 
 <p>
-Dokuwiki supports ordered and unordered lists. To create a list item, indent your text by two spaces and use a <code>*</code> for unordered lists or a <code>-</code> for ordered ones.
+Dokuwiki soporta listas ordenadas y desordenadas. Para crear un elemento de lista, indenta tu texto con dos espacios y usa un <code>*</code> para listas desordenadas o un <code>-</code> para las listas ordenadas.
 </p>
 <ul>
-<li class="level1"><div class="li"> This is a list</div>
+<li class="level1"><div class="li"> Esto es una lista</div>
 </li>
-<li class="level1 node"><div class="li"> The second item</div>
+<li class="level1 node"><div class="li"> El segundo elemento</div>
 <ul>
-<li class="level2"><div class="li"> You may have different levels</div>
+<li class="level2"><div class="li"> Puedes tener diferentes niveles</div>
 </li>
 </ul>
 </li>
-<li class="level1"><div class="li"> Another item</div>
+<li class="level1"><div class="li"> Otro elemento</div>
 </li>
 </ul>
 <ol>
-<li class="level1"><div class="li"> The same list but ordered</div>
+<li class="level1"><div class="li"> La misma lista pero ordenada</div>
 </li>
-<li class="level1 node"><div class="li"> Another item</div>
+<li class="level1 node"><div class="li"> Otro elemento</div>
 <ol>
-<li class="level2"><div class="li"> Just use indention for deeper levels</div>
+<li class="level2"><div class="li"> Basta con usar sangría para obtener niveles más anidados</div>
 </li>
 </ol>
 </li>
-<li class="level1"><div class="li"> That&#039;s it</div>
+<li class="level1"><div class="li"> Listo</div>
 </li>
 </ol>
-<pre class="code">  * This is a list
-  * The second item
-    * You may have different levels
-  * Another item
+<pre class="code">  * Esto es una lista
+  * El segundo elemento
+    * Puedes tener diferentes niveles
+  * Otro elemento
 
-  - The same list but ordered
-  - Another item
-    - Just use indention for deeper levels
-  - That&#039;s it</pre>
-
-<p>
-Also take a look at the <a href="https://www.dokuwiki.org/faq%3Alists" class="interwiki iw_doku" title="https://www.dokuwiki.org/faq%3Alists">FAQ on list items</a>.
-</p>
+  - La misma lista pero ordenada
+  - Otro elemento
+    - Basta con usar indentación para obtener niveles más anidados
+  - Listo</pre>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Listas&quot;,&quot;hid&quot;:&quot;listas&quot;,&quot;codeblockOffset&quot;:1,&quot;secid&quot;:16,&quot;range&quot;:&quot;8820-9480&quot;} -->
-<h2 class="sectionedit17" id="conversion_de_texto">Conversion de texto</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Listas&quot;,&quot;hid&quot;:&quot;listas&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:13,&quot;range&quot;:&quot;9187-9883&quot;} -->
+<h2 class="sectionedit14" id="smileys">Smileys</h2>
 <div class="level2">
 
 <p>
-DokuWiki can convert certain pre-defined characters or strings into images or other text or <abbr title="HyperText Markup Language">HTML</abbr>.
-</p>
-
-<p>
-The text to image conversion is mainly done for smileys. And the text to <abbr title="HyperText Markup Language">HTML</abbr> conversion is used for typography replacements, but can be configured to use other <abbr title="HyperText Markup Language">HTML</abbr> as well.
-</p>
-
-</div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conversion de texto&quot;,&quot;hid&quot;:&quot;conversion_de_texto&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:17,&quot;range&quot;:&quot;9481-9788&quot;} -->
-<h3 class="sectionedit18" id="conversion_de_texto_a_imagen">Conversion de texto a Imagen</h3>
-<div class="level3">
-
-<p>
-DokuWiki converts commonly used <a href="https://en.wikipedia.org/wiki/emoticon" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/emoticon">emoticon</a>s to their graphical equivalents. Those <a href="https://www.dokuwiki.org/Smileys" class="interwiki iw_doku" title="https://www.dokuwiki.org/Smileys">Smileys</a> and other images can be configured and extended. Here is an overview of Smileys included in DokuWiki:
+DokuWiki convierte los <a href="https://en.wikipedia.org/wiki/emoticon" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/emoticon">emoticonos</a> usados habitualmente a sus equivalentes gráficos. Se pueden poner más smileys en el directorio <code>smiley</code> y configurarlos en el fichero <code>conf/smileys.conf</code>. Aquí tienes los Smileys incluidos en DokuWiki.
 </p>
 <ul>
 <li class="level1"><div class="li"> <img src="/dokuwiki/lib/images/smileys/icon_cool.gif" class="icon" alt="8-)" />   8-)  </div>
@@ -453,246 +387,218 @@ DokuWiki converts commonly used <a href="https://en.wikipedia.org/wiki/emoticon"
 </ul>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conversion de texto a Imagen&quot;,&quot;hid&quot;:&quot;conversion_de_texto_a_imagen&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:18,&quot;range&quot;:&quot;9789-10447&quot;} -->
-<h3 class="sectionedit19" id="conversion_de_texto_a_html">Conversion de texto a HTML</h3>
-<div class="level3">
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Smileys&quot;,&quot;hid&quot;:&quot;smileys&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:14,&quot;range&quot;:&quot;9884-10576&quot;} -->
+<h2 class="sectionedit15" id="tipografia">Tipografía</h2>
+<div class="level2">
 
 <p>
-Typography: <a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> can convert simple text characters to their typographically correct entities. Here is an example of recognized characters.
+<a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> puede convertir caracteres de texto simples a su tipografía correcta. Aquí tienes un ejemplo de caracteres reconocidos.
 </p>
 
 <p>
 → ← ↔ ⇒ ⇐ ⇔ » « – — 640&times;480 © ™ ®
-“He thought &#039;It&#039;s a man&#039;s world&#039;…”
+“El pensó &#039;It&#039;s a man&#039;s world&#039;…”
 </p>
 <pre class="code">-&gt; &lt;- &lt;-&gt; =&gt; &lt;= &lt;=&gt; &gt;&gt; &lt;&lt; -- --- 640x480 (c) (tm) (r)
-&quot;He thought &#039;It&#039;s a man&#039;s world&#039;...&quot;</pre>
+&quot;El pensó &#039;It&#039;s a man&#039;s world&#039;...&quot;</pre>
 
 <p>
-The same can be done to produce any kind of <abbr title="HyperText Markup Language">HTML</abbr>, it just needs to be added to the <a href="https://www.dokuwiki.org/entities" class="interwiki iw_doku" title="https://www.dokuwiki.org/entities">pattern file</a>.
-</p>
-
-<p>
-There are three exceptions which do not come from that pattern file: multiplication entity (640&times;480), &#039;single&#039; and “double quotes”. They can be turned off through a <a href="https://www.dokuwiki.org/config%3Atypography" class="interwiki iw_doku" title="https://www.dokuwiki.org/config%3Atypography">config option</a>.
+Por favor, advierte: Estas conversiones pueden ser deshabilitadas en las opciones de configuración.
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Conversion de texto a HTML&quot;,&quot;hid&quot;:&quot;conversion_de_texto_a_html&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:19,&quot;range&quot;:&quot;10448-11157&quot;} -->
-<h2 class="sectionedit20" id="citando">Citando</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tipograf\u00eda&quot;,&quot;hid&quot;:&quot;tipografia&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:15,&quot;range&quot;:&quot;10577-11036&quot;} -->
+<h2 class="sectionedit16" id="citas">Citas</h2>
 <div class="level2">
 
 <p>
-Some times you want to mark some text to show it&#039;s a reply or comment. You can use the following syntax:
+A veces desea marcar algún texto para indicar que es una respuesta o comentario. Puede usar la siguiente sintaxis:
 </p>
-<pre class="code">I think we should do it
-
-&gt; No we shouldn&#039;t
-
-&gt;&gt; Well, I say we should
-
-&gt; Really?
-
-&gt;&gt; Yes!
-
-&gt;&gt;&gt; Then lets do it!</pre>
+<pre class="code">Pienso que deberíamos hacerlo</pre>
+<pre class="code">&gt; No deberíamos</pre>
+<pre class="code">&gt;&gt; Bueno, yo digo que deberíamos</pre>
+<pre class="code">&gt; En serio?</pre>
+<pre class="code">&gt;&gt; Si!</pre>
+<pre class="code">&gt;&gt;&gt; Entonces hagámoslo!</pre>
 
 <p>
-I think we should do it
+Pienso que deberíamos hacerlo
 </p>
 <blockquote><div class="no">
- No we shouldn&#039;t</div></blockquote>
+ No deberíamos</div></blockquote>
 <blockquote><div class="no">
 <blockquote><div class="no">
- Well, I say we should</div></blockquote>
+ Bueno, yo digo que deberíamos</div></blockquote>
 </div></blockquote>
 <blockquote><div class="no">
- Really?</div></blockquote>
+ En serio?</div></blockquote>
 <blockquote><div class="no">
 <blockquote><div class="no">
- Yes!</div></blockquote>
+ Si!</div></blockquote>
 </div></blockquote>
 <blockquote><div class="no">
 <blockquote><div class="no">
 <blockquote><div class="no">
- Then lets do it!</div></blockquote>
+ Entonces hagámoslo!</div></blockquote>
 </div></blockquote>
 </div></blockquote>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Citando&quot;,&quot;hid&quot;:&quot;citando&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:20,&quot;range&quot;:&quot;11158-11523&quot;} -->
-<h2 class="sectionedit21" id="tablas">Tablas</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Citas&quot;,&quot;hid&quot;:&quot;citas&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:16,&quot;range&quot;:&quot;11037-11448&quot;} -->
+<h2 class="sectionedit17" id="tablas">Tablas</h2>
 <div class="level2">
 
 <p>
-DokuWiki supports a simple syntax to create tables.
+DokuWiki soporta una sintaxis simple para crear tablas.
 </p>
-<div class="table sectionedit22"><table class="inline">
+<div class="table sectionedit18"><table class="inline">
 	<thead>
 	<tr class="row0">
-		<th class="col0 leftalign"> Heading 1      </th><th class="col1 leftalign"> Heading 2       </th><th class="col2 leftalign"> Heading 3          </th>
+		<th class="col0 leftalign"> Encabezado 1   </th><th class="col1 leftalign"> Encabezado 2    </th><th class="col2 leftalign"> Encabezado         </th>
 	</tr>
 	</thead>
 	<tr class="row1">
-		<td class="col0 leftalign"> Row 1 Col 1    </td><td class="col1 leftalign"> Row 1 Col 2     </td><td class="col2 leftalign"> Row 1 Col 3        </td>
+		<td class="col0 leftalign"> Fila 1 Col 1   </td><td class="col1 leftalign"> Fila 1 Col 2    </td><td class="col2 leftalign"> Fila 1 Col 3       </td>
 	</tr>
 	<tr class="row2">
-		<td class="col0 leftalign"> Row 2 Col 1    </td><td class="col1" colspan="2"> some colspan (note the double pipe) </td>
+		<td class="col0 leftalign"> Fila 2 Col 1   </td><td class="col1" colspan="2"> una combinación(mira la barra doble)</td>
 	</tr>
 	<tr class="row3">
-		<td class="col0 leftalign"> Row 3 Col 1    </td><td class="col1 leftalign"> Row 3 Col 2     </td><td class="col2 leftalign"> Row 3 Col 3        </td>
+		<td class="col0 leftalign"> Fila 3 Col 1   </td><td class="col1 leftalign"> Fila 2 Col 2    </td><td class="col2 leftalign"> Fila 2 Col 3       </td>
 	</tr>
 </table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:22,&quot;range&quot;:&quot;11597-11828&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:18,&quot;range&quot;:&quot;11526-11758&quot;} -->
 <p>
-Table rows have to start and end with a <code>|</code> for normal rows or a <code>^</code> for headers.
+Las filas tienen que empezar y terminar con un <code>|</code> para las filas normales o con un <code>^</code> para los encabezados.
 </p>
-<pre class="code">^ Heading 1      ^ Heading 2       ^ Heading 3          ^
-| Row 1 Col 1    | Row 1 Col 2     | Row 1 Col 3        |
-| Row 2 Col 1    | some colspan (note the double pipe) ||
-| Row 3 Col 1    | Row 3 Col 2     | Row 3 Col 3        |</pre>
+<pre class="code">^ Encabezado 1   ^ Encabezado 2    ^ Encabezado         ^
+| Fila 1 Col 1   | Fila 1 Col 2    | Fila 1 Col 3       |
+| Fila 2 Col 1   | una combinación(mira la barra doble)||
+| Fila 3 Col 1   | Fila 2 Col 2    | Fila 2 Col 3       |</pre>
 
 <p>
-To connect cells horizontally, just make the next cell completely empty as shown above. Be sure to have always the same amount of cell separators!
+Para conectar celdas horizontalmente, haz la celda siguiente completamente vacía como se muestra arriba. ¡Asegúrate de tener siempre el mismo número de separadores de celda!
 </p>
 
 <p>
-Vertical tableheaders are possible, too.
+Los encabezados verticales también son posibles.
 </p>
-<div class="table sectionedit23"><table class="inline">
+<div class="table sectionedit19"><table class="inline">
 	<thead>
 	<tr class="row0">
-		<td class="col0 leftalign">              </td><th class="col1 leftalign"> Heading 1            </th><th class="col2 leftalign"> Heading 2          </th>
+		<td class="col0 leftalign">              </td><th class="col1 leftalign"> Encabezado 1         </th><th class="col2 leftalign"> Encabezado 2       </th>
 	</tr>
 	</thead>
 	<tr class="row1">
-		<th class="col0 leftalign"> Heading 3    </th><td class="col1 leftalign"> Row 1 Col 2          </td><td class="col2 leftalign"> Row 1 Col 3        </td>
+		<th class="col0"> Encabezado 3 </th><td class="col1 leftalign"> Fila 1 Col 2         </td><td class="col2 leftalign"> Fila 1 Col 3       </td>
 	</tr>
 	<tr class="row2">
-		<th class="col0 leftalign"> Heading 4    </th><td class="col1"> no colspan this time </td><td class="col2 leftalign">                    </td>
+		<th class="col0"> Encabezado 4 </th><td class="col1"> Sin combinación ahora</td><td class="col2 leftalign">                    </td>
 	</tr>
 	<tr class="row3">
-		<th class="col0 leftalign"> Heading 5    </th><td class="col1 leftalign"> Row 2 Col 2          </td><td class="col2 leftalign"> Row 2 Col 3        </td>
+		<th class="col0"> Encabezado 5 </th><td class="col1 leftalign"> Fila 2 Columna 2     </td><td class="col2 leftalign"> Fila 2 Columna 3   </td>
 	</tr>
 </table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:23,&quot;range&quot;:&quot;12348-12591&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:19,&quot;range&quot;:&quot;12347-12591&quot;} -->
 <p>
-As you can see, it&#039;s the cell separator before a cell which decides about the formatting:
+Como puedes ver, el separador de celda antes de una celda es quien decide cómo es el formato:
 </p>
-<pre class="code">|              ^ Heading 1            ^ Heading 2          ^
-^ Heading 3    | Row 1 Col 2          | Row 1 Col 3        |
-^ Heading 4    | no colspan this time |                    |
-^ Heading 5    | Row 2 Col 2          | Row 2 Col 3        |</pre>
+<pre class="code">|              ^ Encabezado 1         ^ Encabezado 2       ^
+^ Encabezado 3 | Fila 1 Col 2         | Fila 1 Col 3       |
+^ Encabezado 4 | Sin combinación ahora|                    |
+^ Encabezado 5 | Fila 2 Columna 2     | Fila 2 Columna 3   |</pre>
 
 <p>
-You can have rowspans (vertically connected cells) by adding <code>:::</code> into the cells below the one to which they should connect.
+Puedes combinar celdas verticalmente (rowspans) añadiendo <code>:::</code> en las celdas debajo de la que deseas combinar.
 </p>
-<div class="table sectionedit24"><table class="inline">
+<div class="table sectionedit20"><table class="inline">
 	<thead>
 	<tr class="row0">
-		<th class="col0 leftalign"> Heading 1      </th><th class="col1 leftalign"> Heading 2                  </th><th class="col2 leftalign"> Heading 3          </th>
+		<th class="col0 leftalign">Encabezado 1         </th><th class="col1 leftalign">Encabezado 2                        </th><th class="col2 leftalign">Encabezado 3       </th>
 	</tr>
 	</thead>
 	<tr class="row1">
-		<td class="col0 leftalign"> Row 1 Col 1    </td><td class="col1" rowspan="3"> this cell spans vertically </td><td class="col2 leftalign"> Row 1 Col 3        </td>
+		<td class="col0 leftalign">Fila 1 Columna 1     </td><td class="col1" rowspan="3">Esta celda se combina verticalmente </td><td class="col2 leftalign">Fila 1 Columna 3   </td>
 	</tr>
 	<tr class="row2">
-		<td class="col0 leftalign"> Row 2 Col 1    </td><td class="col1 leftalign"> Row 2 Col 3        </td>
+		<td class="col0 leftalign">Fila 2 Columna 1     </td><td class="col1 leftalign">Fila 2 Columna 3   </td>
 	</tr>
 	<tr class="row3">
-		<td class="col0 leftalign"> Row 3 Col 1    </td><td class="col1 leftalign"> Row 2 Col 3        </td>
+		<td class="col0 leftalign">Fila 3 Columna 1     </td><td class="col1 leftalign">Fila 2 Columna 3   </td>
 	</tr>
 </table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table3&quot;,&quot;secid&quot;:24,&quot;range&quot;:&quot;13070-13345&quot;} -->
-<p>
-Apart from the rowspan syntax those cells should not contain anything else.
-</p>
-<pre class="code">^ Heading 1      ^ Heading 2                  ^ Heading 3          ^
-| Row 1 Col 1    | this cell spans vertically | Row 1 Col 3        |
-| Row 2 Col 1    | :::                        | Row 2 Col 3        |
-| Row 3 Col 1    | :::                        | Row 2 Col 3        |</pre>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:20,&quot;range&quot;:&quot;13059-13382&quot;} --><pre class="code">^Encabezado 1         ^Encabezado 2                        ^Encabezado 3       ^
+|Fila 1 Columna 1     |Esta celda se combina verticalmente |Fila 1 Columna 3   |
+|Fila 2 Columna 1     |:::                                 |Fila 2 Columna 3   |
+|Fila 3 Columna 1     |:::                                 |Fila 2 Columna 3   |</pre>
 
 <p>
-You can align the table contents, too. Just add at least two whitespaces at the opposite end of your text: Add two spaces on the left to align right, two spaces on the right to align left and two spaces at least at both ends for centered text.
+También puedes alinear los contenidos de la tabla. Basta con añadir al menos dos espacios en blanco en el lado opuesto de tu texto: Añade dos espacios a la izquierda para alinear a la derecha, dos espacios a la derecha para alinear a la izquierda y dos espacios en cada extremo para obtener texto centrado.
 </p>
-<div class="table sectionedit25"><table class="inline">
+<div class="table sectionedit21"><table class="inline">
 	<thead>
 	<tr class="row0">
-		<th class="col0 centeralign" colspan="3">           Table with alignment           </th>
+		<th class="col0 centeralign" colspan="3">           Tabla con alineamiento         </th>
 	</tr>
 	</thead>
 	<tr class="row1">
-		<td class="col0 rightalign">         right</td><td class="col1 centeralign">    center    </td><td class="col2 leftalign">left          </td>
+		<td class="col0 rightalign">       derecha</td><td class="col1 centeralign">    centro    </td><td class="col2 leftalign">izquierda     </td>
 	</tr>
 	<tr class="row2">
-		<td class="col0 leftalign">left          </td><td class="col1 rightalign">         right</td><td class="col2 centeralign">    center    </td>
+		<td class="col0 leftalign">izquierda     </td><td class="col1 rightalign">       derecha</td><td class="col2 centeralign">    centro    </td>
 	</tr>
 	<tr class="row3">
 		<td class="col0"> xxxxxxxxxxxx </td><td class="col1"> xxxxxxxxxxxx </td><td class="col2"> xxxxxxxxxxxx </td>
 	</tr>
 </table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table4&quot;,&quot;secid&quot;:25,&quot;range&quot;:&quot;13954-14141&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table3&quot;,&quot;secid&quot;:21,&quot;range&quot;:&quot;14036-14223&quot;} -->
 <p>
-This is how it looks in the source:
+Así es como aparece en el fuente:
 </p>
-<pre class="code">^           Table with alignment           ^^^
-|         right|    center    |left          |
-|left          |         right|    center    |
+<pre class="code">^           Tabla con alineamiento         ^^^
+|       derecha|    centro    |izquierda     |
+|izquierda     |       derecha|    centro    |
 | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |</pre>
 
-<p>
-Note: Vertical alignment is not supported.
-</p>
-
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tablas&quot;,&quot;hid&quot;:&quot;tablas&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:21,&quot;range&quot;:&quot;11524-14420&quot;} -->
-<h2 class="sectionedit26" id="sin_formato">Sin formato</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Tablas&quot;,&quot;hid&quot;:&quot;tablas&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:17,&quot;range&quot;:&quot;11449-14458&quot;} -->
+<h2 class="sectionedit22" id="bloques_no_analizados">Bloques no analizados</h2>
 <div class="level2">
 
 <p>
-If you need to display text exactly like it is typed (without any formatting), enclose the area either with <code>&lt;nowiki&gt;</code> tags or even simpler, with double percent signs <code>%%</code>.
+Puedes incluir  en tus documentos bloques sin analizar de varias maneras:
+</p>
+<ul>
+<li class="level1"><div class="li"> Indentando con al menos dos espacios (como se usa en los ejemplos a lo largo de toda esta página)</div>
+</li>
+<li class="level1"><div class="li"> Usando las etiquetas <code>code</code> o <code>file</code>.</div>
+</li>
+</ul>
+<pre class="code">Esto es texto no analizado que se hizo indentando con dos espacios.</pre>
+<pre class="code">Esto se hizo con etiquetas code. Los espacios se preservan: como         &lt;-este</pre>
+<pre class="file">Esto con etiquetas file. Se usa para indicar que estás mostrando un fichero.</pre>
+
+<p>
+Para que el analizador ignore por completo una zona (es decir, no le aplique ningún formato), encierra el área entre etiquetas <code>nowiki</code> o, incluso más simple, con signos de porcentaje duplicados <code>%%</code>.
 </p>
 
 <p>
 
-This is some text which contains addresses like this: http://www.splitbrain.org and **formatting**, but nothing is done with it.
+Esto es un texto que contiene direcciones como ésta: http://www.splitbrain.org y **formatos**, pero no se hace nada con ellos.
 
-The same is true for //__this__ text// with a smiley ;-).
 </p>
-<pre class="code">&lt;nowiki&gt;
-This is some text which contains addresses like this: http://www.splitbrain.org and **formatting**, but nothing is done with it.
-&lt;/nowiki&gt;
-The same is true for %%//__this__ text// with a smiley ;-)%%.</pre>
+
+<p>
+Echa un vistazo al fuente de esta página para ver cómo usar estos bloques.
+</p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sin formato&quot;,&quot;hid&quot;:&quot;sin_formato&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:26,&quot;range&quot;:&quot;14421-15074&quot;} -->
-<h2 class="sectionedit27" id="bloques_de_codigo">Bloques de Codigo</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bloques no analizados&quot;,&quot;hid&quot;:&quot;bloques_no_analizados&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:22,&quot;range&quot;:&quot;14459-15428&quot;} -->
+<h2 class="sectionedit23" id="resaltado_de_sintaxis">Resaltado de Sintaxis</h2>
 <div class="level2">
 
 <p>
-You can include code blocks into your documents by either indenting them by at least two spaces (like used for the previous examples) or by using the tags <code>&lt;code&gt;</code> or <code>&lt;file&gt;</code>.
-</p>
-<pre class="code">This is text is indented by two spaces.</pre>
-<pre class="code">This is preformatted code all spaces are preserved: like              &lt;-this</pre>
-<pre class="file">This is pretty much the same, but you could use it to show that you quoted a file.</pre>
-
-<p>
-Those blocks were created by this source:
-</p>
-<pre class="code">  This is text is indented by two spaces.</pre>
-<pre class="code">&lt;code&gt;
-This is preformatted code all spaces are preserved: like              &lt;-this
-&lt;/code&gt;</pre>
-<pre class="code">&lt;file&gt;
-This is pretty much the same, but you could use it to show that you quoted a file.
-&lt;/file&gt;</pre>
-
-</div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Bloques de Codigo&quot;,&quot;hid&quot;:&quot;bloques_de_codigo&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:27,&quot;range&quot;:&quot;15075-15822&quot;} -->
-<h3 class="sectionedit28" id="resultados_de_sintaxis">Resultados de sintaxis</h3>
-<div class="level3">
-
-<p>
-<a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> can highlight sourcecode, which makes it easier to read. It uses the <a href="http://qbnz.com/highlighter/" class="urlextern" title="http://qbnz.com/highlighter/" rel="nofollow">GeSHi</a> Generic Syntax Highlighter – so any language supported by GeSHi is supported. The syntax uses the same code and file blocks described in the previous section, but this time the name of the language syntax to be highlighted is included inside the tag, e.g. <code>&lt;code java&gt;</code> or <code>&lt;file java&gt;</code>.
+<a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> puede resaltar el código fuente, que lo hace más sencillo de leer. Usa <a href="http://qbnz.com/highlighter/" class="urlextern" title="http://qbnz.com/highlighter/" rel="nofollow">GeSHi</a> Generic Syntax Highlighter – por lo que cualquier lenguaje soportado por GeSHi es soportado. La sintaxis es muy parecida a la del bloque de código de la sección anterior, pero esta vez el nombre del lenguaje utilizado se inserta dentro de la etiqueta. Por ejemplo <code>&lt;code java&gt;</code>.
 </p>
 <pre class="code java"><span class="co3">/**
  * The HelloWorldApp class implements an application that
@@ -700,172 +606,119 @@ This is pretty much the same, but you could use it to show that you quoted a fil
  */</span>
 <span class="kw1">class</span> HelloWorldApp <span class="br0">&#123;</span>
     <span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span>
-        <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+system"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Hello World!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">//Display the string.</span>
+        <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+system"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;hola mundo&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">//Display the string.</span>
     <span class="br0">&#125;</span>
 <span class="br0">&#125;</span></pre>
 
 <p>
-The following language strings are currently recognized: <em>4cs 6502acme 6502kickass 6502tasm 68000devpac abap actionscript3 actionscript ada aimms algol68 apache applescript apt_sources arm asm asp asymptote autoconf autohotkey autoit avisynth awk bascomavr bash basic4gl batch bf biblatex bibtex blitzbasic bnf boo caddcl cadlisp ceylon cfdg cfm chaiscript chapel cil c_loadrunner clojure c_mac cmake cobol coffeescript c cpp cpp-qt cpp-winapi csharp css cuesheet c_winapi dart dcl dcpu16 dcs delphi diff div dos dot d ecmascript eiffel email epc e erlang euphoria ezt f1 falcon fo fortran freebasic freeswitch fsharp gambas gdb genero genie gettext glsl gml gnuplot go groovy gwbasic haskell haxe hicest hq9plus html html4strict html5 icon idl ini inno intercal io ispfpanel java5 java javascript jcl j jquery julia kixtart klonec klonecpp kotlin latex lb ldif lisp llvm locobasic logtalk lolcode lotusformulas lotusscript lscript lsl2 lua m68k magiksf make mapbasic mathematica matlab mercury metapost mirc mk-61 mmix modula2 modula3 mpasm mxml mysql nagios netrexx newlisp nginx nimrod nsis oberon2 objc objeck ocaml-brief ocaml octave oobas oorexx oracle11 oracle8 oxygene oz parasail parigp pascal pcre perl6 perl per pf phix php-brief php pic16 pike pixelbender pli plsql postgresql postscript povray powerbuilder powershell proftpd progress prolog properties providex purebasic pycon pys60 python qbasic qml q racket rails rbs rebol reg rexx robots rpmspec rsplus ruby rust sas sass scala scheme scilab scl sdlbasic smalltalk smarty spark sparql sql standardml stonescript swift systemverilog tclegg tcl teraterm texgraph text thinbasic tsql twig typoscript unicon upc urbi uscript vala vbnet vb vbscript vedit verilog vhdl vim visualfoxpro visualprolog whitespace whois winbatch xbasic xml xojo xorg_conf xpp yaml z80 zxbasic</em>
-</p>
-
-<p>
-There are additional <a href="https://www.dokuwiki.org/syntax_highlighting" class="interwiki iw_doku" title="https://www.dokuwiki.org/syntax_highlighting">advanced options</a> available for syntax highlighting, such as highlighting lines or adding line numbers.
+Los lenguajes siguientes son reconocidos actualmente: <em>actionscript, actionscript-french, ada, apache, applescript, asm, asp, autoit, bash, blitzbasic, caddcl, cadlisp, c, c_mac, cfm, cpp, csharp, css, delphi, diff, d, div, dos, eiffel, freebasic, gml, groovy, html4strict, ini, inno, java, java5, javascript, lisp, lua, matlab, mpasm, mysql, nsis, objc, ocaml, ocaml-brief, oobas, oracle8, pascal, perl, php-brief, php, python, qbasic, scheme, sdlbasic, smalltalk, smarty, sql, tcl, text, tsql, reg, robots, ruby, vb, vbnet, vhdl, visualfoxpro, winbatch, xml</em>
 </p>
 
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Resultados de sintaxis&quot;,&quot;hid&quot;:&quot;resultados_de_sintaxis&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:28,&quot;range&quot;:&quot;15823-18588&quot;} -->
-<h3 class="sectionedit29" id="downloadable_code_blocks">Downloadable Code Blocks</h3>
-<div class="level3">
-
-<p>
-When you use the <code>&lt;code&gt;</code> or <code>&lt;file&gt;</code> syntax as above, you might want to make the shown code available for download as well. You can do this by specifying a file name after language code like this:
-</p>
-<pre class="code">&lt;file php myexample.php&gt;
-&lt;?php echo &quot;hello world!&quot;; ?&gt;
-&lt;/file&gt;</pre>
-<dl class="file">
-<dt><a href="/dokuwiki/doku.php?do=export_code&amp;id=wiki:syntax&amp;codeblock=8" title="Download Snippet" class="mediafile mf_php">myexample.php</a></dt>
-<dd><pre class="code file php"><span class="kw2">&lt;?php</span> <span class="kw1">echo</span> <span class="st0">&quot;hello world!&quot;</span><span class="sy0">;</span> <span class="sy1">?&gt;</span></pre>
-</dd></dl>
-
-<p>
-If you don&#039;t want any highlighting but want a downloadable file, specify a dash (<code>-</code>) as the language code: <code>&lt;code - myfile.foo&gt;</code>.
-</p>
-
-</div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Downloadable Code Blocks&quot;,&quot;hid&quot;:&quot;downloadable_code_blocks&quot;,&quot;codeblockOffset&quot;:7,&quot;secid&quot;:29,&quot;range&quot;:&quot;18589-19119&quot;} -->
-<h2 class="sectionedit30" id="incrustar_html_y_php">Incrustar HTML y PHP</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Resaltado de Sintaxis&quot;,&quot;hid&quot;:&quot;resaltado_de_sintaxis&quot;,&quot;codeblockOffset&quot;:7,&quot;secid&quot;:23,&quot;range&quot;:&quot;15429-16738&quot;} -->
+<h2 class="sectionedit24" id="agregar_fuentes_rss_atom">Agregar fuentes RSS/ATOM</h2>
 <div class="level2">
 
 <p>
-You can embed raw <abbr title="HyperText Markup Language">HTML</abbr> or PHP code into your documents by using the <code>&lt;html&gt;</code> or <code>&lt;php&gt;</code> tags. (Use uppercase tags if you need to enclose block level elements.)
+DokuWiki puede integrar información de fuentes XML externas. Para procesar las fuentes XML, se ocupa <a href="http://simplepie.org/" class="urlextern" title="http://simplepie.org/" rel="nofollow">SimplePie</a>. Todos los formatos entendidos por SimplePie, pueden usarse también en DocuWiki. Se puede afectar el despliegue por medio de varios parámetros separados por espacios:
 </p>
-
-<p>
-<abbr title="HyperText Markup Language">HTML</abbr> example:
-</p>
-<pre class="code">&lt;html&gt;
-This is some &lt;span style=&quot;color:red;font-size:150%;&quot;&gt;inline HTML&lt;/span&gt;
-&lt;/html&gt;
-&lt;HTML&gt;
-&lt;p style=&quot;border:2px dashed red;&quot;&gt;And this is some block HTML&lt;/p&gt;
-&lt;/HTML&gt;</pre>
-
-<p>
-<code class="code html4strict">This is some <span class="sc2">&lt;<a href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:red;font-size:150%;&quot;</span>&gt;</span>inline HTML<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span></code>
-</p>
-<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;border:2px dashed red;&quot;</span>&gt;</span>And this is some block HTML<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span></pre>
-<p>
-PHP example:
-</p>
-<pre class="code">&lt;php&gt;
-echo &#039;The PHP version: &#039;;
-echo phpversion();
-echo &#039; (generated inline HTML)&#039;;
-&lt;/php&gt;
-&lt;PHP&gt;
-echo &#039;&lt;table class=&quot;inline&quot;&gt;&lt;tr&gt;&lt;td&gt;The same, but inside a block level element:&lt;/td&gt;&#039;;
-echo &#039;&lt;td&gt;&#039;.phpversion().&#039;&lt;/td&gt;&#039;;
-echo &#039;&lt;/tr&gt;&lt;/table&gt;&#039;;
-&lt;/PHP&gt;</pre>
-
-<p>
-<code class="code php"><span class="kw1">echo</span> <span class="st_h">'The PHP version: '</span><span class="sy0">;</span>
-<span class="kw1">echo</span> <a href="http://www.php.net/phpversion"><span class="kw3">phpversion</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="kw1">echo</span> <span class="st_h">' (inline HTML)'</span><span class="sy0">;</span></code>
-</p>
-<pre class="code php"><span class="kw1">echo</span> <span class="st_h">'&lt;table class=&quot;inline&quot;&gt;&lt;tr&gt;&lt;td&gt;The same, but inside a block level element:&lt;/td&gt;'</span><span class="sy0">;</span>
-<span class="kw1">echo</span> <span class="st_h">'&lt;td&gt;'</span><span class="sy0">.</span><a href="http://www.php.net/phpversion"><span class="kw3">phpversion</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st_h">'&lt;/td&gt;'</span><span class="sy0">;</span>
-<span class="kw1">echo</span> <span class="st_h">'&lt;/tr&gt;&lt;/table&gt;'</span><span class="sy0">;</span></pre>
-<p>
-<strong>Please Note</strong>: <abbr title="HyperText Markup Language">HTML</abbr> and PHP embedding is disabled by default in the configuration. If disabled, the code is displayed instead of executed.
-</p>
-
-</div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Incrustar HTML y PHP&quot;,&quot;hid&quot;:&quot;incrustar_html_y_php&quot;,&quot;codeblockOffset&quot;:9,&quot;secid&quot;:30,&quot;range&quot;:&quot;19120-20351&quot;} -->
-<h2 class="sectionedit31" id="anadir_rss_atom">Añadir RSS/ATOM</h2>
-<div class="level2">
-
-<p>
-<a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> can integrate data from external XML feeds. For parsing the XML feeds, <a href="http://simplepie.org/" class="urlextern" title="http://simplepie.org/" rel="nofollow">SimplePie</a> is used. All formats understood by SimplePie can be used in DokuWiki as well. You can influence the rendering by multiple additional space separated parameters:
-</p>
-<div class="table sectionedit32"><table class="inline">
+<div class="table sectionedit25"><table class="inline">
 	<thead>
 	<tr class="row0">
-		<th class="col0 leftalign"> Parameter  </th><th class="col1"> Description </th>
+		<th class="col0 leftalign"> Parámetro        </th><th class="col1"> Descripción </th>
 	</tr>
 	</thead>
 	<tr class="row1">
-		<td class="col0"> any number </td><td class="col1"> will be used as maximum number items to show, defaults to 8 </td>
+		<td class="col0"> cualquier número </td><td class="col1"> número de artículos a mostrar como máximo; por omisión, 8 </td>
 	</tr>
 	<tr class="row2">
-		<td class="col0 leftalign"> reverse    </td><td class="col1"> display the last items in the feed first </td>
+		<td class="col0 leftalign"> reverse          </td><td class="col1"> mostrar los últimos artículos al principio </td>
 	</tr>
 	<tr class="row3">
-		<td class="col0 leftalign"> author     </td><td class="col1"> show item authors names </td>
+		<td class="col0 leftalign"> author           </td><td class="col1"> mostrar los nombres de los autores de los artículos </td>
 	</tr>
 	<tr class="row4">
-		<td class="col0 leftalign"> date       </td><td class="col1"> show item dates </td>
+		<td class="col0 leftalign"> date             </td><td class="col1"> mostrar las fechas de los artículos </td>
 	</tr>
 	<tr class="row5">
-		<td class="col0"> description</td><td class="col1"> show the item description. If <a href="https://www.dokuwiki.org/config%3Ahtmlok" class="interwiki iw_doku" title="https://www.dokuwiki.org/config%3Ahtmlok">HTML</a> is disabled all tags will be stripped </td>
+		<td class="col0 leftalign"> description      </td><td class="col1"> mostrar las descripciones de los artículos. Si el <abbr title="HyperText Markup Language">HTML</abbr> está deshabilitado, toda etiqueta se rasurará </td>
 	</tr>
 	<tr class="row6">
-		<td class="col0 leftalign"> nosort     </td><td class="col1"> do not sort the items in the feed </td>
-	</tr>
-	<tr class="row7">
-		<td class="col0"> <em>n</em>[dhm] </td><td class="col1"> refresh period, where d=days, h=hours, m=minutes. (e.g. 12h = 12 hours). </td>
+		<td class="col0 leftalign"> <em>n</em>[dhm]       </td><td class="col1"> periodo de actualización, donde d=días, h=horas, m=minutos. (ej. 12h = 12 horas). </td>
 	</tr>
 </table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table5&quot;,&quot;secid&quot;:32,&quot;range&quot;:&quot;20663-21154&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table4&quot;,&quot;secid&quot;:25,&quot;range&quot;:&quot;17084-17644&quot;} -->
 <p>
-The refresh period defaults to 4 hours. Any value below 10 minutes will be treated as 10 minutes. <a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> will generally try to supply a cached version of a page, obviously this is inappropriate when the page contains dynamic external content. The parameter tells <a href="/dokuwiki/doku.php?id=wiki:dokuwiki" class="wikilink1" title="wiki:dokuwiki">DokuWiki</a> to re-render the page if it is more than <em>refresh period</em> since the page was last rendered.
+El periodo de actualización por omisión es de 4 horas. Cualquier valor menor a 10 minutos será tratado como 10 minutos. DokuWiki generalmente tratará de entregar una versión en caché de la página; obviamente esto no es apropiado cuando la página incluye contenido dinámico externo. El parámetro le dice a DokuWiki que regenere la página si hace más de <em>periodo de actualización</em> desde que la página se generó por última vez.
 </p>
 
 <p>
-By default the feed will be sorted by date, newest items first. You can sort it by oldest first using the <code>reverse</code> parameter, or display the feed as is with <code>nosort</code>.
+<strong>Ejemplo:</strong>
 </p>
-
-<p>
-<strong>Example:</strong>
-</p>
-<pre class="code">{{rss&gt;http://slashdot.org/index.rss 5 author date 1h }}</pre>
-<ul class="rss"><li><div class="li"><a href="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/L7DOYLJgN3c/too-many-workers-are-trapped-by-non-competes" class="urlextern" title="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/L7DOYLJgN3c/too-many-workers-are-trapped-by-non-competes" rel="nofollow">Too Many Workers Are Trapped By Non-Competes</a> by msmash (2019/01/14 14:51)</div></li><li><div class="li"><a href="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/oX-aPzRHEoE/usb-type-c-headphones-were-nowhere-in-sight-at-ces-2019" class="urlextern" title="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/oX-aPzRHEoE/usb-type-c-headphones-were-nowhere-in-sight-at-ces-2019" rel="nofollow">USB Type-C Headphones Were Nowhere in Sight at CES 2019</a> by msmash (2019/01/14 14:17)</div></li><li><div class="li"><a href="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/hmpnj18T7-s/google-reportedly-blacklists-ethereum-as-a-google-ad-keyword-startup-claims" class="urlextern" title="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/hmpnj18T7-s/google-reportedly-blacklists-ethereum-as-a-google-ad-keyword-startup-claims" rel="nofollow">Google Reportedly Blacklists &#039;Ethereum&#039; As a Google Ad Keyword, Startup Claims</a> by BeauHD (2019/01/14 13:13)</div></li><li><div class="li"><a href="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/1DxHZHkz_Mk/worlds-longest-aircraft-gets-full-production-go-ahead" class="urlextern" title="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/1DxHZHkz_Mk/worlds-longest-aircraft-gets-full-production-go-ahead" rel="nofollow">World&#039;s Longest Aircraft Gets Full-Production Go-Ahead</a> by BeauHD (2019/01/14 10:10)</div></li><li><div class="li"><a href="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/bxV2A9QtRVg/battlefield-5s-poor-sales-numbers-have-become-a-disaster-for-electronic-arts" class="urlextern" title="http://rss.slashdot.org/~r/Slashdot/slashdot/~3/bxV2A9QtRVg/battlefield-5s-poor-sales-numbers-have-become-a-disaster-for-electronic-arts" rel="nofollow">Battlefield 5&#039;s Poor Sales Numbers Have Become a Disaster For Electronic Arts</a> by BeauHD (2019/01/14 07:07)</div></li></ul>
+<pre class="code">{{rss&gt;http://barrapunto.com/index.rss 10 author date 2h }}</pre>
+<ul class="rss"><li><div class="li"><a href="http://barrapunto.com/article.pl?sid=18/06/08/1657223&amp;from=rss" class="urlextern" title="http://barrapunto.com/article.pl?sid=18/06/08/1657223&amp;from=rss" rel="nofollow">La propuesta de derechos de autor de la UE es extremadamente mala para todos</a> por amieiro (2018/06/08 11:34)</div></li><li><div class="li"><a href="http://eventos.barrapunto.com/article.pl?sid=18/06/07/0814214&amp;from=rss" class="urlextern" title="http://eventos.barrapunto.com/article.pl?sid=18/06/07/0814214&amp;from=rss" rel="nofollow">Abierto el registro para GUADEC 2018 en Almería</a> por JuanjoAI (2018/06/07 04:14)</div></li><li><div class="li"><a href="http://barrapunto.com/article.pl?sid=18/05/02/2253208&amp;from=rss" class="urlextern" title="http://barrapunto.com/article.pl?sid=18/05/02/2253208&amp;from=rss" rel="nofollow">En China, el 2020 pasará a ser 1984</a> por nettizen (2018/05/02 19:10)</div></li><li><div class="li"><a href="http://espana.barrapunto.com/article.pl?sid=18/04/17/2154209&amp;from=rss" class="urlextern" title="http://espana.barrapunto.com/article.pl?sid=18/04/17/2154209&amp;from=rss" rel="nofollow">Justicia infringió la LOPD por el fallo de LexNet</a> por Ricardo Estalmán (posted by nettizen) (2018/04/17 18:13)</div></li><li><div class="li"><a href="http://barrapunto.com/article.pl?sid=18/04/09/152223&amp;from=rss" class="urlextern" title="http://barrapunto.com/article.pl?sid=18/04/09/152223&amp;from=rss" rel="nofollow">Tor Messenger no se desarrollará</a> por Ricardo Estalmán (posted by nettizen) (2018/04/09 11:19)</div></li><li><div class="li"><a href="http://softlibre.barrapunto.com/article.pl?sid=18/04/07/1511246&amp;from=rss" class="urlextern" title="http://softlibre.barrapunto.com/article.pl?sid=18/04/07/1511246&amp;from=rss" rel="nofollow">¿Programas para gestionar actualizaciones de Ubuntu de forma centralizada?</a> por nettizen (2018/04/07 11:28)</div></li><li><div class="li"><a href="http://barrapunto.com/article.pl?sid=18/04/05/0041200&amp;from=rss" class="urlextern" title="http://barrapunto.com/article.pl?sid=18/04/05/0041200&amp;from=rss" rel="nofollow">Salvar la voz de Stephen Hawking</a> por Ricardo Estalmán (posted by nettizen) (2018/04/04 19:59)</div></li><li><div class="li"><a href="http://barrapunto.com/article.pl?sid=18/03/14/1626209&amp;from=rss" class="urlextern" title="http://barrapunto.com/article.pl?sid=18/03/14/1626209&amp;from=rss" rel="nofollow">Ha fallecido Stephen Hawking</a> por nettizen (2018/03/14 12:19)</div></li><li><div class="li"><a href="http://americas.barrapunto.com/article.pl?sid=18/03/08/2017211&amp;from=rss" class="urlextern" title="http://americas.barrapunto.com/article.pl?sid=18/03/08/2017211&amp;from=rss" rel="nofollow">California legislará el &#039;derecho a la reparación&#039; de los dispositivos electrónicos</a> por nettizen (2018/03/08 15:09)</div></li><li><div class="li"><a href="http://barrapunto.com/article.pl?sid=18/03/08/1648217&amp;from=rss" class="urlextern" title="http://barrapunto.com/article.pl?sid=18/03/08/1648217&amp;from=rss" rel="nofollow">¿Dos fotografías en el mismo instante y al mismo objeto involuntariamente?</a> por nettizen (2018/03/08 11:39)</div></li></ul>
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\u00f1adir RSS\/ATOM&quot;,&quot;hid&quot;:&quot;anadir_rss_atom&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:31,&quot;range&quot;:&quot;20352-21846&quot;} -->
-<h2 class="sectionedit33" id="mascros_de_control">Mascros de control</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Agregar fuentes RSS\/ATOM&quot;,&quot;hid&quot;:&quot;agregar_fuentes_rss_atom&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:24,&quot;range&quot;:&quot;16739-18224&quot;} -->
+<h2 class="sectionedit26" id="incrustar_html_y_php">Incrustar HTML y PHP</h2>
 <div class="level2">
 
 <p>
-Some syntax influences how DokuWiki renders a page without creating any output it self. The following control macros are availble:
+Puedes incrustar código <abbr title="HyperText Markup Language">HTML</abbr> o PHP puro en tus documentos usando las etiquetas <code>html</code> o <code>php</code> de este modo:
 </p>
-<div class="table sectionedit34"><table class="inline">
+<pre class="code">&lt;html&gt;
+Esto es &lt;font color=&quot;red&quot; size=&quot;+1&quot;&gt;HTML&lt;/font&gt;
+&lt;/html&gt;</pre>
+
+<p>
+<code class="code html4strict">Esto es <span class="sc2">&lt;<a href="http://december.com/html/4/element/font.html"><span class="kw2">font</span></a> <span class="kw3">color</span><span class="sy0">=</span><span class="st0">&quot;red&quot;</span> <span class="kw3">size</span><span class="sy0">=</span><span class="st0">&quot;+1&quot;</span>&gt;</span>HTML<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/font.html"><span class="kw2">font</span></a>&gt;</span></code>
+</p>
+<pre class="code">&lt;php&gt;
+echo &#039;Un logo generado por PHP:&#039;;
+echo &#039;&lt;img src=&quot;&#039; . $_SERVER[&#039;PHP_SELF&#039;] . &#039;?=&#039; . php_logo_guid() . &#039;&quot; alt=&quot;PHP Logo !&quot; /&gt;&#039;;
+&lt;/php&gt;</pre>
+
+<p>
+<code class="code php"><span class="kw1">echo</span> <span class="st_h">'Un logo generado por PHP:'</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st_h">'&lt;img src=&quot;'</span> <span class="sy0">.</span> <span class="re0">$_SERVER</span><span class="br0">&#91;</span><span class="st_h">'PHP_SELF'</span><span class="br0">&#93;</span> <span class="sy0">.</span> <span class="st_h">'?='</span> <span class="sy0">.</span> <a href="http://www.php.net/php_logo_guid"><span class="kw3">php_logo_guid</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">.</span> <span class="st_h">'&quot; alt=&quot;PHP Logo !&quot; /&gt;'</span><span class="sy0">;</span></code>
+</p>
+
+<p>
+<strong>Por favor observa</strong>: La inclusión de <abbr title="HyperText Markup Language">HTML</abbr> y PHP se encuentra deshabilitada predeterminadamente en la configuración. Si se encuentra deshabilitado, el código se muestra en lugar de ejecutarse.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Incrustar HTML y PHP&quot;,&quot;hid&quot;:&quot;incrustar_html_y_php&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:26,&quot;range&quot;:&quot;18225-19011&quot;} -->
+<h2 class="sectionedit27" id="macros_de_control">Macros de Control</h2>
+<div class="level2">
+
+<p>
+Algunas expresiones afectan la manera en que DokuWiki despliega una página, sin producir una salida <em>per se</em>. Se cuenta con las siguientes macros de control:
+</p>
+<div class="table sectionedit28"><table class="inline">
 	<thead>
 	<tr class="row0">
-		<th class="col0 leftalign"> Macro           </th><th class="col1"> Description </th>
+		<th class="col0 leftalign"> Macro           </th><th class="col1"> Descripción </th>
 	</tr>
 	</thead>
 	<tr class="row1">
-		<td class="col0 leftalign"> ~~NOTOC~~   </td><td class="col1"> If this macro is found on the page, no table of contents will be created </td>
+		<td class="col0 leftalign"> ~~NOTOC~~   </td><td class="col1"> Si ésta macro se encuentra en la página, no se generará una tabla de contenidos </td>
 	</tr>
 	<tr class="row2">
-		<td class="col0"> ~~NOCACHE~~ </td><td class="col1"> DokuWiki caches all output by default. Sometimes this might not be wanted (eg. when the &lt;php&gt; syntax above is used), adding this macro will force DokuWiki to rerender a page on every call </td>
+		<td class="col0"> ~~NOCACHE~~ </td><td class="col1"> DokuWiki, por omisión, hace un caché de todo lo que despliega. A veces esto no es deseable (por ejemplo, cuando se usa la sintaxis &lt;php&gt; descrita arriba); añadir esta macro forzará a DokuWiki a regenerar la página cada vez que sea solicitada </td>
 	</tr>
 </table></div>
-<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table6&quot;,&quot;secid&quot;:34,&quot;range&quot;:&quot;22011-22353&quot;} -->
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table5&quot;,&quot;secid&quot;:28,&quot;range&quot;:&quot;19205-19617&quot;} -->
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Mascros de control&quot;,&quot;hid&quot;:&quot;mascros_de_control&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:33,&quot;range&quot;:&quot;21847-22354&quot;} -->
-<h2 class="sectionedit35" id="complementos_de_sintaxis">Complementos de sintaxis</h2>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Macros de Control&quot;,&quot;hid&quot;:&quot;macros_de_control&quot;,&quot;codeblockOffset&quot;:10,&quot;secid&quot;:27,&quot;range&quot;:&quot;19012-19618&quot;} -->
+<h2 class="sectionedit29" id="plugins_de_sintaxis">Plugins de Sintaxis</h2>
 <div class="level2">
 
 <p>
-DokuWiki&#039;s syntax can be extended by <a href="https://www.dokuwiki.org/plugins" class="interwiki iw_doku" title="https://www.dokuwiki.org/plugins">Plugins</a>. How the installed plugins are used is described on their appropriate description pages. The following syntax plugins are available in this particular DokuWiki installation:
+La sintaxis de DokuWiki puede extenderse con <a href="https://www.dokuwiki.org/plugins" class="interwiki iw_doku" title="https://www.dokuwiki.org/plugins">Plugins</a>. Como se usan los plugin instalados se describe en sus correspondientes páginas descriptivas. Los siguientes plugins de sintaxis están disponibles en esta particular instalación de DokuWiki:
 </p>
-<ul><li><div class="li"><a href="http://dokuwiki.org/plugin:info" class="urlextern" title="http://dokuwiki.org/plugin:info" rel="nofollow">Info Plugin</a> <em>2014-10-01</em> by <a href="mailto:&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">Andreas Gohr</a><br />Displays information about various DokuWiki internals</div></li><li><div class="li"><a href="http://www.dokuwiki.org/plugin:hidden" class="urlextern" title="http://www.dokuwiki.org/plugin:hidden" rel="nofollow">hidden Plugin</a> <em>2018-07-05</em> by <a href="mailto:&#x67;&#x75;&#x69;&#x6c;&#x6c;&#x61;&#x75;&#x6d;&#x65;&#x2e;&#x74;&#x75;&#x72;&#x72;&#x69;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;" class="mail" title="&#x67;&#x75;&#x69;&#x6c;&#x6c;&#x61;&#x75;&#x6d;&#x65;&#x2e;&#x74;&#x75;&#x72;&#x72;&#x69;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">Guillaume Turri</a><br />Enable to hide/show details</div></li></ul>
+<ul><li><div class="li"><a href="http://dokuwiki.org/plugin:info" class="urlextern" title="http://dokuwiki.org/plugin:info" rel="nofollow">Info Plugin</a> <em>2014-10-01</em> por <a href="mailto:&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x61;&#x6e;&#x64;&#x69;&#x40;&#x73;&#x70;&#x6c;&#x69;&#x74;&#x62;&#x72;&#x61;&#x69;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">Andreas Gohr</a><br />Displays information about various DokuWiki internals</div></li><li><div class="li"><a href="http://www.dokuwiki.org/plugin:hidden" class="urlextern" title="http://www.dokuwiki.org/plugin:hidden" rel="nofollow">hidden Plugin</a> <em>2018-07-05</em> por <a href="mailto:&#x67;&#x75;&#x69;&#x6c;&#x6c;&#x61;&#x75;&#x6d;&#x65;&#x2e;&#x74;&#x75;&#x72;&#x72;&#x69;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;" class="mail" title="&#x67;&#x75;&#x69;&#x6c;&#x6c;&#x61;&#x75;&#x6d;&#x65;&#x2e;&#x74;&#x75;&#x72;&#x72;&#x69;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">Guillaume Turri</a><br />Enable to hide/show details</div></li></ul>
 </div>
-<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Complementos de sintaxis&quot;,&quot;hid&quot;:&quot;complementos_de_sintaxis&quot;,&quot;codeblockOffset&quot;:11,&quot;secid&quot;:35,&quot;range&quot;:&quot;22355-&quot;} --><div class="footnotes">
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plugins de Sintaxis&quot;,&quot;hid&quot;:&quot;plugins_de_sintaxis&quot;,&quot;codeblockOffset&quot;:10,&quot;secid&quot;:29,&quot;range&quot;:&quot;19619-&quot;} --><div class="footnotes">
 <div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
-<div class="content">This is a footnote</div></div>
-<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
-<div class="content">when the aspect ratio of the given width and height doesn&#039;t match that of the image, it will be cropped to the new ratio before resizing</div></div>
+<div class="content">Esto es una nota al pie</div></div>
 </div>

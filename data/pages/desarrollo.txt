@@ -1,6 +1,6 @@
 ====== Sistemas Analitic ======
   *  [[Apro|  Apro]]
-
   *   [[Octosync |  Octosync]]
-
   *   [[Inscreen |  Inscreen]]
+  *   [[ Gestor |  Gestor]]
+  *   [[loBasiko |  loBasiko]]

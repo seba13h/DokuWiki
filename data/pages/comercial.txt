@@ -1,3 +1,5 @@
-==== INDICE ====
+==== COMERCIAL ====
   * [[Manuales de Uso | Manuales de Uso ]]
   * [[Informes | Informes de Industria ]]
+  * [[Prospectos | Prospeecto ]]
+  * [[Registro Clientes | Registro Clientes ]]

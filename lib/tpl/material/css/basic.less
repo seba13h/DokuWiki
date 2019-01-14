@@ -438,3 +438,380 @@ body {
     padding-left: 12px;
   }
 }
+/**
+ * This file provides the styles for the file uploader
+ * used in the media manager (both fullscreen and popup).
+ */
+
+.qq-uploader {
+    position: relative;
+    width: 100%;
+}
+
+.qq-uploader .error {
+    color: #f00;
+    background-color: #fff;
+}
+
+/* select file button */
+
+.qq-upload-button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 100%;
+    cursor: pointer;
+    margin: 1px 1px 5px;
+}
+
+.qq-upload-button-focus {
+    outline: 1px dotted;
+}
+
+/* drop area */
+
+.qq-upload-drop-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 70px;
+    z-index: 2;
+    background: @ini_background_neu;
+    color: @ini_text;
+    text-align: center;
+}
+
+.qq-upload-drop-area span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -8px;
+    font-size: 120%;
+}
+
+.qq-upload-drop-area-active {
+    background: @ini_background_alt;
+}
+
+/* list of files to upload */
+
+div.qq-uploader ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.qq-uploader li {
+    margin: 0 0 5px;
+    color: @ini_text;
+}
+
+.qq-uploader li span,
+.qq-uploader li input,
+.qq-uploader li a {
+    margin-right: 5px;
+}
+
+.qq-upload-file {
+    display: block;
+    font-weight: bold;
+}
+
+.qq-upload-spinner {
+    display: inline-block;
+    background: url("../../images/throbber.gif");
+    width: 15px;
+    height: 15px;
+    vertical-align: text-bottom;
+}
+
+.qq-upload-size,
+.qq-upload-cancel {
+    font-size: 85%;
+}
+
+.qq-upload-failed-text {
+    display: none;
+}
+.qq-upload-fail .qq-upload-failed-text {
+    display: inline;
+}
+
+.qq-action-container * {
+    vertical-align: middle;
+}
+.qq-overwrite-check input {
+    margin-left: 10px;
+}
+/**
+ * This file provides styles for the media manager popup
+ * (mediamanager.php).
+ */
+
+/*____________ structure ____________*/
+
+html.popup {
+    overflow: auto;
+}
+
+#media__manager {
+    height: 100%;
+    overflow: hidden;
+}
+
+#mediamgr__aside {
+    width: 30%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    border-right: 1px solid @ini_border;
+}
+[dir=rtl] #mediamgr__aside {
+    left: auto;
+    right: 0;
+    border-right-width: 0;
+    border-left: 1px solid @ini_border;
+}
+#mediamgr__aside .pad {
+    padding: .5em;
+}
+
+#mediamgr__content {
+    width: 69.7%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+}
+[dir=rtl] #mediamgr__content {
+    right: auto;
+    left: 0;
+}
+#mediamgr__content .pad {
+    padding: .5em;
+}
+
+#media__manager h1,
+#media__manager h2 {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    padding-bottom: .2em;
+    border-bottom: 1px solid @ini_border;
+}
+
+/* left side
+********************************************************************/
+
+/*____________ options ____________*/
+
+#media__opts {
+    margin-bottom: .5em;
+}
+
+#media__opts input {
+    margin-right: .3em;
+}
+[dir=rtl] #media__opts input {
+    margin-right: 0;
+    margin-left: .3em;
+}
+#media__opts label {
+}
+
+/*____________ tree ____________*/
+
+#media__tree ul {
+    padding-left: .2em;
+}
+[dir=rtl] #media__tree ul {
+    padding-left: 0;
+    padding-right: .2em;
+}
+#media__tree ul li {
+    clear: left;
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: 0;
+}
+[dir=rtl] #media__tree ul li {
+    clear: right;
+    margin-right: 0;
+}
+#media__tree ul li img {
+    float: left;
+    padding: .5em .3em 0 0;
+}
+[dir=rtl] #media__tree ul li img {
+    float: right;
+    padding: .5em 0 0 .3em;
+}
+#media__tree ul li div.li {
+    display: inline;
+}
+#media__tree ul li li {
+    margin-left: 1.5em;
+}
+[dir=rtl] #media__tree ul li li {
+    margin-left: 0;
+    margin-right: 1.5em;
+}
+
+/* right side
+********************************************************************/
+
+/*____________ upload form ____________*/
+
+/* upload info */
+#media__content div.upload {
+    font-size: .9em;
+    margin-bottom: .5em;
+}
+
+#mediamanager__uploader {
+    margin-bottom: 1em;
+}
+#mediamanager__uploader p {
+    margin-bottom: .5em;
+}
+
+/*____________ file list ____________*/
+
+#media__content img.load {
+    margin: 1em auto;
+}
+
+#media__content .odd,
+#media__content .even {
+    padding: .5em;
+}
+#media__content .odd {
+    background-color: @ini_background_alt;
+}
+#media__content .even {
+}
+/* highlight newly uploaded or edited file */
+#media__content #scroll__here {
+    border: 1px dashed @ini_border;
+}
+
+/* link which inserts media file */
+#media__content a.mediafile {
+    margin-right: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+[dir=rtl] #media__content a.mediafile {
+    margin-right: 0;
+    margin-left: 1.5em;
+}
+#media__content span.info {
+}
+#media__content img.btn {
+    vertical-align: text-bottom;
+}
+
+/* info how to insert media, if JS disabled */
+#media__content div.example {
+    color: @ini_text_neu;
+    margin-left: 1em;
+}
+
+#media__content div.detail {
+    padding: .2em 0;
+}
+#media__content div.detail div.thumb {
+    float: left;
+    margin: 0 .5em 0 18px;
+}
+[dir=rtl] #media__content div.detail div.thumb {
+    float: right;
+    margin: 0 18px 0 .5em;
+}
+#media__content div.detail div.thumb a {
+    display: block;
+    cursor: pointer;
+}
+#media__content div.detail p {
+    margin-bottom: 0;
+}
+
+
+/*____________ media search ____________*/
+
+#dw__mediasearch {
+}
+#dw__mediasearch p {
+}
+#dw__mediasearch label {
+}
+#dw__mediasearch label span {
+}
+#dw__mediasearch input.edit {
+}
+#dw__mediasearch button {
+}
+/* all types of buttons */
+input[type=submit],
+input[type=button],
+input[type=reset],
+input.button,
+a.button,
+button,
+.qq-upload-button {
+    color: #333;
+    background-color: #eee;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4MjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGNEY0RjQiIG9mZnNldD0iMC4zIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0VFRUVFRSIgb2Zmc2V0PSIwLjk5Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0NDQ0NDQyIgb2Zmc2V0PSIuOTkiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNnODI0KSIgLz4KPC9zdmc+);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 30%, #eeeeee 99%, #cccccc 99%);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: .1em .5em;
+    cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=reset]:active,
+input[type=reset]:hover,
+input.button:hover,
+input.button:active,
+input.button:focus,
+a.button:hover,
+a.button:active,
+a.button:focus,
+button:hover,
+button:active,
+button:focus,
+.qq-upload-button:hover {
+    border-color: #999;
+    background-color: #ddd;
+    background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc2NzAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGNEY0RjQiIG9mZnNldD0iMC4zIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0RERERERCIgb2Zmc2V0PSIwLjk5Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0JCQkJCQiIgb2Zmc2V0PSIuOTkiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNnNjcwKSIgLz4KPC9zdmc+);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 30%, #dddddd 99%, #bbbbbb 99%);
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input[disabled],
+button[disabled],
+select[disabled],
+textarea[disabled],
+option[disabled],
+input[readonly],
+button[readonly],
+select[readonly],
+textarea[readonly] {
+    cursor: auto;
+    opacity: .5;
+    background-color: #eee;
+}
